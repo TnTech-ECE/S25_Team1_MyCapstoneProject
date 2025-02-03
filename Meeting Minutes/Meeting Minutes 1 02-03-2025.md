@@ -1,3 +1,5 @@
+Meeting Minutes 1 02-03-2025
+
 Group
 This week, we dedicated ourselves to becoming acquainted with GitHub and reviewing the robot specifications on iLearn. Additionally, we engaged in discussions regarding potential roles for the project and the organization. Furthermore, the completion of team training was a topic of consideration. We also completed our lab safety training.
 
