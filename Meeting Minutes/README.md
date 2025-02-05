@@ -22,9 +22,13 @@ This is a format to use for meeting minutes each week.
 
 ## Member Updates
 Evan -
+
 Connor -
+
 Kamden -
+
 Wayne -
+
 Cooper -
 
 ## Meeting Minutes (Summary)
@@ -35,7 +39,11 @@ For the Team:
 1.
 
 Evan -
+
 Connor -
+
 Kamden -
+
 Wayne -
+
 Cooper -
