@@ -2,7 +2,7 @@
 
 ## Attendance
 
-In Person on 02/05/2025 1. Evan 2. Connor 3. Kamden 4. Wayne 5. Cooper
+In Person on 02/07/2025 1. Evan 2. Connor 3. Kamden 4. Wayne 5. Cooper
 
 ## Key Points
 
@@ -14,8 +14,9 @@ In Person on 02/05/2025 1. Evan 2. Connor 3. Kamden 4. Wayne 5. Cooper
 
 ## Attendance
 
-**In Person** on 02/05/2025 1. Kamden 2. Evan 3. Cooper 4. Conner
-Virtual 1. Wayne excused for work.
+**In Person** on 02/06/2025 1. Kamden 2. Evan 3. Cooper 4. Conner
+
+**Virtual** 1. Wayne excused for work.
 
 ## Key Points
 
