@@ -58,7 +58,7 @@ tactically contested environment. 
 
 <!-- -->
 
--   The CirceBot will install ethernet cable of 200 yards according to
+-   The CirceBot will install ethernet cable of 100 yards according to
     best practices associated with the cable type being installed. 
 
 <!-- -->
@@ -123,8 +123,8 @@ tactically contested environment. 
 
 <!-- -->
 
--   CirceBot shall be able to carry 200 yards of Ethernet cable.
-    (approximately 20 lbs.) 
+-   CirceBot shall be able to carry 100 yards of Ethernet cable.
+    (approximately 10 lbs.) 
 
 <!-- -->
 
