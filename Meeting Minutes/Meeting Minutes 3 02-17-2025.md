@@ -4,7 +4,7 @@ This is a format to use for meeting minutes each week.
 
 ## Attendance
 
-**In Person** on xx/xx/2025
+**In Person** on 02/13/2025
 
 1. Evan
 2. Connor
@@ -33,7 +33,7 @@ Connor - Before meeting Thursday with sawyer and Elias from devcom we had starte
 
 Kamden - This week, I worked on the Project Proposal specifically the budget, timeline, and specifications. I also spoke to Dr. Van Neste and persuaded him to become our Advsior. I have also done more work on the repository to clean up and figure out the UI.
 
-Wayne -
+Wayne - This week I worked on completing the project proposal. I also did some light research in the document provided by DEVCOM.
 
 Cooper -
 
@@ -51,6 +51,6 @@ Connor - Since the meeting I have completed the specific implications section an
 
 Kamden - I plan on researching more now that we have a stronger idea on what the project will be oriented on. I would also like to navigate with the team and get a better heading on what we will be doing going forward.
 
-Wayne -
+Wayne - In the coming week I plan to use any feedback provided for our proposal in order to improve it. I will also continue touching up on the DEVCOM document.
 
 Cooper -
