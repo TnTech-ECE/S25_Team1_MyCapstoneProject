@@ -1,10 +1,10 @@
 # Cable Installation Robot for Contested Environments
 
-# (CIRCE)
+# (CIRCEBOT)
 
-### Kamden Eden, Connor Graves, Wayne Marcrum, Cooper McFarlane, Evan Winnie
+### Kamden Edens, Connor Graves, Wayne Marcrum, Cooper McFarlane, Evan Winnie
 
-#### DEVCOM
+#### Customer: DEVCOM
 
 Department of Electrical and Computer Engineering
 Tennessee Technological University
@@ -139,22 +139,20 @@ embedded systems, and strategic deployment. University
 students working on CirceBot will gain valuable experience in
 automation, robotics, and sensor integration, fostering an
 interest in emerging technologies in military infrastructure and
-autonomous warfare support [ 8 ].
+autonomous warfare support [8].
 The primary objective of CirceBot is to autonomously route
 and lay cables in dynamic and contested environments.
 Multiple solutions exist for achieving this goal. The system’s
 navigation and tracking component may utilize cameras,
 ultrasonic sensors, or infrared mapping tools to assess terrain
-and adjust its path dynamically [ 8 ]. This data will be processed
+and adjust its path dynamically [8]. This data will be processed
 by an onboard microcontroller or embedded computing system,
 such as a Raspberry Pi, allowing seamless communication
 between sensors, motors, and cable deployment mechanisms
-[ 8 ].
+[8].
 A crucial design consideration is the cable management
 system itself. The cable must be deployed in a controlled
 manner, maintaining proper tension, and avoiding tangles or
-
-
 dragging the cable along behind it [9]. Also, few robots are
 autonomous meaning that the existing robots require someone
 to control them like an RC car. Those that are autonomous are
@@ -169,7 +167,6 @@ today, the biggest hurdle will be implementing a navigation
 system for GPS-denied areas.
 
 #### IV. SPECIFICATIONS
-
 
 CirceBot shall be designed to receive and execute commands
 in the format supplied in the CirceSoft2CirceBot.proto spec
@@ -204,15 +201,12 @@ collisions.
 
 #### V. CONSTRAINTS
 
-
 The material cost of CirceBot shall not exceed the outlined
 budget, and any excess funds will remain or be returned to
 Tennessee Tech University.
 The construction and use of CirceBot shall, as is appropriate,
 comply with OSHA, ANSI/RIA, and ISO robotic safety
-standards.[1 0 ]
-
-
+standards.[10]
 The manufacturing, testing, and eventual implementation of
 CirceBot shall not negatively impact the general public on
 Tennessee Tech University campus or in the surrounding
@@ -269,8 +263,6 @@ affordability, they are not designed for precise, on-demand
 cable deployment. Their operation is heavily influenced by
 weather conditions, and they lack the capability to navigate
 rugged, GPS-denied terrain [4].
-
-
 Another alternative option could be unmanned aerial
 vehicles (UAVs) specifically designed for cable deployment.
 An example is the BOREY 20 Fixed-Wing UAV, which flies a
@@ -297,7 +289,6 @@ which our project specifically aims to overcome with a
 dedicated, hardwired approach.
 
 #### VII. MEASURES OF SUCCESS
-
 
 Measures of success will vary and evolve with time,
 research, and a gained understanding of the task and its
@@ -413,7 +404,6 @@ Table [1]: Tentative Expenses for Construction
 
 #### X. PERSONNEL
 
-
 Instructor: Micah Rentschler is the instructor for this project
 and shall meet with our team weekly to answer any questions
 
@@ -473,8 +463,6 @@ and centralized Command and Control (C2) even when RF
 communications are disrupted by jamming or interference. This
 uninterrupted data link is crucial for ensuring the proper
 functioning of mission-critical operations.
-
-
 Enhanced Safety for Personnel:
 Rather than exposing personnel to high-risk scenarios—such as
 manually laying cables through contested areas—the
@@ -514,7 +502,6 @@ investment for modern tactical operations.
 
 #### XIII. BROADER IMPLICATIONS
 
-
 While specifically, this can keep individuals safe, it can also
 give peace of mind to family and friends of those who would
 typically be laying down communications in these contested
@@ -532,8 +519,6 @@ time the robot would be drastically less [2].
 Ethically speaking this can greatly mitigate risk to personnel.
 It is much easier to replace a robot than a human being. In this
 case, the robot is not working towards taking human life, but
-
-
 simply getting communication lines up, so the argument that
 robots cannot determine the difference between combatants and
 civilians is negligible. One could say that communications
@@ -574,8 +559,7 @@ to be done.
 [1] Lenovo, The Essential Guide to Understanding Hardwired
 Systems. Available:
 [http://www.lenovo.com/us/en/glossary/hardwired/?orgRef=https%](http://www.lenovo.com/us/en/glossary/hardwired/?orgRef=https%)
-53A%252F%252Fwww.google.com%252F. Accessed: Feb.
-11, 2025.
+53A%252F%252Fwww.google.com%252F. Accessed: Feb. 11, 2025.
 
 [2] Army University Press, "The Ethics of Robots in War?"
 Available: [http://www.armyupress.army.mil/Journals/NCO-](http://www.armyupress.army.mil/Journals/NCO-)
@@ -588,8 +572,7 @@ Communications: UST," Unmanned Systems Technology, Feb.
 8, 2024. Available:
 http://www.unmannedsystemstechnology.com/2023/03/new-
 tethered-drone-designed-for-tactical-
-communications/?utm_source=chatgpt.com. Accessed: Feb.
-13, 2025.
+communications/?utm_source=chatgpt.com. Accessed: Feb. 13, 2025.
 
 
 [4] Massachusetts Institute of Technology, "Balloon-Based
@@ -623,7 +606,7 @@ environments," in Proc. IEEE Conf. Autom. Sci. Eng., 2021, pp.
 189 - 195.
 
 
-[1 0 ] Staff, Control Engineering, “Industrial robot safety
+[10] Staff, Control Engineering, “Industrial robot safety
 considerations, standards and best practices to consider,”
 Control Engineering, Nov. 11, 2024. [Online]. Available:
 http://www.controleng.com/industrial-robot-safety-considerations-
