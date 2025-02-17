@@ -390,121 +390,32 @@ Lastly, a contingency fund is included to address any
 unforeseen expenses, ensuring the successful completion of the
 project within the given budget constraints.
 
-```
 Table [1]: Tentative Expenses for Construction
-```
-## Category Item Quantity
 
-```
-Unit
-Cost
-```
-## ($)
-
-```
-Total
-Cost
-```
-## ($)
-
-```
-Materials and
-```
-## Components
-
-```
-Microcontroller
-```
-## (e.g., Arduino) 2 25 50
-
-```
-Sensors (e.g.,
-```
-## Ultrasonic, IR) 10 10 100
-
-```
-Motors (e.g.,
-```
-## DC, Servo) 6 20 120
-
-```
-Wheels and
-```
-## Chassis 1 set 50 50
-
-## Battery Pack^3 30 
-
-```
-Cable
-Deployment
-```
-## Mechanism 1 150 150
-
-```
-Miscellaneous
-Hardware (nuts,
-```
-## bolts, etc.) Various 30 30
-
-## Subtotal 590
-
-```
-Software and
-Development
-```
-## Tools
-
-```
-Development
-Software
-```
-## Licenses 2 100 200
-
-```
-Simulation
-Software (3D
-```
-## Modeling) 1 200 200
-
-## Subtotal 400
-
-```
-Prototyping
-```
-## and Testing
-
-```
-3D Printing
-```
-## Materials Various 100 100
-
-```
-Prototype PCB
-```
-## Manufacturing 3 50 150
-
-```
-Testing
-Equipment
-(multimeters,
-```
-## special devices) 2 75 150
-
-## Subtotal 400
-
-```
-Contingency
-```
-## Fund
-
-```
-Unforeseen
-```
-## Expenses 1 210 210
-
-## Subtotal 210
-
-## Total Budget 2000
+| Category                  | Item                       | Quantity | Unit Cost ($) | Total Cost ($) |
+|---------------------------|----------------------------|----------|---------------|----------------|
+| **Materials and Components** |                            |          |               |                |
+|                           | Microcontroller (e.g., Arduino) | 2        | 25            | 50             |
+|                           | Sensors (e.g., Ultrasonic, IR) | 10       | 10            | 100            |
+|                           | Motors (e.g., DC, Servo)       | 6        | 20            | 120            |
+|                           | Wheels and Chassis             | 1 set    | 50            | 50             |
+|                           | Battery Pack^3                 |          |               | 30             |
+|                           | Cable Deployment Mechanism     | 1        | 150           | 150            |
+|                           | Miscellaneous Hardware (nuts, bolts, etc.) | Various | 30 | 30             |
+| **Subtotal**              |                            |          |               | 590            |
+| **Software and Development Tools** |                   |          |               |                |
+|                           | Development Software Licenses | 2        | 100           | 200            |
+|                           | Simulation Software (3D Modeling) | 1    | 200           | 200            |
+| **Subtotal**              |                            |          |               | 400            |
+| **Prototyping and Testing** |                          |          |               |                |
+|                           | 3D Printing Materials        | Various  | 100           | 100            |
+|                           | Prototype PCB Manufacturing  | 3        | 50            | 150            |
+|                           | Testing Equipment (multimeters, special devices) | 2 | 75 | 150 |
+| **Subtotal**              |                            |          |               | 400            |
+| **Contingency Fund**      |                            |          |               |                |
+|                           | Unforeseen Expenses          | 1        | 210           | 210            |
+| **Subtotal**              |                            |          |               | 210            |
+| **Total Budget**          |                            |          |               | 2000           |
 
 #### X. PERSONNEL
 
