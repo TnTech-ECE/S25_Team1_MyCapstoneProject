@@ -6,12 +6,11 @@
 
 #### DEVCOM
 
-```
 Department of Electrical and Computer Engineering
 Tennessee Technological University
 Cookeville, TN, 38501
 kedens43@tntech.edu, crgraves42@tntech.edu, gwmarcrum42@tntech.edu, crmcfarlan42@tntech.edu, ebwinnie42@tntech.edu
-```
+
 Abstract **—** Modern military operations rely heavily on secure
 communication networks, often requiring the rapid deployment of
 cables in contested environments. The Cable Installation Robot
@@ -30,9 +29,9 @@ capability in contested zones. CIRCE aims to enhance operational
 efficiency and battlefield survivability, representing a significant
 advancement in autonomous military engineering applications.
 
-```
+
 Keywords — Collision Detection, Sensors, Design.
-```
+
 #### I. INTRODUCTION
 
 In modern military and defense operations, maintaining
@@ -55,8 +54,6 @@ system is designed to function in GPS-denied environments
 while ensuring precise cable installation.
 This proposal outlines the technical approach, design
 methodology, and expected outcomes for the CIRCE system.
-
-```
 The primary objectives include developing a robotic platform
 capable of autonomously navigating to waypoints, deploying
 up to 100 yards of Ethernet cable, and maintaining real-time
@@ -65,10 +62,10 @@ advanced navigation techniques, semi-autonomous control, and
 robust cable-handling mechanisms, the CIRCE system aims to
 enhance operational efficiency while minimizing risk to
 personnel in contested environments.
-```
+
 #### II. FORMULATING THE PROBLEM
 
-```
+
 The problem at hand here is that we currently do not have a
 reliable and consistent tool to install a hard-wired
 communication system in an area where it is too dangerous to
@@ -97,12 +94,9 @@ location, functioning in a zone of contested radio frequency,
 and running independently on its power supply. It will also pose
 a challenge to have the robot use GPS coordinates while also
 having an option to not involve GPS at all and navigate
-separately.
-Why is there not already a solution to this problem? While
-there are many cable-laying robots out there both aerial and, on
-the ground, very few carry the cable itself, meaning it is
-```
-
+separately. Why is there not already a solution to this problem? 
+While there are many cable-laying robots out there both aerial and, 
+on the ground, very few carry the cable itself, meaning it is
 dragging the cable along behind it. Also, few robots are
 autonomous meaning that someone is controlling it like an RC
 car. Those that are autonomous are not hard-wired and rely on
@@ -160,7 +154,7 @@ A crucial design consideration is the cable management
 system itself. The cable must be deployed in a controlled
 manner, maintaining proper tension, and avoiding tangles or
 
-```
+
 dragging the cable along behind it [9]. Also, few robots are
 autonomous meaning that the existing robots require someone
 to control them like an RC car. Those that are autonomous are
@@ -173,10 +167,10 @@ carry/lay cable instead of tying it to the back and dragging.
 While one can combine many of the existing solutions out there
 today, the biggest hurdle will be implementing a navigation
 system for GPS-denied areas.
-```
+
 #### IV. SPECIFICATIONS
 
-```
+
 CirceBot shall be designed to receive and execute commands
 in the format supplied in the CirceSoft2CirceBot.proto spec
 from CirceSoft, and transmit telemetry data in the
@@ -207,17 +201,17 @@ allow for easy reloading and quick replacement of Ethernet
 cable reels within 2 minutes, without the use of external tools.
 CirceBot shall use minor obstacle avoidance to avoid
 collisions.
-```
+
 #### V. CONSTRAINTS
 
-```
+
 The material cost of CirceBot shall not exceed the outlined
 budget, and any excess funds will remain or be returned to
 Tennessee Tech University.
 The construction and use of CirceBot shall, as is appropriate,
 comply with OSHA, ANSI/RIA, and ISO robotic safety
 standards.[1 0 ]
-```
+
 
 The manufacturing, testing, and eventual implementation of
 CirceBot shall not negatively impact the general public on
@@ -276,7 +270,7 @@ cable deployment. Their operation is heavily influenced by
 weather conditions, and they lack the capability to navigate
 rugged, GPS-denied terrain [4].
 
-```
+
 Another alternative option could be unmanned aerial
 vehicles (UAVs) specifically designed for cable deployment.
 An example is the BOREY 20 Fixed-Wing UAV, which flies a
@@ -301,10 +295,10 @@ to meet Ethernet cable installation guidelines. This can lead to
 issues such as tangling, improper strain relief, or misalignment,
 which our project specifically aims to overcome with a
 dedicated, hardwired approach.
-```
+
 #### VII. MEASURES OF SUCCESS
 
-```
+
 Measures of success will vary and evolve with time,
 research, and a gained understanding of the task and its
 specifics; however, we can measure success by the
@@ -334,7 +328,7 @@ The robot shall be self-reporting. This includes but is not
 limited to speed, location, and battery life.
 The robot shall communicate through a hard-wired ethernet
 cable connection.
-```
+
 
 Overall success can be measured by the number of
 specifications the robot achieves.
@@ -419,10 +413,10 @@ Table [1]: Tentative Expenses for Construction
 
 #### X. PERSONNEL
 
-```
+
 Instructor: Micah Rentschler is the instructor for this project
 and shall meet with our team weekly to answer any questions
-```
+
 
 our group has. He will also be present for certain meetings with
 the project client.
@@ -480,7 +474,7 @@ communications are disrupted by jamming or interference. This
 uninterrupted data link is crucial for ensuring the proper
 functioning of mission-critical operations.
 
-```
+
 Enhanced Safety for Personnel:
 Rather than exposing personnel to high-risk scenarios—such as
 manually laying cables through contested areas—the
@@ -517,10 +511,10 @@ system significantly improves mission effectiveness. The
 combined benefits of enhanced safety, operational reliability,
 and cost savings make the CIRCE system a compelling
 investment for modern tactical operations.
-```
+
 #### XIII. BROADER IMPLICATIONS
 
-```
+
 While specifically, this can keep individuals safe, it can also
 give peace of mind to family and friends of those who would
 typically be laying down communications in these contested
@@ -538,7 +532,7 @@ time the robot would be drastically less [2].
 Ethically speaking this can greatly mitigate risk to personnel.
 It is much easier to replace a robot than a human being. In this
 case, the robot is not working towards taking human life, but
-```
+
 
 simply getting communication lines up, so the argument that
 robots cannot determine the difference between combatants and
@@ -588,7 +582,7 @@ Available: [http://www.armyupress.army.mil/Journals/NCO-](http://www.armyupress.
 Journal/Archives/2024/February/The-Ethics-of-Robots-in-
 War/. Accessed: Feb. 12, 2025.
 
-```
+
 [3] C. Rees, "New Tethered Drone Designed for Tactical
 Communications: UST," Unmanned Systems Technology, Feb.
 8, 2024. Available:
@@ -596,42 +590,41 @@ http://www.unmannedsystemstechnology.com/2023/03/new-
 tethered-drone-designed-for-tactical-
 communications/?utm_source=chatgpt.com. Accessed: Feb.
 13, 2025.
-```
-```
+
+
 [4] Massachusetts Institute of Technology, "Balloon-Based
 Resilient Communications," MIT Lincoln Laboratory.
 Available: http://www.ll.mit.edu/r-d/projects/balloon-based-
 resilient-communications. Accessed: Feb. 13, 2025.
-```
-```
+
+
 [5] UAVOS Inc., "Borey 20," UAVOS, Mar. 7, 2024. Available:
 http://www.uavos.com/products/fixed-wing-uavs/borey-
 10/?utm_source=unmannedsystemstechnology.com&utm_me
 dium=referral. Accessed: Feb. 13, 2025.
-```
-```
+
+
 [6] J. Smith, "Autonomous underwater cable-laying systems:
 Challenges and innovations," IEEE Transactions on Robotics,
 vol. 36, no. 4, pp. 1021-1035, 2021.
-```
-```
+
+
 [7] A. Brown and C. Wilson, "Terrain-adaptive robotics for
 military applications," in Proc. IEEE Int. Conf. Intell. Robots
 Syst., 2022, pp. 2345-2350.
-```
-```
+
+
 [8] R. Lee, "Sensor fusion techniques in autonomous
 navigation," IEEE Sensors J., vol. 29, no. 3, pp. 567-580, 2023.
-```
-```
+
+
 [9] M. Patel, "Cable management systems in harsh
 environments," in Proc. IEEE Conf. Autom. Sci. Eng., 2021, pp.
 189 - 195.
-```
-```
+
+
 [1 0 ] Staff, Control Engineering, “Industrial robot safety
 considerations, standards and best practices to consider,”
 Control Engineering, Nov. 11, 2024. [Online]. Available:
 http://www.controleng.com/industrial-robot-safety-considerations-
 standards-and-best-practices-to-consider.
-```
