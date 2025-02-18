@@ -35,7 +35,7 @@ Kamden - This week, I worked on the Project Proposal specifically the budget, ti
 
 Wayne - This week I worked on completing the project proposal. I also did some light research in the document provided by DEVCOM.
 
-Cooper -
+Cooper - Had a meeting with our team, the ME team and Devcom to discuss aspects of the project and potential resources. I also managed to confirm that the library computers, at least run AutoCAD.
 
 ## Meeting Minutes (Summary)
 
@@ -43,7 +43,7 @@ Had a meeting with Devcom in person and also met with ME team to discuss what th
 
 ## Action Items for Next Week
 
-For the Team: 1.
+For the Team: 1. Review Proposal and rate other teams based on progress.
 
 Evan - I intend on taking a deeper dive into the non GPS navigation thing this week, which will involve asking some questions to Sawyer. 
 
@@ -53,4 +53,4 @@ Kamden - I plan on researching more now that we have a stronger idea on what the
 
 Wayne - In the coming week I plan to use any feedback provided for our proposal in order to improve it. I will also continue touching up on the DEVCOM document.
 
-Cooper -
+Cooper - I intend to figure out how to get access to Revit, should we need it.
