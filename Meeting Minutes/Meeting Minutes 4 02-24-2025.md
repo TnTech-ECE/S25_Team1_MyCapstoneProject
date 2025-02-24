@@ -2,7 +2,7 @@
 
 ## Attendance
 
-**In Person** on 02/24/2025
+**On Teams** on 02/24/2025
 
 1. Evan
 2. Connor
@@ -47,4 +47,4 @@ Kamden - Finish the Gantt chart. Continue to research central board ideas for ro
 
 Wayne - In the coming week I plan to make any last minute touches to the proposal and start looking at details for the conceptual design.
 
-Cooper -
+Cooper - Work on proposal and complete additional reviews.
