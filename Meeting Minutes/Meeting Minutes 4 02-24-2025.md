@@ -29,7 +29,7 @@ Kamden - Snowdays offset a lot of work on the project. Gantt chart is still in t
 
 Wayne - This week I worked on making adjustments to the proposal as necessary as well as expanding my understanding of various project related topics. 
 
-Cooper -
+Cooper - I reviewed and edited the format of my section of the proposal.
 
 ## Meeting Minutes (Summary)
 
