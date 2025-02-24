@@ -153,16 +153,7 @@ between sensors, motors, and cable deployment mechanisms
 A crucial design consideration is the cable management
 system itself. The cable must be deployed in a controlled
 manner, maintaining proper tension, and avoiding tangles or
-dragging the cable along behind it [9]. Also, few robots are
-autonomous meaning that the existing robots require someone
-to control them like an RC car. Those that are autonomous are
-not hard-wired and rely on GPS solely to navigate. The solution
-we present combines many of the robots already in existence
-for this service. The intention is to build something that is hard-
-wired that simply receives inputs and goes to them without
-having to be controlled. It will also be specifically designed to
-carry/lay cable instead of tying it to the back and dragging.
-While one can combine many of the existing solutions out there
+dragging the cable along behind it [9]. While one can combine many of the existing solutions out there
 today, the biggest hurdle will be implementing a navigation
 system for GPS-denied areas.
 
