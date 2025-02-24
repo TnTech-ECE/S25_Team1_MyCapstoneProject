@@ -2,7 +2,7 @@
 
 ## Attendance
 
-**In Person** on xx/xx/2025
+**In Person** on 02/24/2025
 
 1. Evan
 2. Connor
@@ -20,7 +20,7 @@
 
 ## Action Items From Past Meetings
 
-1.
+1. Complete Project Proposal draft and have it ready for review.
 
 ## Member Updates
 
