@@ -109,7 +109,7 @@ cable instead of tying it to the back and dragging.
 
 #### III. BACKGROUND
 
-The professional counterpart to this project is modern subsea
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The professional counterpart to this project is modern subsea
 autonomous cable-laying systems, which are designed to
 deploy infrastructure across vast and often unpredictable
 underwater environments. Observing the implementation of
@@ -122,7 +122,8 @@ operational challenges [6]. For the purposes of this project,
 CirceBot will integrate similar tracking and mapping
 capabilities to navigate and deploy cables efficiently within an
 unpredictable and potentially hostile environment.
-Unlike subsea cable layers, CirceBot must operate above
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unlike subsea cable layers, CirceBot must operate above
 ground, often traversing rugged and uneven terrain. Typically,
 autonomous cable-laying systems employ LiDAR, radar, and
 infrared sensors to continuously monitor terrain and adjust
@@ -133,14 +134,16 @@ and potential sabotage. Military-grade systems also employ
 countermeasures against jamming or physical interference,
 which will be considered in the design of CirceBot’s navigation
 and security protocols [7].
-Achieving this goal will require integrating multiple
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Achieving this goal will require integrating multiple
 engineering disciplines, including robotics, mechanical design,
 embedded systems, and strategic deployment. University
 students working on CirceBot will gain valuable experience in
 automation, robotics, and sensor integration, fostering an
 interest in emerging technologies in military infrastructure and
 autonomous warfare support [8].
-The primary objective of CirceBot is to autonomously route
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The primary objective of CirceBot is to autonomously route
 and lay cables in dynamic and contested environments.
 Multiple solutions exist for achieving this goal. The system’s
 navigation and tracking component may utilize cameras,
@@ -150,7 +153,8 @@ by an onboard microcontroller or embedded computing system,
 such as a Raspberry Pi, allowing seamless communication
 between sensors, motors, and cable deployment mechanisms
 [8].
-A crucial design consideration is the cable management
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A crucial design consideration is the cable management
 system itself. The cable must be deployed in a controlled
 manner, maintaining proper tension, and avoiding tangles or
 dragging the cable along behind it [9]. While one can combine many of the existing solutions out there
@@ -318,7 +322,7 @@ specifications the robot achieves.
 
 #### VIII. RESOURCES
 
-To successfully design and implement this project, the team
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To successfully design and implement this project, the team
 must utilize a diverse range of skills while adhering to the
 constraints set by stakeholders, time, and budget. Each team
 member contributes unique expertise, ensuring that all aspects
@@ -328,7 +332,8 @@ emphasis on AutoCAD, hardwiring, power systems, soldering,
 troubleshooting, programming, and design. These skills will be
 applied across multiple aspects of development, including
 circuit design, software integration, and system optimization.
-The application of AutoCAD and design principles will be
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The application of AutoCAD and design principles will be
 essential for drafting schematics and structuring component
 layouts, ensuring precision in hardware implementation. C++
 and programming expertise will contribute to the software
@@ -340,7 +345,8 @@ electrical connections and ensuring efficient power distribution
 throughout the project. Additionally, troubleshooting will play
 a critical role in identifying and resolving potential technical
 issues, ensuring system reliability and performance.
-As the project progresses, team members will continue to
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As the project progresses, team members will continue to
 adapt and expand their skill sets to address unforeseen technical
 challenges. A particular emphasis will be placed on sensor
 integration and optimization, as this hardware is fundamental to
