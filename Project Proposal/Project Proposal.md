@@ -65,47 +65,11 @@ personnel in contested environments.
 
 #### II. FORMULATING THE PROBLEM
 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The problem at hand here is that we currently do not have a reliable and consistent tool to install a hard wired communication system in an area where radio frequency is denied and is too dangerous to send a soldier/technician in to complete the task by hand. This raises the question of how one can overcome this. Hard wired communications are typically used in scenarios where high security and consistent performance are imperative [Evan 1.]. This is exactly the scenario we have here and the robot's job will be to get the wire from point A to point B without placing a human in harm's way. 
+  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By designing a semi autonomous robot with the capability of traversing mild terrain to lay down a line of cable, shall accomplish the ideas listed above. The challenges involved in reaching a solution to this problem are, but not limited to: traversing rough terrain, having the ability to navigate in a GPS denied zone and obstacle avoidance. 
+ #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Why is there not already a solution to this problem? While there are many cable laying robots out there both aerial and on the ground, very few carry the cable itself. This means while many existing robots are dragging cable behind it, CIRCEBOT intends to dispense from a spool. Also, few robots are autonomous meaning that the existing robots require someone to control it like an RC car. Those that are autonomous are not hard wired and rely on GPS solely to navigate. The solution we present combines many of the robots already in existence for this service. The intention is to build something that is hard wired that simply receives inputs and goes to them without having to be controlled. While one can combine many of the existing solutions out there today, the biggest hurdle will be implementing a navigation system for GPS denied areas.
 
-The problem at hand here is that we currently do not have a
-reliable and consistent tool to install a hard-wired
-communication system in an area where it is too dangerous to
-send a soldier/technician in to complete the task by hand. The
-reason this is so important is that these places typically have
-contested radio frequencies meaning that the average walkie-
-talkie or cell phone either does not work in its entirety or is not
-a secure communication system that the enemy can hack. The
-ability to communicate safely and effectively in a war zone is
-imperative. This raises the question of how one can overcome
-this. Hard-wired communications are typically used in
-scenarios where high security and consistent performance are
-imperative [1]. This is exactly the scenario we have here, and
-the robot's job will be to get the wire from point A to point B
-without placing a living being in harm's way.
-This robot shall keep a person out of harm's way by
-completing its task of installing communications through a
-contested area. By designing a semi-autonomous robot with the
-capability of traversing mild terrain to lay down a line of cable,
-a soldier/technician should not have to be exposed to a
-dangerous zone, where contesting forces could cause bodily
-harm. The challenges involved in solving this problem are, but
-are not limited to: traversing rough terrain, communicating
-through ethernet cable, using inputs from CirceSoft for the next
-location, functioning in a zone of contested radio frequency,
-and running independently on its power supply. It will also pose
-a challenge to have the robot use GPS coordinates while also
-having an option to not involve GPS at all and navigate
-separately. Why is there not already a solution to this problem? 
-While there are many cable-laying robots out there both aerial and, 
-on the ground, very few carry the cable itself, meaning it is
-dragging the cable along behind it. Also, few robots are
-autonomous meaning that someone is controlling it like an RC
-car. Those that are autonomous are not hard-wired and rely on
-GPS solely to navigate. The solution we present combines
-many of the robots already in existence for this service. The
-intention is to build something that is hard-wired that simply
-receives inputs and goes to them without having to be
-controlled. It will also be specifically designed to carry/lay
-cable instead of tying it to the back and dragging.
+
 
 #### III. BACKGROUND
 
@@ -285,35 +249,13 @@ dedicated, hardwired approach.
 
 #### VII. MEASURES OF SUCCESS
 
-Measures of success will vary and evolve with time,
-research, and a gained understanding of the task and its
-specifics; however, we can measure success by the
-accomplishments of the robot itself.
-The robot shall move. More specifically it should traverse
-obstacles and carry approximately 20lbs. This could take place
-on the president's lawn with obstacles in the way of its
-destination where it then must either go around or go over.
-Success can be measured by the robot traversing the shortest
-distance within reason, while not damaging itself (e.g. flipping
-over).
-The robot shall receive pinned locations from CIRCESOFT
-and travel to these pins. This will most likely take place on the
-president's lawn, where we will input pinned locations at a
-predetermined distance and the robot will traverse these
-locations efficiently. We will likely implement 3-4 pinned
-locations.
-The robot shall lay ethernet cable correctly based on ethernet
-cable guidelines. This will need to be inspected while the robot
-is traversing the given pins. Success will be measured based on
-how well the cable is laid regarding the guidelines/codes for
-ethernet cable.
-The robot shall not need any assistance while on its mission.
-It shall not need help traversing obstacles, going in the correct
-direction, or stopping where intended.
-The robot shall be self-reporting. This includes but is not
-limited to speed, location, and battery life.
-The robot shall communicate through a hard-wired ethernet
-cable connection.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Measures of success will vary and evolve with time, research and a gained understanding of the task and its specifics; however, we can measure success by the accomplishments of the robot itself. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. The robot shall move. More specifically it should traverse obstacles and carry approximately 10lbs. This could take place on the president's lawn with obstacles in the way of its destination where it then must either go around or go over. Success can be measured by the robot traversing the shortest distance within reason, while not damaging itself (e.g. flipping over). 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. The robot shall not need any assistance while on its mission. It shall not need help traversing obstacles, going in the correct direction or stopping where intended. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. The robot shall be self reporting. This includes but is not limited to speed, location and battery life. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. Overall success can be measured by the number of specifications (see above specifications section)that the robot achieves. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. Reliability and ease of use will also be examined during the testing phase to make sure that the machine works consistently for the average soldier.
+
 
 
 Overall success can be measured by the number of
@@ -499,39 +441,12 @@ investment for modern tactical operations.
 
 #### XIII. BROADER IMPLICATIONS
 
-While specifically, this can keep individuals safe, it can also
-give peace of mind to family and friends of those who would
-typically be laying down communications in these contested
-areas. This would also improve communications in these war
-zones and hostile environments. Communication is vital to
-completing a job or task efficiently, meaning productivity
-would increase and fewer injuries would occur. Since more is
-getting done in less time, we have less deployed personnel,
-which can save taxpayer dollars. To build on the cost of these
-robots is an initial cost to configure, build, and implement;
-however, their maintenance is much lower than that of a human
-being. According to the army press, a soldier can cost anywhere
-from 50,000 to 100,000 to employ and maintain in the US. Over
-time the robot would be drastically less [2].
-Ethically speaking this can greatly mitigate risk to personnel.
-It is much easier to replace a robot than a human being. In this
-case, the robot is not working towards taking human life, but
-simply getting communication lines up, so the argument that
-robots cannot determine the difference between combatants and
-civilians is negligible. One could say that communications
-could aid in negotiations and agreements without conflict all
-while never putting a friendly in harm's way.
-Our ethical duty as engineers is to ensure that this robot does
-its job correctly the first time. If it were to fail mid-mission it
-could potentially leave crucial information out of the fight that
-could result in human loss.
-If the robot becomes a success it could be seen in many other
-applications, such as running wire underground in mines,
-subways, or utility scenarios. In this case it could keep people
-out of cramped and dangerous positions as well as create a
-market for these robots, boosting the economy. It could
-potentially create jobs both building the robots and running
-them as well.
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIRCEBOT would highly improve communications which is vitally important to getting a task complete efficiently, meaning productivity would increase and less injuries would occur. Since more is getting done in less time that means we have less deployed personnel, which can save taxpayer dollars. To build on the cost of these robots, it is an initial investment to configure, build and implement; however, their maintenance is much lower than that of a human being. According to the army press a soldier can cost anywhere from 50,000 to 100,000 to employ and maintain in the US. Over time the robot would be drastically less from year to year. [Evan 2.]
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ethically speaking this can greatly mitigate risk to personnel. It is much easier to replace a robot than a human being. In this case the robot is not working towards taking human life, but simply getting communication lines up, so the argument that robots cannot determine the difference between combatants and civilians is negligible. One could say that communications could aid in negotiations and agreements without conflict all while never putting a friendly in harm's way. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our ethical duty as engineers is to ensure that this robot does its job correctly the first time. If it were to fail mid mission it could potentially leave crucial information out of the fight that could result in human loss. 
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the robot becomes a success it could be seen in many other applications, such as running wire underground in mines, subways, or utility scenarios. In this case it could keep people out of cramped and dangerous positions as well as create a market for these robots, boosting the economy. It could potentially create jobs both building the robots and running them as well.
+
+
 
 #### XIV. STATEMENT OF CONTRIBUTIONS
 
