@@ -34,7 +34,7 @@ Keywords — Collision Detection, Sensors, Design.
 
 #### I. INTRODUCTION
 
-In modern military and defense operations, maintaining
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In modern military and defense operations, maintaining
 reliable communication is critical for effective command and
 control. However, in contested environments where radio
 frequency communications are unreliable, alternative solutions
@@ -44,7 +44,7 @@ Robot for Contested Environments (CIRCE), a semi-
 autonomous robot designed to deploy Ethernet cables and
 restore communication links without exposing any human to
 unnecessary risk.
-The CIRCE system will consist of three core components:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The CIRCE system will consist of three core components:
 CirceBot, the cable installation robot responsible for physically
 deploying the cable; CirceSoft, the path planning software that
 guides CirceBot’s movements; and a hardline-based
@@ -52,7 +52,7 @@ communication interface that enables telemetry transmission
 and control without reliance on radio frequency signals. The
 system is designed to function in GPS-denied environments
 while ensuring precise cable installation.
-This proposal outlines the technical approach, design
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This proposal outlines the technical approach, design
 methodology, and expected outcomes for the CIRCE system.
 The primary objectives include developing a robotic platform
 capable of autonomously navigating to waypoints, deploying
@@ -175,7 +175,7 @@ additional standards, if any, supplied by the client or campus.
 
 #### VI. SURVEY OF EXISTING RESOURCES
 
-Existing solutions to this problem could be but are not
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Existing solutions to this problem could be but are not
 limited to, autonomous UAVs (Unmanned Aerial Vehicle),
 Tethered drones, and High-Altitude Loitering Relay (HAPS or
 Balloon-Based). Although these may be tangible and solve the
@@ -190,53 +190,33 @@ communications gap between the centralized Command and
 Control (C2) and the asset located in a contested environment.
 Its capability to carry payloads of up to 4 kg at an operational
 altitude of around 90 meters for up to 50 hours makes it a viable
-short-term solution for rapid deployment scenarios. This
-system is particularly useful for creating a temporary
-communication link in situations where ground-based
-infrastructure cannot be safely deployed [3]. While effective as
+short-term solution for rapid deployment scenarios[3]. While effective as
 a temporary communications relay, these drones are primarily
 engineered for maintaining an aerial communication node
-rather than physically deploying cable. Their payload capacity
-is optimized for carrying relay equipment, not for managing and
-laying several hundred meters of Ethernet cable with the
-precision required by our project. Additionally, their
+rather than physically deploying cable. Additionally, their
 operational duration and autonomy are limited to short-term
 scenarios, making them unsuitable for sustained, dynamic cable
 deployment in contested environments.
-Although this is a short-term solution, high-altitude balloons
-pose another longer-lasting option. These balloon-borne relays
-can function as beyond-line-of-sight (BLoS) communication
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Although this is a short-term solution, 
+high-altitude balloons pose another longer-lasting option. These 
+balloon-borne relayscan function as beyond-line-of-sight (BLoS) communication
 nodes, providing connectivity in environments where satellite
 communications might be compromised or insufficient. A
 helium-filled latex weather balloon, for example, can ascend to
 altitudes of up to 100,000 feet. At such elevations, the balloon
 operates well above weather systems and typical air traffic,
 offering an extensive coverage footprint that can exceed 600
-miles in diameter. Despite their relatively low cost (each unit,
-along with the helium required for deployment, typically runs
-only a few hundred dollars) these systems can be paired with a
-compact yet capable payload to create a highly cost-effective
-alternative for sustained communication relays. However,
-relays. Although these balloons offer impressive coverage and
+miles in diameter. Although these balloons offer impressive coverage and
 affordability, they are not designed for precise, on-demand
 cable deployment. Their operation is heavily influenced by
 weather conditions, and they lack the capability to navigate
 rugged, GPS-denied terrain [4].
-Another alternative option could be unmanned aerial
-vehicles (UAVs) specifically designed for cable deployment.
-An example is the BOREY 20 Fixed-Wing UAV, which flies a
-preplanned route to deploy a lightweight and durable Ethernet
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another alternative option 
+could be unmanned aerial vehicles (UAVs). The BOREY 20 Fixed-Wing UAV, 
+which flies a preplanned route to deploy a lightweight and durable Ethernet
 cable. This system employs advanced navigation techniques,
 such as mapping LiDAR or visual-based navigation, to ensure
-precise positioning along the route. The UAV’s ability to
-autonomously follow a predetermined path and adjust for
-obstacles makes it an effective tool for establishing a hardwired
-communication link. Although the deployment of physical
-cables using UAVs requires meticulous planning, especially to
-avoid obstacles and maintain cable integrity, the approach
-offers the advantage of creating a secure, jam-resistant
-connection in environments where traditional RF
-communications are unreliable [5]. While these UAVs offer the
+precise positioning along the route[5]. While these UAVs offer the
 physical mechanism for deploying cable, they typically rely on
 preprogrammed flight paths and GPS navigation, which are
 problematic in contested or GPS-denied environments.
