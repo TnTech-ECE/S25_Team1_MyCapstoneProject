@@ -160,17 +160,20 @@ collisions.
 
 #### V. CONSTRAINTS
 
-The material cost of CirceBot shall not exceed the outlined
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The material cost of CirceBot shall not exceed the outlined
 budget, and any excess funds will remain or be returned to
 Tennessee Tech University.
-The construction and use of CirceBot shall, as is appropriate,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The construction and use of CirceBot shall, as is appropriate,
 comply with OSHA, ANSI/RIA, and ISO robotic safety
 standards.[10]
-The manufacturing, testing, and eventual implementation of
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The manufacturing, testing, and eventual implementation of
 CirceBot shall not negatively impact the general public on
 Tennessee Tech University campus or in the surrounding
 Cookeville, TN area.
-The designing and construction of CirceBot shall follow any
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The designing and construction of CirceBot shall follow any
 additional standards, if any, supplied by the client or campus.
 
 #### VI. SURVEY OF EXISTING RESOURCES
@@ -323,30 +326,34 @@ Table [1]: Tentative Expenses for Construction
 
 #### X. PERSONNEL
 
-Instructor: Micah Rentschler is the instructor for this project
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor: Micah Rentschler is the instructor for this project
 and shall meet with our team weekly to answer any questions
-
-
 our group has. He will also be present for certain meetings with
 the project client.
-Supervisor/Advisor: Dr. Van Neste was chosen to be our
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor/Advisor: Dr. Van Neste was chosen to be our
 supervisor because he is a good researcher and is very
 knowledgeable with capstone projects.
-Kamden: Kamden knows how to work with both AutoCAD
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kamden: Kamden knows how to work with both AutoCAD
 and Revit. He also knows how to use fusion 360, solder,
 perform troubleshooting, and is familiar with programming.
 Wayne: Wayne’s strongest areas are in hardwiring and
 troubleshooting, but he is also familiar with power and
 programming.
-Evan: Evan knows how to work with batteries and wiring.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evan: Evan knows how to work with batteries and wiring.
 He is also experienced in organization and customer
 interaction.
-Cooper: Cooper has experience in AutoCAD and C++. He is
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cooper: Cooper has experience in AutoCAD and C++. He is
 also passingly familiar with SmartPlant/Smart3D.
-Conner: Conner knows how to perform hardwiring and
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conner: Conner knows how to perform hardwiring and
 design. He also has some experience with 3D modeling in
 Revit.
-Any skills that are required for the project, but are not
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any skills that are required for the project, but are not
 included in the above, will be acquired by consulting with both
 the team supervisor and client advisors, and through personal
 research and study.
