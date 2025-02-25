@@ -31,7 +31,7 @@ advancement in autonomous military engineering applications.
 
 
 Keywords — Collision Detection, Sensors, Design.
-
+___
 #### I. INTRODUCTION
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In modern military and defense operations, maintaining
@@ -62,15 +62,13 @@ advanced navigation techniques, semi-autonomous control, and
 robust cable-handling mechanisms, the CIRCE system aims to
 enhance operational efficiency while minimizing risk to
 personnel in contested environments.
-
+___
 #### II. FORMULATING THE PROBLEM
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The problem at hand here is that we currently do not have a reliable and consistent tool to install a hard wired communication system in an area where radio frequency is denied and is too dangerous to send a soldier/technician in to complete the task by hand. This raises the question of how one can overcome this. Hard wired communications are typically used in scenarios where high security and consistent performance are imperative [Evan 1.]. This is exactly the scenario we have here and the robot's job will be to get the wire from point A to point B without placing a human in harm's way. 
   #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By designing a semi autonomous robot with the capability of traversing mild terrain to lay down a line of cable, shall accomplish the ideas listed above. The challenges involved in reaching a solution to this problem are, but not limited to: traversing rough terrain, having the ability to navigate in a GPS denied zone and obstacle avoidance. 
  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Why is there not already a solution to this problem? While there are many cable laying robots out there both aerial and on the ground, very few carry the cable itself. This means while many existing robots are dragging cable behind it, CIRCEBOT intends to dispense from a spool. Also, few robots are autonomous meaning that the existing robots require someone to control it like an RC car. Those that are autonomous are not hard wired and rely on GPS solely to navigate. The solution we present combines many of the robots already in existence for this service. The intention is to build something that is hard wired that simply receives inputs and goes to them without having to be controlled. While one can combine many of the existing solutions out there today, the biggest hurdle will be implementing a navigation system for GPS denied areas.
-
-
-
+___
 #### III. BACKGROUND
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The professional counterpart to this project is modern subsea
@@ -124,7 +122,7 @@ manner, maintaining proper tension, and avoiding tangles or
 dragging the cable along behind it [9]. While one can combine many of the existing solutions out there
 today, the biggest hurdle will be implementing a navigation
 system for GPS-denied areas.
-
+___
 #### IV. SPECIFICATIONS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall be designed to receive and execute commands
@@ -139,7 +137,6 @@ tension tolerances.
 It shall be equipped with an independent power source
 capable of at least 20 minutes of operation in Tennessee
 environments.
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall transmit real-time data, including current
 position, current velocity, meters of cable left, heading, battery
@@ -160,7 +157,7 @@ allow for easy reloading and quick replacement of Ethernet
 cable reels within 2 minutes, without the use of external tools.
 CirceBot shall use minor obstacle avoidance to avoid
 collisions.
-
+___
 #### V. CONSTRAINTS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The material cost of CirceBot shall not exceed the outlined
@@ -178,7 +175,7 @@ Cookeville, TN area.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The designing and construction of CirceBot shall follow any
 additional standards, if any, supplied by the client or campus.
-
+___
 #### VI. SURVEY OF EXISTING RESOURCES
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Existing solutions to this problem could be but are not
@@ -232,7 +229,7 @@ to meet Ethernet cable installation guidelines. This can lead to
 issues such as tangling, improper strain relief, or misalignment,
 which our project specifically aims to overcome with a
 dedicated, hardwired approach.
-
+___
 #### VII. MEASURES OF SUCCESS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Measures of success will vary and evolve with time, research and a gained understanding of the task and its specifics; however, we can measure success by the accomplishments of the robot itself. 
@@ -247,7 +244,7 @@ dedicated, hardwired approach.
 Overall success can be measured by the number of
 specifications the robot achieves.
 .
-
+___
 #### VIII. RESOURCES
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To successfully design and implement this project, the team
@@ -282,7 +279,7 @@ the correct operation of the navigation subsystem of CirceBot.
 The team remains committed to ongoing learning and
 refinement, ensuring that the project meets both technical
 requirements and stakeholder expectations.
-
+___
 #### IX. BUDGET
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our capstone project, we are developing a self-
@@ -326,7 +323,7 @@ Table [1]: Tentative Expenses for Construction
 |                           | Unforeseen Expenses          | 1        | 210           | 210            |
 | **Subtotal**              |                            |          |               | 210            |
 | **Total Budget**          |                            |          |               | 2000           |
-
+___
 #### X. PERSONNEL
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor: Micah Rentschler is the instructor for this project
@@ -360,7 +357,7 @@ Revit.
 included in the above, will be acquired by consulting with both
 the team supervisor and client advisors, and through personal
 research and study.
-
+___
 #### XI. TIMELINE
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our capstone project, we have this semester to design a
@@ -380,7 +377,7 @@ to spend a few weeks in September and October
 troubleshooting any issues that come up during the build
 process to ensure everything runs smoothly from design to
 deployment.
-
+___
 #### XII. SPECIFIC IMPLICATIONS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementing the CIRCE system provides several
@@ -429,7 +426,7 @@ system significantly improves mission effectiveness. The
 combined benefits of enhanced safety, operational reliability,
 and cost savings make the CIRCE system a compelling
 investment for modern tactical operations.
-
+___
 #### XIII. BROADER IMPLICATIONS
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIRCEBOT would highly improve communications which is vitally important to getting a task complete efficiently, meaning productivity would increase and less injuries would occur. Since more is getting done in less time that means we have less deployed personnel, which can save taxpayer dollars. To build on the cost of these robots, it is an initial investment to configure, build and implement; however, their maintenance is much lower than that of a human being. According to the army press a soldier can cost anywhere from 50,000 to 100,000 to employ and maintain in the US. Over time the robot would be drastically less from year to year. [Evan 2.]
@@ -438,7 +435,7 @@ investment for modern tactical operations.
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the robot becomes a success it could be seen in many other applications, such as running wire underground in mines, subways, or utility scenarios. In this case it could keep people out of cramped and dangerous positions as well as create a market for these robots, boosting the economy. It could potentially create jobs both building the robots and running them as well.
 
 
-
+___
 #### XIV. STATEMENT OF CONTRIBUTIONS
 
 Wayne Marcrum: Researched and wrote the background and
@@ -456,7 +453,7 @@ and understanding what the customer wanted. A budget was
 drawn up later as more of a guideline and is liable to change. A
 timeline was formed as a prediction of when we suspect things
 to be done.
-
+___
 #### XV. REFERENCES
 
 [1] Lenovo, The Essential Guide to Understanding Hardwired
