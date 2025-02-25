@@ -379,45 +379,45 @@ deployment.
 
 #### XII. SPECIFIC IMPLICATIONS
 
-Implementing the CIRCE system provides several
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementing the CIRCE system provides several
 significant benefits that directly address the challenges
 encountered in tactically contested environments:
-Restoration of Reliable Communications:
-By deploying a dedicated hardwired Ethernet link, the system
+ #### Restoration of Reliable Communications:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By deploying a dedicated hardwired Ethernet link, the system
 maintains a continuous connection between the stationary asset
 and centralized Command and Control (C2) even when RF
 communications are disrupted by jamming or interference. This
 uninterrupted data link is crucial for ensuring the proper
 functioning of mission-critical operations.
-Enhanced Safety for Personnel:
-Rather than exposing personnel to high-risk scenarios—such as
+ #### Enhanced Safety for Personnel:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rather than exposing personnel to high-risk scenarios—such as
 manually laying cables through contested areas—the
 autonomous CirceBot performs the cable installation. This
 approach minimizes human exposure to enemy threats and
 hazardous conditions, thereby enhancing overall operational
 safety and reducing the risk of injury.
-Precision and Efficiency in Cable Deployment:
-The integrated CirceSoft application leverages real-time
+ #### Precision and Efficiency in Cable Deployment:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The integrated CirceSoft application leverages real-time
 telemetry and field imagery to compute an optimal cable route
 that adheres to best installation practices. By considering
 factors such as proper curve radii, strain relief, tension
 tolerances, and potential environmental hazards, the system
 minimizes installation errors and delays, ensuring that the cable
 is deployed accurately and maintains its operational integrity.
-Operational Adaptability:
-Equipped with advanced navigation algorithms that function in
+ #### Operational Adaptability:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Equipped with advanced navigation algorithms that function in
 GPS-denied environments, the CirceBot can reliably operate
 across a range of terrains and conditions. This versatility allows
 the system to be effectively deployed in various tactical
 scenarios, increasing its overall utility.
-Cost Efficiency and Reduced Risk:
-Automating the cable installation process decreases the reliance
+ #### Cost Efficiency and Reduced Risk:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Automating the cable installation process decreases the reliance
 on manual labor in high-risk settings, which not only cuts labor
 costs but also minimizes the financial and operational risks
 associated with personnel injury or mission failure. Over time,
 these savings contribute to improved operational readiness and
 reduced long-term expenditures.
-In summary, the CIRCE system represents a robust, secure
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In summary, the CIRCE system represents a robust, secure
 solution for restoring communications in contested
 environments. By ensuring continuous connectivity, enhancing
 personnel safety, and optimizing installation accuracy, the
