@@ -127,7 +127,7 @@ system for GPS-denied areas.
 
 #### IV. SPECIFICATIONS
 
-CirceBot shall be designed to receive and execute commands
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall be designed to receive and execute commands
 in the format supplied in the CirceSoft2CirceBot.proto spec
 from CirceSoft, and transmit telemetry data in the
 CirceBot2CirceSoft.proto spec to CirceSoft. It shall accept
@@ -139,7 +139,9 @@ tension tolerances.
 It shall be equipped with an independent power source
 capable of at least 20 minutes of operation in Tennessee
 environments.
-CirceBot shall transmit real-time data, including current
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall transmit real-time data, including current
 position, current velocity, meters of cable left, heading, battery
 life percentage, and error codes if any occur.
 It shall receive Next Position waypoints and navigate to the
@@ -149,7 +151,8 @@ of Ethernet cable and report error codes via self-diagnosis.
 It shall be rechargeable, send and receive commands at a
 minimum frequency of 10 Hz, and communicate with CirceSoft
 using the WebSocket protocol.
-CirceBot shall have a switch to simulate GPS-denied
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall have a switch to simulate GPS-denied
 environments and will communicate using the deployed
 Ethernet cable. (Review)
 It shall stop once the specified destination is reached and
@@ -282,7 +285,7 @@ requirements and stakeholder expectations.
 
 #### IX. BUDGET
 
-For our capstone project, we are developing a self-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our capstone project, we are developing a self-
 autonomous robot designed to deploy cables efficiently and
 autonomously. This project requires a budget of $2000, which
 will cover essential materials such as microcontrollers, sensors,
@@ -360,7 +363,7 @@ research and study.
 
 #### XI. TIMELINE
 
-For our capstone project, we have this semester to design a
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our capstone project, we have this semester to design a
 self-autonomous cable-deploying robot. Our first internal
 deadline is to have the initial design concept ready by mid-
 March. By the end of April, we aim to select and order all the
@@ -369,7 +372,8 @@ we'll refine our design and make sure everything is
 documented properly. By July, we want to have the final
 design completed and all the documentation ready for the
 Mechanical Engineering (ME) team.
-Starting in September, the ME team will kick off the
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Starting in September, the ME team will kick off the
 physical build of the robot. We'll be working closely with
 them to answer any questions and adjust as needed. We expect
 to spend a few weeks in September and October
