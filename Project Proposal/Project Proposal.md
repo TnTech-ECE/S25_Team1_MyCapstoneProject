@@ -200,6 +200,7 @@ rather than physically deploying cable. Additionally, their
 operational duration and autonomy are limited to short-term
 scenarios, making them unsuitable for sustained, dynamic cable
 deployment in contested environments.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Although this is a short-term solution, 
 high-altitude balloons pose another longer-lasting option. These 
 balloon-borne relayscan function as beyond-line-of-sight (BLoS) communication
@@ -214,6 +215,7 @@ affordability, they are not designed for precise, on-demand
 cable deployment. Their operation is heavily influenced by
 weather conditions, and they lack the capability to navigate
 rugged, GPS-denied terrain [4].
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another alternative option 
 could be unmanned aerial vehicles (UAVs). The BOREY 20 Fixed-Wing UAV, 
 which flies a preplanned route to deploy a lightweight and durable Ethernet
