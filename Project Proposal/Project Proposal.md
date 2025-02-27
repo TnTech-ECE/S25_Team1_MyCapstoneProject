@@ -44,7 +44,8 @@ Robot for Contested Environments (CIRCE), a semi-
 autonomous robot designed to deploy Ethernet cables and
 restore communication links without exposing any human to
 unnecessary risk.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The CIRCE system will consist of three core components:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The CIRCE system will consist of three core components:
 CirceBot, the cable installation robot responsible for physically
 deploying the cable; CirceSoft, the path planning software that
 guides CirceBot’s movements; and a hardline-based
@@ -52,7 +53,8 @@ communication interface that enables telemetry transmission
 and control without reliance on radio frequency signals. The
 system is designed to function in GPS-denied environments
 while ensuring precise cable installation.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This proposal outlines the technical approach, design
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This proposal outlines the technical approach, design
 methodology, and expected outcomes for the CIRCE system.
 The primary objectives include developing a robotic platform
 capable of autonomously navigating to waypoints, deploying
@@ -65,9 +67,12 @@ personnel in contested environments.
 ___
 #### II. FORMULATING THE PROBLEM
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The problem at hand here is that the customer currently does not have a reliable and consistent tool to install a hard wired communication system in an area where radio frequency is denied and is too dangerous to send a soldier/technician in to complete the task by hand. This raises the question of how one can overcome this. Hard wired communications are typically used in scenarios where high security and consistent performance are imperative [Evan 1.]. This is exactly the scenario at hand and the robot's job will be to get the wire from point A to point B without placing a human in harm's way. 
-  #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By designing a semi autonomous robot with the capability of traversing mild terrain to lay down a line of cable, it shall accomplish the ideas listed above. The challenges involved in reaching a solution to this problem are, but not limited to: traversing rough terrain, having the ability to navigate in a GPS denied zone and obstacle avoidance. 
- #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Why is there not already a solution to this problem? While there are many cable laying robots out there both aerial and on the ground, very few carry the cable itself. This means while many existing robots are dragging cable behind it, CIRCEBOT intends to dispense from a spool. Also, few robots are autonomous meaning that the existing robots require someone to control it like an RC car. Those that are autonomous are not hard wired and rely on GPS solely to navigate. The intended solution combines many of the robots already in existence for this service. The goal is to build something that is hard wired, which receives inputs and traverses to them without having to be controlled. While one can combine many of the existing solutions out there today, the biggest hurdle will be implementing a navigation system for GPS denied areas.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The customer currently lacks a reliable tool for installing hard-wired communication systems in environments where radio frequency is denied, and conditions are too hazardous for human interaction. Hard-wired communication is essential for high-security and mission-critical applications, making an automated solution necessary.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIRCEBOT is a semi-autonomous robot designed to lay Ethernet cables across mild terrain without human involvement. Key challenges include navigating GPS-denied areas, traversing rough terrain, and avoiding obstacles.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Existing cable-laying robots either drag cables behind them or require manual operation, often relying on GPS for navigation. CIRCEBOT aims to overcome these limitations by autonomously deploying cable from a spool and using a navigation system that does not depend on GPS. The primary challenge lies in implementing a robust navigation system for GPS-denied environments. 
+
 ___
 #### III. BACKGROUND
 
@@ -197,22 +202,20 @@ capability to navigate rugged, GPS-denied terrain [4].
 deploy lightweight Ethernet cables using advanced navigation methods such as LiDAR. Nevertheless, 
 their dependence on preprogrammed flight paths and GPS, along with imprecise cable management, creates 
 challenges for proper Ethernet installation. This project addresses these issues through a dedicated, 
-hardwired approach.
+hardwired approach [5].
 ___
 #### VII. MEASURES OF SUCCESS
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Measures of success will vary and evolve with time, research and a gained understanding of the task and its specifics; however, we can measure success by the accomplishments of the robot itself. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. The robot shall move. More specifically it should traverse obstacles and carry approximately 10lbs. This could take place on the  president's lawn with obstacles in the way of its destination where it then must either go around or go over. Success can be  measured by  the robot traversing the shortest distance within  reason, while not damaging itself (e.g. flipping over). 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. The robot shall not need any assistance while on its mission. It shall not need help traversing obstacles, going in the correct &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction or stopping where intended. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. The robot shall be self reporting. This includes but is not limited to speed, location and battery life. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. Overall success can be measured by the number of specifications (see above specifications section)that the robot achieves. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. Reliability and ease of use will also be examined during the testing phase to make sure that the machine works consistently for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the average soldier.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Success will be defined by the robot's ability to complete its tasks effectively and reliably. As research progresses, these measures may evolve, but the following criteria will serve as key indicators:  
 
+1. **Mobility & Load Capacity** – The robot must traverse obstacles while carrying approximately 10 lbs. It should navigate efficiently without flipping over or sustaining damage.  
+2. **Autonomy** – The robot must complete its mission without human intervention, including obstacle navigation, directional control, and stopping at the intended location.  
+3. **Self-Reporting** – It should provide real-time data on speed, location, and battery life.  
+4. **Specification Compliance** – Success will be measured by how many design specifications the robot meets.  
+5. **Reliability & Ease of Use** – The system should function consistently and be user-friendly for soldiers in the field.  
 
+The overall success of CIRCEBOT will be determined by its ability to meet these criteria under real-world conditions.  
 
-Overall success can be measured by the number of
-specifications the robot achieves.
-.
 ___
 #### VIII. RESOURCES
 
@@ -298,34 +301,30 @@ ___
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor: Micah Rentschler is the instructor for this project
 and shall meet with our team weekly to answer any questions
 our group has. He will also be present for certain meetings with
-the project client.
+the customer.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor/Advisor: Dr. Van Neste was chosen to be our
-supervisor because he is a good researcher and is very
-knowledgeable with capstone projects.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor/Advisor: Dr. Van Neste was chosen to be the
+supervisor for this project. He is a good researcher and is very
+knowledgeable with many aspects of this capstone project.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kamden: Kamden knows how to work with both AutoCAD
-and Revit. He also knows how to use fusion 360, solder,
-perform troubleshooting, and is familiar with programming.
-Wayne: Wayne’s strongest areas are in hardwiring and
-troubleshooting, but he is also familiar with power and
-programming.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Customer: Devcom is the customer for CIRCEBOT. As a prominent military contractor they are very familiar with projects such as this and will be a great asset to acquire the necessary knowledge to accomplish the goal. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evan: Evan knows how to work with batteries and wiring.
-He is also experienced in organization and customer
-interaction.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kamden: knows how to work with both AutoCAD and Revit. He also knows how to use fusion 360, solder, perform troubleshooting, and is familiar with programming.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cooper: Cooper has experience in AutoCAD and C++. He is
-also passingly familiar with SmartPlant/Smart3D.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wayne: strongest areas are in hardwiring and troubleshooting, but he is also familiar with power and programming.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conner: Conner knows how to perform hardwiring and
-design. He also has some experience with 3D modeling in
-Revit.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Evan:knows how to work with batteries and wiring. He is also experienced in organization and customer interaction.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cooper: has experience in AutoCAD and C++. He is also passingly familiar with SmartPlant/Smart3D.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Connor: knows how to perform hardwiring and design. He also has some experience with 3D modeling in Revit.
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any skills that are required for the project, but are not
 included in the above, will be acquired by consulting with both
 the team supervisor and client advisors, and through personal
 research and study.
+
 ___
 #### XI. TIMELINE
 
@@ -390,10 +389,12 @@ reduced long-term expenditures.
 ___
 #### XIII. BROADER IMPLICATIONS
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIRCEBOT would highly improve communications which is vitally important to getting a task complete efficiently, meaning productivity would increase and less injuries would occur. Since more is getting done in less time that means we have less deployed personnel, which can save taxpayer dollars. To build on the cost of these robots, it is an initial investment to configure, build and implement; however, their maintenance is much lower than that of a human being. According to the army press a soldier can cost anywhere from 50,000 to 100,000 to employ and maintain in the US. Over time the robot would be drastically less from year to year. [Evan 2.]
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ethically speaking this can greatly mitigate risk to personnel. It is much easier to replace a robot than a human being. In this case the robot is not working towards taking human life, but simply getting communication lines up, so the argument that robots cannot determine the difference between combatants and civilians is negligible. One could say that communications could aid in negotiations and agreements without conflict all while never putting a friendly in harm's way. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our ethical duty as engineers is to ensure that this robot does its job correctly the first time. If it were to fail mid mission it could potentially leave crucial information out of the fight that could result in human loss. 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the robot becomes a success it could be seen in many other applications, such as running wire underground in mines, subways, or utility scenarios. In this case it could keep people out of cramped and dangerous positions as well as create a market for these robots, boosting the economy. It could potentially create jobs both building the robots and running them as well.
+#### 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIRCEBOT will significantly enhance communication efficiency, increasing productivity while reducing injuries. By automating cable deployment in hazardous environments, fewer personnel are needed, lowering operational risks and saving taxpayer dollars. Although there is an initial investment in development and deployment, maintenance costs are far lower than those associated with human personnel. According to Army reports, a soldier costs between **$50,000 and $100,000 annually**, whereas CIRCEBOT's long-term expenses will be drastically lower.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From an ethical standpoint, CIRCEBOT mitigates risk to personnel by replacing human operators in dangerous environments. Unlike autonomous combat systems, its sole purpose is to establish secure communication lines, supporting coordination and potentially aiding in conflict resolution without endangering friendly forces. As engineers, it is our responsibility to ensure the robot functions reliably—any failure mid-mission could result in critical communication breakdowns, potentially leading to loss of life.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Beyond military applications, CIRCEBOT could be adapted for use in **mining, subways, and utility infrastructure**, reducing human exposure to hazardous and confined spaces. This innovation could stimulate economic growth by creating new markets and job opportunities in the manufacturing, deployment, and maintenance of autonomous cable-laying robots.  
 
 
 ___
