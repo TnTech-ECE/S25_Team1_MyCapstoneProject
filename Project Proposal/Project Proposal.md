@@ -298,26 +298,22 @@ Table [1]: Tentative Expenses for Construction
 ___
 #### X. PERSONNEL
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor: Micah Rentschler is the instructor for this project
-and shall meet with our team weekly to answer any questions
-our group has. He will also be present for certain meetings with
-the customer.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor: Micah Rentschler, the instructor for this project, will meet with the team weekly to address any questions and attend certain meetings with the customer.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor/Advisor: Dr. Van Neste was chosen to be the
-supervisor for this project. He is a good researcher and is very
-knowledgeable with many aspects of this capstone project.
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor/Advisor: Dr. Van Neste, chosen as the supervisor for this project, is a knowledgeable researcher with expertise in various aspects of the capstone project.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Customer: Devcom is the customer for CIRCEBOT. As a prominent military contractor they are very familiar with projects such as this and will be a great asset to acquire the necessary knowledge to accomplish the goal. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kamden: knows how to work with both AutoCAD and Revit. He also knows how to use fusion 360, solder, perform troubleshooting, and is familiar with programming.
+###### Team Members
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wayne: strongest areas are in hardwiring and troubleshooting, but he is also familiar with power and programming.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kamden: Proficient in AutoCAD and Revit. Also skilled in Fusion 360, soldering, troubleshooting, and programming.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Evan:knows how to work with batteries and wiring. He is also experienced in organization and customer interaction.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wayne: Expertise in hardwiring and troubleshooting, with knowledge in power systems and programming.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cooper: has experience in AutoCAD and C++. He is also passingly familiar with SmartPlant/Smart3D.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Evan: Experienced with batteries, wiring, organization, and customer interaction.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Connor: knows how to perform hardwiring and design. He also has some experience with 3D modeling in Revit.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cooper: Proficient in AutoCAD and C++, with basic knowledge of SmartPlant/Smart3D.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Connor: Skilled in hardwiring, design, and 3D modeling in Revit.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any skills that are required for the project, but are not
