@@ -166,7 +166,7 @@ ___
 #### V. CONSTRAINTS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The material cost of CirceBot shall not exceed the outlined
-budget, and any excess funds will remain or be returned to
+budget, and any excess funds shall remain or be returned to
 Tennessee Tech University.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The construction and use of CirceBot shall, as is appropriate,
