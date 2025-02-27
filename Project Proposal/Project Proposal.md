@@ -301,7 +301,8 @@ ___
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instructor: Micah Rentschler, the instructor for this project, will meet with the team weekly to address any questions and attend certain meetings with the customer.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supervisor/Advisor: Dr. Van Neste, chosen as the supervisor for this project, is a knowledgeable researcher with expertise in various aspects of the capstone project.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Customer: Devcom is the customer for CIRCEBOT. As a prominent military contractor they are very familiar with projects such as this and will be a great asset to acquire the necessary knowledge to accomplish the goal. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Customer: Devcom is the customer for CIRCEBOT. As a prominent military contractor they are very familiar with projects such as this and will be a great asset to acquire the necessary knowledge to accomplish the goal. 
 
 ###### Team Members
 
