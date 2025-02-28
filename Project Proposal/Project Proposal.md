@@ -137,7 +137,7 @@ using the WebSocket protocol.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall have a switch to simulate GPS-denied
 environments and will communicate using the deployed
-Ethernet cable. (Review)
+Ethernet cable.
 It shall stop once the specified destination is reached and
 allow for easy reloading and quick replacement of Ethernet
 cable reels within 2 minutes, without the use of external tools.
