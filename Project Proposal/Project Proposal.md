@@ -118,7 +118,7 @@ CirceBot2CirceSoft.proto spec to CirceSoft. It shall accept
 planned paths in the specified format and follow those paths to
 its objective.
 CirceBot shall dispense cable according to installation
-guidelines, including proper curve radiuses, strain relief, and
+guidelines, including proper curve radii, strain relief, and
 tension tolerances.
 It shall be equipped with an independent power source
 capable of at least 20 minutes of operation in Tennessee
