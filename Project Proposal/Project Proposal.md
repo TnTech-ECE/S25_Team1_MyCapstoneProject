@@ -293,7 +293,9 @@ research and study.
 ___
 #### XI. TIMELINE
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the capstone project, the team has this semester to design a self-autonomous cable-deploying robot. The first internal deadline is to have the initial design concept ready by mid-March. By the end of April, the team aims to select and order all the necessary components. Through May and the early summer, the team will refine the design and ensure everything is documented properly. By July, the final design should be completed and all the documentation ready for the Mechanical Engineering (ME) team.
+![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Project-Proposal/Project%20Proposal/Team_1_Gantt_Chart.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the capstone project, the team has this semester to design a self-autonomous cable-deploying robot. The first internal deadline is to have the initial design concept ready by mid-March. By the end of April, the team aims to select and order all the necessary components. Through May and the early summer, the team will refine the design and ensure everything is documented properly. By August, the final design should be completed and all the documentation ready for the Mechanical Engineering (ME) team.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Starting in September, the ME team will begin the physical build of the robot. The project team will work closely with the ME team to answer any questions and make adjustments as needed. A few weeks in September and October will be dedicated to troubleshooting any issues that arise during the build process to ensure everything runs smoothly from design to deployment.
 ___
