@@ -364,12 +364,7 @@ resources, specific implications, and revisions.
 Cooper McFarlane: Contributed to the constraints and
 personnel.
 #### 
-Kamden: Specifications, budget, and timeline. I spent time
-formulating specifications after our team’s meeting in person
-and understanding what the customer wanted. A budget was
-drawn up later as more of a guideline and is liable to change. A
-timeline was formed as a prediction of when we suspect things
-to be done.
+Kamden: Contributed to specifications, budget, timeline, and revisions.
 ___
 #### XV. REFERENCES
 
