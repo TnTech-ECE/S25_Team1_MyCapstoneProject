@@ -100,26 +100,7 @@ ensuring accurate cable routing while also avoiding obstacles
 and potential sabotage. Military-grade systems also employ
 countermeasures against jamming or physical interference,
 which will be considered in the design of CirceBot’s navigation
-and security protocols [7].
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Achieving this goal will require integrating multiple
-engineering disciplines, including robotics, mechanical design,
-embedded systems, and strategic deployment. University
-students working on CirceBot will gain valuable experience in
-automation, robotics, and sensor integration, fostering an
-interest in emerging technologies in military infrastructure and
-autonomous warfare support [8].
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The primary objective of CirceBot is to autonomously route
-and lay cables in dynamic and contested environments.
-Multiple solutions exist for achieving this goal. The system’s
-navigation and tracking component may utilize cameras,
-ultrasonic sensors, or infrared mapping tools to assess terrain
-and adjust its path dynamically [8]. This data will be processed
-by an onboard microcontroller or embedded computing system,
-such as a Raspberry Pi, allowing seamless communication
-between sensors, motors, and cable deployment mechanisms
-[8].
+and security protocols [7]. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A crucial design consideration is the cable management
 system itself. The cable must be deployed in a controlled
