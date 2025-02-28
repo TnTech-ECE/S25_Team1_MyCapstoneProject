@@ -235,7 +235,7 @@ requirements and stakeholder expectations.
 ___
 #### IX. BUDGET
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the capstone project, a self-autonomous robot is being developed to deploy cables efficiently and autonomously. The project requires a budget of $2000, which will cover essential materials such as microcontrollers, sensors, motors, wheels, a chassis, a cable deployment mechanism, and a battery pack. Additionally, the budget will account for software and development tools, including licenses and simulation software, as well as costs for prototyping and testing materials like 3D printing supplies and PCB manufacturing. Although university resources are provided, funds will be allocated for any additional equipment required for the project. A contingency fund is also included to address any unforeseen expenses, ensuring the successful completion of the project within the given budget constraints.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the capstone project, a self-autonomous robot is being developed to deploy cables efficiently and autonomously. The project requires a budget of $2000, which will cover essential materials such as microcontrollers, sensors, motors, wheels, a chassis, a cable deployment mechanism, and a battery pack. Additionally, the budget will account for software and development tools, including licenses and simulation software, as well as costs for prototyping and testing materials like 3D printing supplies and PCB manufacturing. A contingency fund is also included to address any unforeseen expenses, ensuring the successful completion of the project within the given budget constraints.
 
 Table [1]: Tentative Expenses for Construction
 
