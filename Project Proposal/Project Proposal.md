@@ -235,20 +235,7 @@ requirements and stakeholder expectations.
 ___
 #### IX. BUDGET
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For our capstone project, we are developing a self-
-autonomous robot designed to deploy cables efficiently and
-autonomously. This project requires a budget of $2000, which
-will cover essential materials such as microcontrollers, sensors,
-motors, wheels, a chassis, a cable deployment mechanism, and
-a battery pack. Additionally, the budget will account for
-software and development tools, including licenses and
-simulation software, as well as costs for prototyping and testing
-materials like 3D printing supplies and PCB manufacturing.
-Although university resources are provided, we will allocate
-funds for any additional equipment required for the project.
-Lastly, a contingency fund is included to address any
-unforeseen expenses, ensuring the successful completion of the
-project within the given budget constraints.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the capstone project, a self-autonomous robot is being developed to deploy cables efficiently and autonomously. The project requires a budget of $2000, which will cover essential materials such as microcontrollers, sensors, motors, wheels, a chassis, a cable deployment mechanism, and a battery pack. Additionally, the budget will account for software and development tools, including licenses and simulation software, as well as costs for prototyping and testing materials like 3D printing supplies and PCB manufacturing. Although university resources are provided, funds will be allocated for any additional equipment required for the project. A contingency fund is also included to address any unforeseen expenses, ensuring the successful completion of the project within the given budget constraints.
 
 Table [1]: Tentative Expenses for Construction
 
@@ -367,12 +354,16 @@ ___
 Wayne Marcrum: Researched and wrote the background and
 resources portions, as well as formatted the paper into IEEE
 with revisions.
+#### 
 Evan Winnie: Contributed to formulating the problem,
 measures of success, broader implications and ethics, revisions.
+#### 
 Connor Graves: Contributed to introduction, survey of
 resources, specific implications, and revisions.
+#### 
 Cooper McFarlane: Contributed to the constraints and
 personnel.
+#### 
 Kamden: Specifications, budget, and timeline. I spent time
 formulating specifications after our team’s meeting in person
 and understanding what the customer wanted. A budget was
