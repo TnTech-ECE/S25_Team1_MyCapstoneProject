@@ -150,7 +150,7 @@ ___
 budget, and any excess funds shall remain or be returned to
 Tennessee Tech University.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall comply with relevant safety standards, including OSHA, ANSI/RIA, and ISO robotic safety standards, to ensure safe operation and minimize risk. Compliance will involve adhering to guidelines on hazard identification, risk assessment, emergency stop functions, and workspace safety to protect users and operators.[10]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall comply with relevant safety standards, including specific OSHA standards such as OSHA 29 CFR 1910 Subpart O (Machinery and Machine Guarding) and OSHA 29 CFR 1910.212 (General requirements for all machines). Additionally, compliance with ANSI/RIA R15.06 (Industrial Robots and Robot Systems - Safety Requirements) and ISO 10218 (Safety Requirements for Industrial Robots) will ensure safe operation and minimize risk. Compliance will involve adhering to guidelines on hazard identification, risk assessment, emergency stop functions, and workspace safety to protect users and operators.[10]
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The manufacturing, testing, and implementation of CirceBot shall be conducted in a manner that ensures no harm or disruption to the general public on Tennessee Tech University’s campus or the surrounding Cookeville, TN area. This includes measures to prevent excessive noise, emissions, physical hazards, or interference with pedestrian and vehicular traffic.
 
