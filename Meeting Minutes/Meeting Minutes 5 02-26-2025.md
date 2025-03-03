@@ -30,7 +30,7 @@ Kamden - This week, the team worked hard on getting the proposal top notch so we
 
 Wayne - This week I worked on finishing adjustments to the paper based on peer review as well as looking towards the conceptual design.
 
-Cooper -
+Cooper - I edited my sections in the project proposal and discussed the design project with the team.
 
 ## Meeting Minutes (Summary)
 
@@ -48,4 +48,4 @@ Kamden - Next week, I am hopeful to have the proposal pass the review phase and 
 
 Wayne - In the coming week I plan to finish the proposal and start/complete a conceptual design. I will also work on the presentation for the DEVCOM meeting.
 
-Cooper -
+Cooper - I plan to work with the team on the design project.
