@@ -161,24 +161,29 @@ ___
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Existing solutions to this problem could be but are not
 limited to, autonomous UAVs (Unmanned Aerial Vehicle), Tethered drones, and High-Altitude 
-Loitering Relay (HAPS or Balloon-Based), yet none fully meet the CirceBot’s specifications. 
-For instance, tethered drones like the Orion Heavy Lift support variable-height antennas to 
+Loitering Relay (HAPS or Balloon-Based), yet none fully meet the CirceBot’s specifications.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For instance, tethered drones like the Orion Heavy Lift support variable-height antennas to 
 extend secure mobile networks by relaying communications between centralized command and contested 
 assets. Although capable of carrying a 4 kg payload at about 90 meters for up to 50 hours [3], they are 
-built for aerial relaying rather than continuous cable deployment.
+built for aerial relaying rather than continuous cable deployment. This alternative fails to meet
+specifications such as physical deployment of 100 yards of ethernet cable, communication through
+the cable it is deploying, exceeding the $2000 dollar maximum, etc. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High-altitude balloons offer a longer-lasting alternative 
 as beyond-line-of-sight communication nodes when satellite links fall short. A helium-filled 
 weather balloon can ascend to 100,000 feet and cover over 600 miles in diameter. Although these 
 balloons offer impressive coverage and affordability, they are not designed for precise, on-demand 
-cable deployment. Their operation is heavily influenced by weather conditions, and they lack the 
-capability to navigate rugged, GPS-denied terrain [4].
+cable deployment. This alternative fails to meet the specificationssuch as physical deployment of the 
+cable, communication through the cable, rechargable battery, etc. Their operation is also heavily 
+influenced by weather conditions, and they lack the capability to navigate rugged, GPS-denied areas [4].
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unmanned aerial vehicles, like the BOREY 20 Fixed-Wing UAV, can 
 deploy lightweight Ethernet cables using advanced navigation methods such as LiDAR. Nevertheless, 
-their dependence on preprogrammed flight paths and GPS, along with imprecise cable management, creates 
-challenges for proper Ethernet installation. This project addresses these issues through a dedicated, 
-hardwired approach [5].
+their dependence on preprogrammed flight paths, along with imprecise cable management, creates 
+challenges for proper Ethernet installation [5]. This approach also fails to meeet specifications such as the
+ability to navigate in GPS denied environemtns (as they use GPS to fly their path), exceeding the $2000 maximum, communication through the 
+cable, etc.
 ___
 #### VII. MEASURES OF SUCCESS
 
