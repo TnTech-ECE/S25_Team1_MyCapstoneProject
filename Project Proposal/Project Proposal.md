@@ -110,39 +110,44 @@ today, the biggest hurdle will be implementing a navigation
 system for GPS-denied areas.
 ___
 #### IV. SPECIFICATIONS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The specifications for CirceBot are given directly from the customer and are as follows:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall be designed to receive and execute commands
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. CirceBot shall be designed to receive and execute commands
 in the format supplied in the CirceSoft2CirceBot.proto spec
 from CirceSoft, and transmit telemetry data in the
 CirceBot2CirceSoft.proto spec to CirceSoft. It shall accept
 planned paths in the specified format and follow those paths to
 its objective.
-CirceBot shall dispense cable according to installation
-guidelines, including proper curve radii, strain relief, and
-tension tolerances.
-It shall be equipped with an independent power source
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. CirceBot shall dispense cable according to installation
+guidelines, including proper curve radii (minimum 4 times the width of the cable), strain relief (strain should not exceed 25 pounds or 110 nextons), and
+tension tolerances which are important to maintain the integrity of the signal through the wire.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.CirceBot shall be equipped with an independent power source
 capable of at least 20 minutes of operation in Tennessee
 environments.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall transmit real-time data, including current
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. CirceBot shall transmit real-time data, including current
 position, current velocity, meters of cable left, heading, battery
 life percentage, and error codes if any occur.
 It shall receive Next Position waypoints and navigate to the
 next waypoint.
-CirceBot shall carry up to 100 yards (approximately 10 lbs)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. CirceBot shall carry up to 100 yards (approximately 10 lbs)
 of Ethernet cable and report error codes via self-diagnosis.
 It shall be rechargeable, send and receive commands at a
 minimum frequency of 10 Hz, and communicate with CirceSoft
 using the WebSocket protocol.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall have a switch to simulate GPS-denied
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6. CirceBot shall have a switch to simulate GPS-denied
 environments and will communicate using the deployed
 Ethernet cable.
-It shall stop once the specified destination is reached and
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7. CirceBot shall stop once the specified destination is reached and
 allow for easy reloading and quick replacement of Ethernet
 cable reels within 2 minutes, without the use of external tools.
-CirceBot shall use minor obstacle avoidance to avoid
-collisions.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. CirceBot shall use minor obstacle avoidance to avoid
+collisions meaning that if a stick, root, or rock is in the way the robot should navigate around it to avoid damaging itself.
 ___
 #### V. CONSTRAINTS
 
