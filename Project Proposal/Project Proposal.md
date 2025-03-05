@@ -153,15 +153,15 @@ collisions meaning that if a stick, root, or rock is in the way the robot should
 ___
 #### V. CONSTRAINTS
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The material cost of CirceBot shall not exceed the outlined
+* The material cost of CirceBot shall not exceed the outlined
 budget, and any excess funds shall remain or be returned to
 Tennessee Tech University.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CirceBot shall comply with relevant safety standards, including specific OSHA standards such as OSHA 29 CFR 1910 Subpart O (Machinery and Machine Guarding) and OSHA 29 CFR 1910.212 (General requirements for all machines). Additionally, compliance with ANSI/RIA R15.06 (Industrial Robots and Robot Systems - Safety Requirements) and ISO 10218 (Safety Requirements for Industrial Robots) will ensure safe operation and minimize risk. Compliance will involve adhering to guidelines on hazard identification, risk assessment, emergency stop functions, and workspace safety to protect users and operators.[10]
+* CirceBot shall comply with relevant safety standards, including specific OSHA standards such as OSHA 29 CFR 1910 Subpart O (Machinery and Machine Guarding) and OSHA 29 CFR 1910.212 (General requirements for all machines). Additionally, compliance with ANSI/RIA R15.06 (Industrial Robots and Robot Systems - Safety Requirements) and ISO 10218 (Safety Requirements for Industrial Robots) will ensure safe operation and minimize risk. Compliance will involve adhering to guidelines on hazard identification, risk assessment, emergency stop functions, and workspace safety to protect users and operators.[10]
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The manufacturing, testing, and implementation of CirceBot shall be conducted in a manner that ensures no harm or disruption to the general public on Tennessee Tech University’s campus or the surrounding Cookeville, TN area. This includes measures to prevent excessive noise, emissions, physical hazards, or interference with pedestrian and vehicular traffic.
+* The manufacturing, testing, and implementation of CirceBot shall be conducted in a manner that ensures no harm or disruption to the general public on Tennessee Tech University’s campus or the surrounding Cookeville, TN area. This includes measures to prevent excessive noise, emissions, physical hazards, or interference with pedestrian and vehicular traffic.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additionally, the design and construction of CirceBot shall align with any supplementary standards or requirements specified by the client or campus authorities to ensure operational safety and regulatory compliance.
+* Additionally, the design and construction of CirceBot shall align with any supplementary standards or requirements specified by the client or campus authorities to ensure operational safety and regulatory compliance.
 ___
 #### VI. SURVEY OF EXISTING RESOURCES
 
