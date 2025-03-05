@@ -148,6 +148,8 @@ cable reels within 2 minutes, without the use of external tools.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8. CirceBot shall use minor obstacle avoidance to avoid
 collisions meaning that if a stick, root, or rock is in the way the robot should navigate around it to avoid damaging itself.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9. The budget for CirceBot shall not exceed a maximum of $2,000. 
 ___
 #### V. CONSTRAINTS
 
