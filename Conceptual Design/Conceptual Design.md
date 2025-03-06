@@ -163,6 +163,12 @@
 - **Earth-Centered Earth-Fixed (ECEF) coordinate system**.
 - **Hall sensors** for additional positioning data.
 
+## **Hard wired communication**
+- CirceBot will use Ethernet for bidirectional communication with CirceSoft, transmitting telemetry data while receiving navigational commands.
+- The WebSocket protocol will be employed over the Ethernet link, ensuring low-latency, real-time data exchange.
+- Telemetry data will include CirceBot’s GPS coordinates (when available), velocity, cable length deployed, heading, battery status, and error codes.
+- CirceBot will receive waypoints and navigation instructions from CirceSoft, allowing for precise path execution.
+
 ## **Operating System**
 - Candidates: **Arduino, Raspberry Pi**.
 
