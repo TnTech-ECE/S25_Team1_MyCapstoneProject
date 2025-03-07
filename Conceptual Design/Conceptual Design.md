@@ -252,7 +252,7 @@
 |                           | Battery Pack                 | 1 pack        | 40              | 40             |
 |                           | Cable Deployment Mechanism     | 1        | 150           | 150            |
 |                           | Miscellaneous Hardware (nuts, bolts, etc.) | Various | 30 | 30             |
-| **Subtotal**              |                            |          |               | 590            |
+| **Subtotal**              |                            |          |               | 543            |
 | **Software and Development Tools** |                   |          |               |                |
 |                           | Development Software Licenses | 2        | 100           | 200            |
 |                           | Simulation Software (3D Modeling) | 1    | 200           | 200            |
@@ -263,9 +263,9 @@
 |                           | Testing Equipment (multimeters, special devices) | 2 | 75 | 150 |
 | **Subtotal**              |                            |          |               | 400            |
 | **Contingency Fund**      |                            |          |               |                |
-|                           | Unforeseen Expenses          | 1        | 210           | 210            |
-| **Subtotal**              |                            |          |               | 210            |
-| **Total Budget**          |                            |          |               | 2000           |
+|                           | Unforeseen Expenses          | 1        | 210           | 157            |
+| **Subtotal**              |                            |          |               | 157            |
+| **Total Budget**          |                            |          |               | 1500           |
 - Personnel and Division of Labor
   -   The following are the members of Team 1 and their skills. After comparing the skills available to the skills required for specific subsystems, the team members have been assigned to work on the subsystems they’re most suited for.
     - Kamden: Proficient in AutoCAD and Revit. Also skilled in Fusion 360, soldering, troubleshooting, and programming. He will be in charge of Microcontroller Subsystem due to his prior knowledge and enthusiasm in that area.
