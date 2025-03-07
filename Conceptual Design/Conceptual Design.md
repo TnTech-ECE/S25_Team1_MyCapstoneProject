@@ -245,7 +245,7 @@
 | Category                  | Item                       | Quantity | Unit Cost ($) | Total Cost ($) |
 |---------------------------|----------------------------|----------|---------------|----------------|
 | **Materials and Components** |                            |          |               |                |
-|                           | Microcontroller (e.g., Arduino) | 1        | 50            | 50             |
+|                           | Microcontroller (Arduino Mega 2560) | 1        | 50            | 50             |
 |                           | Sensors (e.g., Ultrasonic, IR) | 10       | 10            | 100            |
 |                           | Motors (e.g., DC, Servo)       | 2        | 61.50            | 123            |
 |                           | Wheels and Chassis             | 1 set    | 50            | 50             |
