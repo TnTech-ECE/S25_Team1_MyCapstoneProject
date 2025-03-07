@@ -240,7 +240,32 @@
 ---
 
 # Resources
-- Budget
+- Table [1]: Tentative Expenses for Construction
+
+| Category                  | Item                       | Quantity | Unit Cost ($) | Total Cost ($) |
+|---------------------------|----------------------------|----------|---------------|----------------|
+| **Materials and Components** |                            |          |               |                |
+|                           | Microcontroller (e.g., Arduino) | 1        | 50            | 50             |
+|                           | Sensors (e.g., Ultrasonic, IR) | 10       | 10            | 100            |
+|                           | Motors (e.g., DC, Servo)       | 2        | 61.50            | 123            |
+|                           | Wheels and Chassis             | 1 set    | 50            | 50             |
+|                           | Battery Pack                 | 1 pack        | 40              | 40             |
+|                           | Cable Deployment Mechanism     | 1        | 150           | 150            |
+|                           | Miscellaneous Hardware (nuts, bolts, etc.) | Various | 30 | 30             |
+| **Subtotal**              |                            |          |               | 590            |
+| **Software and Development Tools** |                   |          |               |                |
+|                           | Development Software Licenses | 2        | 100           | 200            |
+|                           | Simulation Software (3D Modeling) | 1    | 200           | 200            |
+| **Subtotal**              |                            |          |               | 400            |
+| **Prototyping and Testing** |                          |          |               |                |
+|                           | 3D Printing Materials        | Various  | 100           | 100            |
+|                           | Prototype PCB Manufacturing  | 3        | 50            | 150            |
+|                           | Testing Equipment (multimeters, special devices) | 2 | 75 | 150 |
+| **Subtotal**              |                            |          |               | 400            |
+| **Contingency Fund**      |                            |          |               |                |
+|                           | Unforeseen Expenses          | 1        | 210           | 210            |
+| **Subtotal**              |                            |          |               | 210            |
+| **Total Budget**          |                            |          |               | 2000           |
 - Personnel and Division of Labor
   -   The following are the members of Team 1 and their skills. After comparing the skills available to the skills required for specific subsystems, the team members have been assigned to work on the subsystems they’re most suited for.
     - Kamden: Proficient in AutoCAD and Revit. Also skilled in Fusion 360, soldering, troubleshooting, and programming. He will be in charge of Microcontroller Subsystem due to his prior knowledge and enthusiasm in that area.
