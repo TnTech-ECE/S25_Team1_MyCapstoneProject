@@ -296,4 +296,4 @@ Everyone will fill their own section.
 - Connor:
 - Kamden:
 - Wayne:
-- Cooper: 
+- Cooper: Personnel and Division of Labor. Drivetrain/motor.
