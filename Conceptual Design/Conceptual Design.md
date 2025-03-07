@@ -179,8 +179,10 @@
 - The ENC28J60 Ethernet module will be used with the Arduino Mega 2560 since the board does not have a native Ethernet port. This module allows the Arduino to establish a reliable wired Ethernet connection for communication, enabling the robot to receive position controls and send telemetry data over the network. The ENC28J60’s low power consumption and compatibility with the Arduino make it a suitable choice for this application.
 
 ## **Drive train/motors**
-- A 150 Watt brushed DC motor with a no load rpm of 3800 RPM has a torque of 0.2780 lb-ft or 0.3769173896 N-m.
-- The microcontroller will communicate to the motor(s) the speeds and torque needed to follow the designated path CirceBot.
+- Two SD1 24V 75W motors each capable of running at 6500 rpm and with a continuous torque of 0.11 N-m will be used to move the drivetrain of CirceBot. This motor was chosen due to meeting the power consumption listed in the drivetrain portion of the Power System section above. This is the best estimate possible given the current understanding. 
+- The motors have a length of 119 mm, a width of 64 mm, and a height of 90.8 mm.
+- Each motor weighs 1.22 kg resulting in a total weight of 2.44 kg.
+- The microcontroller will communicate to the motors the speeds and torque needed to follow the designated path.
 - Size of the drivetrain will be dependent on the eventual size of CirceBot as well as the final positioning of the motors.
 
 ## **Robot Chassis**
@@ -284,6 +286,7 @@
 - [Connor 1] **IEEE 802.** IEEE Standards Association, 3 June 2024. [Link](https://standards.ieee.org/featured/ieee-802/)
 - [Connor 2] **MIL-STD-882**. Assist-Quicksearch Document Details. [Link](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=36027)
 - [Evan 1] **What Is a PDM, and Why Do You Need One?** High Performance Academy. [Link](https://www.hpacademy.com/technical-articles/what-is-a-pdm-and-why-do-you-need-one/)
+- [Cooper 1] Parvalux Electric Motors. “SD1 Series 24V 75W - Parvalux.” Parvalux, 30 Oct. 2023, www.parvalux.com/us/product/sd1-series-24v-75w/?_gl=1*t9l1zi*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxm5cI-RFO4i9wmA9od3oKgfd7h6p5X4irmzQD5_Ylo81-l9e4qac-UaAipNEALw_wcB.
 
 ---
 
