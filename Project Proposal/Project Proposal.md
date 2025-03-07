@@ -114,6 +114,8 @@ ___
 
 - **CirceBot shall be designed** to receive and execute commands in the format supplied in the *CirceSoft2CirceBot.proto* spec from CirceSoft and transmit telemetry data in the *CirceBot2CirceSoft.proto* spec to CirceSoft. It shall accept planned paths in the specified format and follow those paths to its objective.
 
+- **CirceBot shall be designed** to operate in a radio frequency denied zone, meaning that the communication system cannot be jammed by a contesting force. 
+
 - **CirceBot shall dispense cable** according to installation guidelines, including:
   - Proper curve radii (minimum 4 times the width of the cable).
   - Strain relief (strain should not exceed 25 pounds or 110 newtons).
@@ -153,15 +155,15 @@ Tennessee Tech University.
 
 * CirceBot shall comply with relevant safety standards, including specific OSHA standards such as OSHA 29 CFR 1910 Subpart O (Machinery and Machine Guarding) and OSHA 29 CFR 1910.212 (General requirements for all machines). Additionally, compliance with ANSI/RIA R15.06 (Industrial Robots and Robot Systems - Safety Requirements) and ISO 10218 (Safety Requirements for Industrial Robots) will ensure safe operation and minimize risk. Compliance will involve adhering to guidelines on hazard identification, risk assessment, emergency stop functions, and workspace safety to protect users and operators.[10]
 
-  - ANSI/TIA-568.2-D: This standard specifies that for unshielded twisted-pair (UTP) cables, the minimum bend radius should be four times the cable's outer diameter.
+  - CirceBot shall adhere to ANSI/TIA-568.2-D: This standard specifies that for unshielded twisted-pair (UTP) cables, the minimum bend radius should be four times the cable's outer diameter. 
  
-  - ANSI/TIA-568.2-D: This standard emphasizes the importance of proper strain relief to prevent mechanical stress on cables, which can lead to performance degradation or failure. Implementing strain relief mechanisms, such as boots or bushings, helps maintain the integrity of the cable by preventing excessive bending and pulling forces.
+  - CirceBot shall adhere to ANSI/TIA-568.2-D: This standard emphasizes the importance of proper strain relief to prevent mechanical stress on cables, which can lead to performance degradation or failure. Implementing strain relief mechanisms, such as boots or bushings, helps maintain the integrity of the cable by preventing excessive bending and pulling forces.
  
-  - ANSI/TIA-568.2-D: This standard provides guidelines on the maximum pulling tension for Ethernet cables during installation. While specific tension tolerances can vary based on the cable manufacturer and type, a general guideline is to avoid exceeding a pulling tension of 25 pounds (110 Newtons) during installation. Exceeding this tension can cause stretching or damage to the cable, leading to signal degradation.
+  - CirceBot shall adhere to ANSI/TIA-568.2-D: This standard provides guidelines on the maximum pulling tension for Ethernet cables during installation. While specific tension tolerances can vary based on the cable manufacturer and type, a general guideline is to avoid exceeding a pulling tension of 25 pounds (110 Newtons) during installation. Exceeding this tension can cause stretching or damage to the cable, leading to signal degradation.
  
-  - ANSI/TIA-568.2-D: This standard specifies the maximum allowable length for twisted-pair Ethernet cables in standard networking applications. The maximum length is defined as 109 yards (328 feet or approximately 100 meters), beyond which signal attenuation, latency, and packet loss can degrade network performance. To extend connectivity beyond this limit, additional hardware such as repeaters, switches, or fiber optic solutions are required. For this project it is intended to stick with the initial 100 yards.
+  - CirceBot shall adhere to ANSI/TIA-568.2-D: This standard specifies the maximum allowable length for twisted-pair Ethernet cables in standard networking applications. The maximum length is defined as 109 yards (328 feet or approximately 100 meters), beyond which signal attenuation, latency, and packet loss can degrade network performance. To extend connectivity beyond this limit, additional hardware such as repeaters, switches, or fiber optic solutions are required. For this project it is intended to stick with the initial 100 yards.
  
-  - ANSI/RIA R15.08: This standard establishes safety requirements for autonomous mobile robots (AMRs), including obstacle detection and avoidance. It defines acceptable sensor technologies, response times, and stopping distances to ensure safe operation in dynamic environments.
+  - CirceBot shall adhere to ANSI/RIA R15.08: This standard establishes safety requirements for autonomous mobile robots (AMRs), including obstacle detection and avoidance. It defines acceptable sensor technologies, response times, and stopping distances to ensure safe operation in dynamic environments.
 
 * The manufacturing, testing, and implementation of CirceBot shall be conducted in a manner that ensures no harm or disruption to the general public on Tennessee Tech University’s campus or the surrounding Cookeville, TN area. This includes measures to prevent excessive noise, emissions, physical hazards, or interference with pedestrian and vehicular traffic.
 
