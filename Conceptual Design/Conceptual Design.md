@@ -160,8 +160,11 @@
 - Based off the above numbers the battery should be **no less than 12V with a 9Ah rating**. 
 
 ## **Navigation**
-- **Earth-Centered Earth-Fixed (ECEF) coordinate system**.
-- **Hall sensors** for additional positioning data.
+- Instead of relying on GPS, CIRCE operates within the ECEF coordinate system, which represents positions relative to the Earth's center, allowing for precise localization without satellite signals.
+- CIRCE tracks its movement by integrating accelerometer and gyroscope data within the ECEF frame, continuously updating its position without requiring external positioning signals.
+- Hall effect sensors detect wheel or motor rotations, providing real-time speed and distance traveled, which can be used to refine position estimates within the ECEF system.
+- By combining Hall sensor data with inertial measurement unit (IMU) readings, CIRCE can estimate its position relative to a known starting point, maintaining accurate navigation in GPS-denied environments.
+- CIRCE continuously transmits speed and positional data to the user through a hardline connection, ensuring real-time monitoring without radio frequency dependence.
 
 ## **Hardwired Communication**
 - CirceBot will use Ethernet for bidirectional communication with CirceSoft, transmitting telemetry data while receiving navigational commands.
@@ -170,11 +173,22 @@
 - CirceBot will receive waypoints and navigation instructions from CirceSoft, allowing for precise path execution.
 
 ## **Operating System**
-- Candidates: **Arduino, Raspberry Pi**.
+- The Arduino Mega 2560 is the ideal microcontroller for this Ethernet cable-laying robot due to its extensive 54 digital I/O pins, including 15 PWM outputs and 16 analog inputs, allowing seamless integration of multiple sensors, motor controllers, and other peripherals without the need for additional multiplexing. Unlike smaller Arduino boards, the Mega 2560 provides four hardware serial ports (UARTs), which enable efficient communication with external modules such as motor drivers, sensor arrays, or even a wireless control system, reducing the risk of timing issues associated with software serial implementations.
+- Another key advantage is its 8 KB of SRAM and 256 KB of flash memory, which ensures sufficient space for handling complex control algorithms, sensor data processing, and real-time decision-making. Compared to a Raspberry Pi, which runs a full operating system and requires higher power consumption, the Arduino Mega operates on a deterministic execution model—meaning that its code runs in real time without the risk of unexpected delays or crashes caused by background processes. This reliability is crucial for a robotics application where precise motor control and sensor feedback are required. Additionally, the Arduino Mega 2560 consumes significantly less power, making it well-suited for battery-powered operations in field environments, whereas a Raspberry Pi would require additional power management solutions and may introduce unnecessary complexity. Ultimately, the Mega 2560’s combination of high I/O capacity, real-time processing, multiple UARTs, and low power consumption makes it the superior choice for this project.
+- The Arduino Mega 2560 was preferred over the Raspberry Pi and Jetson Nano primarily due to its simplicity, reliability, and power efficiency. While the Raspberry Pi and Jetson Nano offer greater computational power, they also come with the overhead of running a full operating system, which can introduce delays and increase power consumption. The Arduino, on the other hand, operates with a deterministic execution model, ensuring real-time performance that is critical for controlling motors and processing sensor data without interruptions. Additionally, the Arduino Mega’s low power consumption is ideal for battery-operated systems like this robot, where extended runtime and minimal complexity are essential, while the Raspberry Pi and Jetson Nano would require more power management and potentially complicate the design.
+- The ENC28J60 Ethernet module will be used with the Arduino Mega 2560 since the board does not have a native Ethernet port. This module allows the Arduino to establish a reliable wired Ethernet connection for communication, enabling the robot to receive position controls and send telemetry data over the network. The ENC28J60’s low power consumption and compatibility with the Arduino make it a suitable choice for this application.
 
-## **Robot Chassis & Cable Laying Device**
-- To be designed by **Mechanical Engineering team**.
+## **Drive train/motors**
+- A 150 Watt brushed DC motor with a no load rpm of 3800 RPM has a torque of 0.2780 lb-ft or 0.3769173896 N-m.
+- The microcontroller will communicate to the motor(s) the speeds and torque needed to follow the designated path CirceBot.
+- Size of the drivetrain will be dependent on the eventual size of CirceBot as well as the final positioning of the motors.
 
+## **Robot Chassis**
+- The robot chassis will ultimately be up to the design of the Mechanical Engineering team. They will use the specifications given to construct a durable and capable platform to host the power system, operating system, motors, and cable laying device. 
+
+
+## **Cable Laying Device**
+- Again this will likely be left up to the Mechanical Engineering team, so that they can better develop the correct materials and hardware to ensure a durable and capable system.
 ---
 
 # Ethical, Professional, and Standards Considerations
@@ -247,3 +261,8 @@
 
 # Statement of Contribution
 Everyone will fill their own section.
+- Evan: Overall revisions. Power system. Formatting and elaboration of formulating the problem. Organization.
+- Connor:
+- Kamden:
+- Wayne:
+- Cooper: 
