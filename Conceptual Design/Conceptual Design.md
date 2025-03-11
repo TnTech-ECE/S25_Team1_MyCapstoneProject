@@ -190,6 +190,12 @@ Given the complexity of this project and the need for strong teamwork, a divide-
 
 ## **Cable Laying Device**
 - Again this will likely be left up to the Mechanical Engineering team, so that they can better develop the correct materials and hardware to ensure a durable and capable system.
+
+## **Hardware Block Diagram**
+![Hardware Block Diagram](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Conceptual-Design/Conceptual%20Design/Hardware%20Block%20Diagram.png)
+## **Operation Flow Diagram**
+![Operation Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Conceptual-Design/Conceptual%20Design/Operation%20Flow%20Chart.png)
+
 ---
 
 # Ethical, Professional, and Standards Considerations
@@ -293,6 +299,6 @@ Power management is another critical aspect. With a minimum operation time of 20
 Everyone will fill their own section.
 - Evan: Overall revisions. Power system. Formatting and elaboration of formulating the problem. Organization.
 - Connor: Overall revisions, Introduction, Broader Impacts, and Hardwire Connection.
-- Kamden:
+- Kamden: Overall revisions, microcontroller, diagrams, formating markdown.
 - Wayne:
 - Cooper: Personnel and Division of Labor. Drivetrain/motor.
