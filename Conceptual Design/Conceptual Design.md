@@ -292,6 +292,10 @@ Power management is another critical aspect. With a minimum operation time of 20
 - [2] **MIL-STD-882**. Assist-Quicksearch Document Details. [Link](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=36027)
 - [3] **What Is a PDM, and Why Do You Need One?** High Performance Academy. [Link](https://www.hpacademy.com/technical-articles/what-is-a-pdm-and-why-do-you-need-one/)
 - [4] Parvalux Electric Motors. “SD1 Series 24V 75W - Parvalux.” Parvalux, 30 Oct. 2023, www.parvalux.com/us/product/sd1-series-24v-75w/?_gl=1*t9l1zi*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxm5cI-RFO4i9wmA9od3oKgfd7h6p5X4irmzQD5_Ylo81-l9e4qac-UaAipNEALw_wcB.
+- [5] Telecommunications Industry Association. ANSI/TIA-568.2-D: Balanced Twisted-Pair Telecommunications Cabling and Components Standard. 2018. https://tiaonline.org/.
+- [6] National Fire Protection Association. NFPA 70: National Electrical Code. 2023. https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70.
+- [7] Leick, Alfred, et al. GPS Satellite Surveying. 4th ed., Wiley, 2015. (This book is available for purchase or via institutional access at Wiley: https://www.wiley.com/en-us/GPS+Satellite+Surveying%2C+4th+Edition-p-9781118675571)
+- [8] Clynch, James R. "Earth Coordinates: Transformations and Applications." Naval Postgraduate School, Feb. 2006. https://www.ngs.noaa.gov/CORS/Articles/EarthCoordinates.pdf.
 
 ---
 
@@ -299,6 +303,6 @@ Power management is another critical aspect. With a minimum operation time of 20
 Everyone will fill their own section.
 - Evan: Overall revisions. Power system. Formatting and elaboration of formulating the problem. Organization.
 - Connor: Overall revisions, Introduction, Broader Impacts, and Hardwire Connection.
-- Kamden: Overall revisions, microcontroller, diagrams, formating markdown.
-- Wayne:
+- Kamden: Overall revisions, microcontroller, diagrams, formatting markdown.
+- Wayne: Overall revisions, ECEF coordinate system, Introduction, Fully Formulating the Problem, Design Requirements and Constraints, Comparative Analysis of Solutions.
 - Cooper: Personnel and Division of Labor. Drivetrain/motor.
