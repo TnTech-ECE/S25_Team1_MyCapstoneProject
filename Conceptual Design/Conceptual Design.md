@@ -1,23 +1,22 @@
 # Introduction
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In modern military and defense operations, maintaining reliable communication is critical for effective command and control. However, in contested environments where radio frequency (RF) communications are disrupted or unreliable, alternative methods are necessary to establish secure and persistent connectivity.
+In modern military and defense operations, maintaining reliable communication is critical for effective command and control. However, in contested environments where radio frequency (RF) communications are disrupted or unreliable, alternative methods are necessary to establish secure and persistent connectivity.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Cable Installation Robot for Contested Environments (CIRCE) is a semi-autonomous robotic system designed to deploy Ethernet cables, restoring communication links while minimizing risk to personnel. CIRCE consists of three primary components: CirceBot, the robotic platform responsible for physically deploying the cable; CirceSoft, the path-planning software that directs CirceBot’s movements; and a hardline communication interface, which enables telemetry transmission and control without relying on RF signals.
+The Cable Installation Robot for Contested Environments (CIRCE) is a semi-autonomous robotic system designed to deploy Ethernet cables, restoring communication links while minimizing risk to personnel. CIRCE consists of three primary components: CirceBot, the robotic platform responsible for physically deploying the cable; CirceSoft, the path-planning software that directs CirceBot’s movements; and a hardline communication interface, which enables telemetry transmission and control without relying on RF signals.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designed for GPS-denied environments, CIRCE ensures precise cable installation while maintaining continuous, secure communication. The system autonomously navigates to designated waypoints, deploys up to 100 yards of Ethernet cable, and maintains real-time telemetry with CirceSoft. By integrating advanced navigation techniques, semi-autonomous control, and a robust cable-handling mechanism, CIRCE enhances operational efficiency and provides a resilient communication solution in contested environments.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By integrating advanced navigation techniques, semi-autonomous control, and a robust cable-handling mechanism, CIRCE enhances operational efficiency and provides a resilient communication solution in contested environments.
+Designed for GPS-denied environments, CIRCE ensures precise cable installation while maintaining continuous, secure communication. The system autonomously navigates to designated waypoints, deploys up to 100 yards of Ethernet cable, and maintains real-time telemetry with CirceSoft. By integrating advanced navigation techniques, semi-autonomous control, and a robust cable-handling mechanism, CIRCE enhances operational efficiency and provides a resilient communication solution in contested environments. By integrating advanced navigation techniques, semi-autonomous control, and a robust cable-handling mechanism, CIRCE enhances operational efficiency and provides a resilient communication solution in contested environments.
 
 ---
 
 # Fully Formulating the Problem
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Establishing reliable communication in contested environments is a significant challenge for military and defense operations. While the inability to use radio frequency (RF) communications is often seen as the primary issue, an equally critical challenge is deploying alternative solutions—such as hardwired connections—without exposing personnel to unnecessary risk. Manual cable installation in hostile or GPS-denied environments is both dangerous and inefficient, making an automated solution highly desirable.
+Establishing reliable communication in contested environments is a significant challenge for military and defense operations. While the inability to use radio frequency (RF) communications is often seen as the primary issue, an equally critical challenge is deploying alternative solutions—such as hardwired connections—without exposing personnel to unnecessary risk. Manual cable installation in hostile or GPS-denied environments is both dangerous and inefficient, making an automated solution highly desirable.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIRCE is designed to address this challenge. Traditional solutions to communication disruptions in contested environments have relied on ad hoc RF workarounds, which are vulnerable to jamming, interference, and detection by adversaries. In contrast, CIRCE provides a robust, hardwired communication deployment system that eliminates these vulnerabilities.
+CIRCE is designed to address this challenge. Traditional solutions to communication disruptions in contested environments have relied on ad hoc RF workarounds, which are vulnerable to jamming, interference, and detection by adversaries. In contrast, CIRCE provides a robust, hardwired communication deployment system that eliminates these vulnerabilities.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By leveraging a semi-autonomous robotic platform, CIRCE efficiently and safely lays Ethernet cables in environments where human-operated solutions would be impractical or hazardous. Unlike manual deployment, which requires personnel to operate in high-risk areas, CIRCE autonomously navigates GPS-denied environments while maintaining precise cable installation under remote guidance. Additionally, by eliminating reliance on RF signals, CIRCE ensures secure and uninterrupted communication links, even in the most challenging operational conditions.
+By leveraging a semi-autonomous robotic platform, CIRCE efficiently and safely lays Ethernet cables in environments where human-operated solutions would be impractical or hazardous. Unlike manual deployment, which requires personnel to operate in high-risk areas, CIRCE autonomously navigates GPS-denied environments while maintaining precise cable installation under remote guidance. Additionally, by eliminating reliance on RF signals, CIRCE ensures secure and uninterrupted communication links, even in the most challenging operational conditions.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The system must meet specific design requirements and constraints to ensure reliable performance in real-world conditions. These specifications, along with the key considerations shaping CIRCE’s development, are critical to creating an effective solution for restoring communication infrastructure in environments where traditional methods fail. The following outlines these requirements, constraints, and their origins:
+The system must meet specific design requirements and constraints to ensure reliable performance in real-world conditions. These specifications, along with the key considerations shaping CIRCE’s development, are critical to creating an effective solution for restoring communication infrastructure in environments where traditional methods fail. The following outlines these requirements, constraints, and their origins:
 
 - CirceBot shall be designed to receive and execute commands in the format supplied in the CirceSoft2CirceBot.proto spec from CirceSoft, and transmit telemetry data in the CirceBot2CirceSoft.proto spec to CirceSoft. It shall accept planned paths in the specified format and follow those paths to its objective. (Disclaimer: CIRCESOFT is the computer science side of this project in which a team will develop said software. The job of the ECE team is to build the robot to receive the inputs from CIRCESOFT)
     - The customer, DEVCOM, has specified that CirceBot shall use their provided software (CIRCESOFT) and format for data telemetry processing and communication.
@@ -95,53 +94,53 @@
 ## Potential Solutions for Obstacle Avoidance
 
 ### **LiDAR-based Obstacle Avoidance**
-- LiDAR systems were considered due to their ability to provide precise 360-degree environmental mapping using laser pulses. LiDAR excels in long-range detection, which is crucial for dynamic obstacle avoidance in outdoor environments. While more expensive and computationally intensive, LiDAR’s superior accuracy, even in varying weather conditions, made it a compelling option. It is particularly effective for detecting obstacles at significant distances, ensuring CIRCE can navigate safely and efficiently.
+LiDAR systems were considered due to their ability to provide precise 360-degree environmental mapping using laser pulses. LiDAR excels in long-range detection, which is crucial for dynamic obstacle avoidance in outdoor environments. While more expensive and computationally intensive, LiDAR’s superior accuracy, even in varying weather conditions, made it a compelling option. It is particularly effective for detecting obstacles at significant distances, ensuring CIRCE can navigate safely and efficiently.
 
 
 ### **Ultrasonic Sensors**
-- Ultrasonic sensors, which use sound waves for distance measurement, offer a low-cost and straightforward solution for obstacle detection. However, they are limited by their shorter range and reduced precision in complex environments. Their performance can also be affected by environmental noise, which reduces their effectiveness in dynamic or noisy surroundings. This is a low complexity and low cost solution that could be used in testing stages. 
+Ultrasonic sensors, which use sound waves for distance measurement, offer a low-cost and straightforward solution for obstacle detection. However, they are limited by their shorter range and reduced precision in complex environments. Their performance can also be affected by environmental noise, which reduces their effectiveness in dynamic or noisy surroundings. This is a low complexity and low cost solution that could be used in testing stages. 
 
 
 ### **Stereo Vision (Camera-based System)**
-- Stereo vision was considered for its ability to mimic human vision, allowing for depth perception and detailed object detection. While it could provide accurate data in well-lit environments, stereo vision requires significant computational power and may struggle in low-light or extreme brightness conditions. Its complexity made it less suitable for CIRCE's operational needs.
+Stereo vision was considered for its ability to mimic human vision, allowing for depth perception and detailed object detection. While it could provide accurate data in well-lit environments, stereo vision requires significant computational power and may struggle in low-light or extreme brightness conditions. Its complexity made it less suitable for CIRCE's operational needs.
 
 ### **Infrared (IR) Sensors**
--  Infrared sensors, using light reflection to detect obstacles, are inexpensive and effective for short-range detection, particularly in varying lighting conditions. However, their range is limited, and they may not detect smaller or transparent objects accurately. Given these limitations, infrared sensors were deemed insufficient for CIRCE's dynamic and varied navigation needs.
+Infrared sensors, using light reflection to detect obstacles, are inexpensive and effective for short-range detection, particularly in varying lighting conditions. However, their range is limited, and they may not detect smaller or transparent objects accurately. Given these limitations, infrared sensors were deemed insufficient for CIRCE's dynamic and varied navigation needs.
 
 ## Potential Solutions for Coordinate System
 
 ### ECEF (Earth-Centered, Earth-Fixed) Coordinate System:
-- The ECEF coordinate system was considered as a potential solution for CIRCE's navigation and positioning needs due to its ability to provide a stable, global frame of reference. ECEF’s use of fixed coordinates relative to the Earth’s center offers high accuracy for long-range positioning, which is particularly useful in outdoor environments. This system’s consistency makes it suitable for global navigation, as it remains fixed in space, regardless of the Earth’s rotation or tilt.
+The ECEF coordinate system was considered as a potential solution for CIRCE's navigation and positioning needs due to its ability to provide a stable, global frame of reference. ECEF’s use of fixed coordinates relative to the Earth’s center offers high accuracy for long-range positioning, which is particularly useful in outdoor environments. This system’s consistency makes it suitable for global navigation, as it remains fixed in space, regardless of the Earth’s rotation or tilt.
 
 ### Geodetic (Latitude, Longitude, Altitude):
-- The traditional geodetic coordinate system was evaluated but ultimately found less suitable for CIRCE's requirements. While it is commonly used for mapping and navigation, it can suffer from inaccuracies in large-scale or long-range applications due to the curvature of the Earth. Additionally, geodetic coordinates require complex conversions and are less efficient for systems requiring real-time updates, especially in large, dynamic environments. This system also typically involves GPS and the use of satellites, which does not meet the specifications of the project.
+The traditional geodetic coordinate system was evaluated but ultimately found less suitable for CIRCE's requirements. While it is commonly used for mapping and navigation, it can suffer from inaccuracies in large-scale or long-range applications due to the curvature of the Earth. Additionally, geodetic coordinates require complex conversions and are less efficient for systems requiring real-time updates, especially in large, dynamic environments. This system also typically involves GPS and the use of satellites, which does not meet the specifications of the project.
 
 ### Local Cartesian Coordinate System:
-- A local Cartesian coordinate system, based on a fixed origin point, was considered as a solution. While this system can offer high accuracy in small, localized areas, it becomes impractical for larger-scale navigation, as it does not provide global consistency. Shifting the origin as the system moves introduces errors that accumulate over time, reducing long-term accuracy and reliability.
+A local Cartesian coordinate system, based on a fixed origin point, was considered as a solution. While this system can offer high accuracy in small, localized areas, it becomes impractical for larger-scale navigation, as it does not provide global consistency. Shifting the origin as the system moves introduces errors that accumulate over time, reducing long-term accuracy and reliability.
 
 ## Potential Solutions for Power Supply:
 
 ### Lithium-ion Battery
-- Lithium-ion batteries were considered due to their high energy density, lightweight design, and ability to provide significant power for extended periods. These batteries are ideal for systems like CIRCE, which require enough power to carry heavy equipment (like 10 lbs of Ethernet), traverse rough terrain (e.g., small roots and branches), and operate computing systems. They can also be recharged easily, making them ideal for repeated use. Lithium-ion batteries are highly efficient, offering the necessary power without adding significant weight. However, they are more costly and require a carefully designed power management system to maximize efficiency and lifespan.
+Lithium-ion batteries were considered due to their high energy density, lightweight design, and ability to provide significant power for extended periods. These batteries are ideal for systems like CIRCE, which require enough power to carry heavy equipment (like 10 lbs of Ethernet), traverse rough terrain (e.g., small roots and branches), and operate computing systems. They can also be recharged easily, making them ideal for repeated use. Lithium-ion batteries are highly efficient, offering the necessary power without adding significant weight. However, they are more costly and require a carefully designed power management system to maximize efficiency and lifespan.
 
 ### Lead-Acid Battery:
-- Lead-acid batteries were considered for their low cost and availability. While they provide a reliable power source, they are much heavier than lithium-ion batteries and have a lower energy density, which could impact CIRCE's mobility and overall performance, especially since it needs to carry around 10 lbs of Ethernet cable while still maintaining adequate torque for traversing small obstacles. Additionally, lead-acid batteries require more maintenance, have a shorter lifespan, and their charging time is significantly longer compared to lithium-ion batteries.
+Lead-acid batteries were considered for their low cost and availability. While they provide a reliable power source, they are much heavier than lithium-ion batteries and have a lower energy density, which could impact CIRCE's mobility and overall performance, especially since it needs to carry around 10 lbs of Ethernet cable while still maintaining adequate torque for traversing small obstacles. Additionally, lead-acid batteries require more maintenance, have a shorter lifespan, and their charging time is significantly longer compared to lithium-ion batteries.
 
 ### Nickel-Metal Hydride (NiMH) Battery:
-- NiMH batteries offer a middle ground between lithium-ion and lead-acid batteries in terms of cost and performance. They are lighter than lead-acid batteries and provide a decent amount of power, but their energy density is lower than lithium-ion batteries. While NiMH could work for CIRCE's needs, it would not provide the same level of runtime or efficiency as lithium-ion batteries, especially when factoring in the required power to run computing systems and maneuver over obstacles. NiMH batteries also have a relatively short lifespan and longer charging times compared to lithium-ion alternatives.
+NiMH batteries offer a middle ground between lithium-ion and lead-acid batteries in terms of cost and performance. They are lighter than lead-acid batteries and provide a decent amount of power, but their energy density is lower than lithium-ion batteries. While NiMH could work for CIRCE's needs, it would not provide the same level of runtime or efficiency as lithium-ion batteries, especially when factoring in the required power to run computing systems and maneuver over obstacles. NiMH batteries also have a relatively short lifespan and longer charging times compared to lithium-ion alternatives.
 
 
 # Chosen Solution
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After careful evaluation, LiDAR was selected for the obstacle avoidance system due to its superior accuracy, long-range detection, and adaptability to varying environmental conditions. Its ability to provide reliable 360-degree mapping makes it the best fit for CIRCE’s complex navigation needs. Similarly, the ECEF coordinate system was chosen for its global consistency, accuracy, and suitability for long-range positioning. Finally, lithium-ion rechargeable batteries were selected as the power supply due to their high energy density, lightweight design, long-lasting power, and rechargeability. Together, these solutions provide the best combination of performance, scalability, and reliability, ensuring CIRCE can navigate effectively and efficiently in dynamic environments.
+After careful evaluation, LiDAR was selected for the obstacle avoidance system due to its superior accuracy, long-range detection, and adaptability to varying environmental conditions. Its ability to provide reliable 360-degree mapping makes it the best fit for CIRCE’s complex navigation needs. Similarly, the ECEF coordinate system was chosen for its global consistency, accuracy, and suitability for long-range positioning. Finally, lithium-ion rechargeable batteries were selected as the power supply due to their high energy density, lightweight design, long-lasting power, and rechargeability. Together, these solutions provide the best combination of performance, scalability, and reliability, ensuring CIRCE can navigate effectively and efficiently in dynamic environments.
 
 
 ---
 
 # High-Level Solution Overview
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given the complexity of this project and the need for strong teamwork, a divide-and-conquer approach is most effective. The robot is structured into distinct subsystems, allowing the team to analyze how each component integrates into the whole. While some subsystems are more simple, others demand more intricate solutions. Each subsystem is assigned to a team member with either an interest or expertise in that area, ensuring efficiency and technical depth. However, the entire team remains available to collaborate and assist as needed, fostering a collective effort toward a cohesive and well-functioning system.
+Given the complexity of this project and the need for strong teamwork, a divide-and-conquer approach is most effective. The robot is structured into distinct subsystems, allowing the team to analyze how each component integrates into the whole. While some subsystems are more simple, others demand more intricate solutions. Each subsystem is assigned to a team member with either an interest or expertise in that area, ensuring efficiency and technical depth. However, the entire team remains available to collaborate and assist as needed, fostering a collective effort toward a cohesive and well-functioning system.
 ## **Power System**
 - Runs on a **lithium-ion battery** (Exact Model TBD). This battery will power the entire robot, which includes the tracks and motors, the microcontroller, all sensors required, operating systems and the cable laying device. 
-- Requires **step-up/step-down transformers** for different power needs. To accomplish running everything off of one battery it is safe to assume that step-up/step-down transformers will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple transformers will be needed. This could be solved with a PDM (power distribution module). This will allow the engineers to regulate voltage to each subsystem, by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses. [Evan 1]
+- Requires **step-up/step-down transformers** for different power needs. To accomplish running everything off of one battery it is safe to assume that step-up/step-down transformers will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple transformers will be needed. This could be solved with a PDM (power distribution module). This will allow the engineers to regulate voltage to each subsystem, by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses[3].
 
 - **Battery Management System (BMS)** will monitor battery activity. This system should only be outputting power and receive no inputs unless being recharged. The battery will have a BMS (battery management system), where it will relay its status such as battery life (%), runtime, and other necessary information to ensure it’s health like temperature. 
 
@@ -179,7 +178,7 @@
 - The ENC28J60 Ethernet module will be used with the Arduino Mega 2560 since the board does not have a native Ethernet port. This module allows the Arduino to establish a reliable wired Ethernet connection for communication, enabling the robot to receive position controls and send telemetry data over the network. The ENC28J60’s low power consumption and compatibility with the Arduino make it a suitable choice for this application.
 
 ## **Drive train/motors**
-- Two SD1 24V 75W motors each capable of running at 6500 rpm and with a continuous torque of 0.11 N-m will be used to move the drivetrain of CirceBot. This motor was chosen due to meeting the power consumption listed in the drivetrain portion of the Power System section above. This is the best estimate possible given the current understanding. 
+- Two SD1 24V 75W motors each capable of running at 6500 rpm and with a continuous torque of 0.11 N-m will be used to move the drivetrain of CirceBot[4]. This motor was chosen due to meeting the power consumption listed in the drivetrain portion of the Power System section above. This is the best estimate possible given the current understanding. 
 - The motors have a length of 119 mm, a width of 64 mm, and a height of 90.8 mm.
 - Each motor weighs 1.22 kg resulting in a total weight of 2.44 kg.
 - The microcontroller will communicate to the motors the speeds and torque needed to follow the designated path.
@@ -219,25 +218,25 @@
 
 # Discussion of Standards that will Influence the Design Process
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The design of the CIRCE system is built on well-established standards and best practices that ensure safety, reliability, and environmental responsibility, all while meeting the tough challenges of contested operational areas. Our team reviewed military, industrial, and environmental guidelines to shape every design decision.
+The design of the CIRCE system is built on well-established standards and best practices that ensure safety, reliability, and environmental responsibility, all while meeting the tough challenges of contested operational areas. Our team reviewed military, industrial, and environmental guidelines to shape every design decision.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Military standards such as MIL-STD-882 have set a high bar for reliability of system safety and risk management[Connor 2]. This standard has led us to include thorough testing, validation, and fail-safe mechanisms so that even under unpredictable battlefield conditions, the system performs reliably, a must when human lives are on the line.
+Military standards such as MIL-STD-882 have set a high bar for reliability of system safety and risk management[2]. This standard has led us to include thorough testing, validation, and fail-safe mechanisms so that even under unpredictable battlefield conditions, the system performs reliably, a must when human lives are on the line.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The team also looked to IEEE standards for guidance in telecommunications and robotics. The IEEE 802 series provided valuable insight in selecting the appropriate hardware and communication protocols to ensure steady data flow, even in frequency-contested environments [Connor 1]. Additionally, recommendations from the IEEE Robotics and Automation Society informed the design of navigation and control systems, enabling the robot to follow its path accurately, even in the absence of traditional GPS signals.
+The team also looked to IEEE standards for guidance in telecommunications and robotics. The IEEE 802 series provided valuable insight in selecting the appropriate hardware and communication protocols to ensure steady data flow, even in frequency-contested environments [1]. Additionally, recommendations from the IEEE Robotics and Automation Society informed the design of navigation and control systems, enabling the robot to follow its path accurately, even in the absence of traditional GPS signals.
 
 ---
 
 # Taking into Account Constraints
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mechanical design takes into account industry best practices for cable installation, such as maintaining proper tension, curvature, and strain relief to prevent damage to the cable and ensure longevity.
+The mechanical design takes into account industry best practices for cable installation, such as maintaining proper tension, curvature, and strain relief to prevent damage to the cable and ensure longevity.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mechanical design also takes into account the requirement to switch out Ethernet cable reels in under 2 minutes, which is driven by the need to minimize exposure time in contested zones, balancing operational efficiency with safety.
+The mechanical design also takes into account the requirement to switch out Ethernet cable reels in under 2 minutes, which is driven by the need to minimize exposure time in contested zones, balancing operational efficiency with safety.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The robot must operate in contested environments, where radio frequency communications are unreliable. The design requires the use of hardline Ethernet for command and control. This change ensures stable and secure data transfer even when the area is heavily contested, reducing risks to personnel by avoiding the need for them to expose themselves to danger.
+The robot must operate in contested environments, where radio frequency communications are unreliable. The design requires the use of hardline Ethernet for command and control. This change ensures stable and secure data transfer even when the area is heavily contested, reducing risks to personnel by avoiding the need for them to expose themselves to danger.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The CIRCE system is designed to operate even when GPS signals are unavailable. The design features a GPS-denial simulation switch and employs LiDAR for navigation, providing a reliable alternative to GPS. This LiDAR-based approach, along with other redundant navigation systems, enables the robot to follow preplanned paths accurately, ensuring that the asset remains under control and its operations stay safe despite the challenges posed by its environment.
+The CIRCE system is designed to operate even when GPS signals are unavailable. The design features a GPS-denial simulation switch and employs LiDAR for navigation, providing a reliable alternative to GPS. This LiDAR-based approach, along with other redundant navigation systems, enables the robot to follow preplanned paths accurately, ensuring that the asset remains under control and its operations stay safe despite the challenges posed by its environment.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Power management is another critical aspect. With a minimum operation time of 20 minutes on an independent power source, the system ensures that there is enough battery life to safely complete tasks or retreat from hazardous situations, thereby protecting both the equipment and the operators.
+Power management is another critical aspect. With a minimum operation time of 20 minutes on an independent power source, the system ensures that there is enough battery life to safely complete tasks or retreat from hazardous situations, thereby protecting both the equipment and the operators.
 
 ---
 
@@ -283,17 +282,17 @@
 
 # References
 
-- [Connor 1] **IEEE 802.** IEEE Standards Association, 3 June 2024. [Link](https://standards.ieee.org/featured/ieee-802/)
-- [Connor 2] **MIL-STD-882**. Assist-Quicksearch Document Details. [Link](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=36027)
-- [Evan 1] **What Is a PDM, and Why Do You Need One?** High Performance Academy. [Link](https://www.hpacademy.com/technical-articles/what-is-a-pdm-and-why-do-you-need-one/)
-- [Cooper 1] Parvalux Electric Motors. “SD1 Series 24V 75W - Parvalux.” Parvalux, 30 Oct. 2023, www.parvalux.com/us/product/sd1-series-24v-75w/?_gl=1*t9l1zi*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxm5cI-RFO4i9wmA9od3oKgfd7h6p5X4irmzQD5_Ylo81-l9e4qac-UaAipNEALw_wcB.
+- [1] **IEEE 802.** IEEE Standards Association, 3 June 2024. [Link](https://standards.ieee.org/featured/ieee-802/)
+- [2] **MIL-STD-882**. Assist-Quicksearch Document Details. [Link](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=36027)
+- [3] **What Is a PDM, and Why Do You Need One?** High Performance Academy. [Link](https://www.hpacademy.com/technical-articles/what-is-a-pdm-and-why-do-you-need-one/)
+- [4] Parvalux Electric Motors. “SD1 Series 24V 75W - Parvalux.” Parvalux, 30 Oct. 2023, www.parvalux.com/us/product/sd1-series-24v-75w/?_gl=1*t9l1zi*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxm5cI-RFO4i9wmA9od3oKgfd7h6p5X4irmzQD5_Ylo81-l9e4qac-UaAipNEALw_wcB.
 
 ---
 
 # Statement of Contribution
 Everyone will fill their own section.
 - Evan: Overall revisions. Power system. Formatting and elaboration of formulating the problem. Organization.
-- Connor:
+- Connor: Overall revisions, Introduction, Broader Impacts, and Hardwire Connection.
 - Kamden:
 - Wayne:
 - Cooper: Personnel and Division of Labor. Drivetrain/motor.
