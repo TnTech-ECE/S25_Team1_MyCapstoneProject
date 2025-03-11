@@ -131,7 +131,7 @@ NiMH batteries offer a middle ground between lithium-ion and lead-acid batteries
 
 
 # Chosen Solution
-After careful evaluation, LiDAR was selected for the obstacle avoidance system due to its superior accuracy, long-range detection, and adaptability to varying environmental conditions. Its ability to provide reliable 360-degree mapping makes it the best fit for CIRCE’s complex navigation needs. Similarly, the ECEF coordinate system was chosen for its global consistency, accuracy, and suitability for long-range positioning. Finally, lithium-ion rechargeable batteries were selected as the power supply due to their high energy density, lightweight design, long-lasting power, and rechargeability. Together, these solutions provide the best combination of performance, scalability, and reliability, ensuring CIRCE can navigate effectively and efficiently in dynamic environments.
+After careful evaluation, LiDAR was selected for the obstacle avoidance system due to its superior accuracy, long-range detection, and adaptability to varying environmental conditions. Its ability to provide reliable 360-degree mapping makes it the best fit for CIRCE’s complex navigation needs. Similarly, the ECEF coordinate system was chosen for its global consistency, accuracy, and suitability for long-range positioning. Finally, lithium-ion rechargeable batteries were selected as the power supply due to their high energy density, lightweight design, long-lasting power, and rechargeability. Together, these solutions provide the best combination of performance, scalability, and reliability, ensuring CIRCE can navigate effectively and efficiently in dynamic environments. As always the progression of research and design may cause deviation from the above designation; however, this is the best path forward given the level of understanding the team currently possesses. 
 
 
 ---
@@ -247,7 +247,7 @@ Power management is another critical aspect. With a minimum operation time of 20
 ---
 
 # Resources
-- Gantt Chart
+- ### See Gantt Chart here: 
 ![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Project-Proposal/Project%20Proposal/Team_1_Gantt_Chart.png)
 ![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Project-Proposal/Project%20Proposal/Team_1_Gantt_Chart_2.png)
 - Table [1]: Tentative Expenses for Construction
