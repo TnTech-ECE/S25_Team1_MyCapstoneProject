@@ -1,48 +1,45 @@
-This is a format to use for meeting minutes each week.
-
-# Day of Week, Month day, 2025
+# Monday, March 10th, 2025
 
 ## Attendance
 
-**In Person** on xx/xx/2025
+**On Teams** on 03/10/2025
 
-1.
-2.
-3.
-4.
-5.
+1. Evan
+2. Connor
+3. Kamden
+4. Wayne
+5. Cooper
 
 ## Key Points
 
-1.
+1. Discussed Progress with DEVCOM in our biweekly meeting.
 
-2.
+2. Discussed with the ME their progress and robot design.
 
-3.
+3. Tracked the time scale of things and the pace of it all.
 
-# Day of Week, Month day, 2025 (use this if there is more than one meeting in a week)
+# Wednesday, March 12th, 2025
 
 ## Attendance
 
-**In Person** on xx/xx/2025
+**In Person** on 03/12/2025
 
-1.
-2.
-3.
-4.
-5.
+1. Evan
+2. Connor
+3. Kamden
+4. Wayne
 
 ## Key Points
 
-1.
+1. Meet with only the ME team to discuss more indepth robot design.
 
-2.
+2. Discussed constraints as well as timeframe of when things would be done.
 
-3.
+3. Worked with ME team to divide which part each side would do.
 
 ## Action Items From Past Meetings
 
-1.
+1. Finish Conceptual design and work with ME team's progress
 
 ## Member Updates
 
@@ -50,25 +47,25 @@ Evan -
 
 Connor -
 
-Kamden -
+Kamden - This week, we made a ton of progress in our design and idea of the project. I think we are on a good track to have something done this semester and next.
 
 Wayne -
 
 Cooper -
 
 ## Meeting Minutes (Summary)
-
+This week, we met twice to really dig in what progress we had on this project. We have now formulated a clearer picture of what we can do with this project and are comfortable working with Devcom and the ME team.
 
 
 ## Action Items for Next Week
 
-For the Team: 1.
+For the Team: 1. Pass the Conceptual Design Review. Enjoy Spring break.
 
 Evan -
 
 Connor -
 
-Kamden -
+Kamden - Enjoy the break, keep researching what the best controller would be, help aid in the robot design and placement of parts.
 
 Wayne -
 
