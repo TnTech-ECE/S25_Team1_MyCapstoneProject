@@ -249,8 +249,8 @@ Power management is another critical aspect. With a minimum operation time of 20
 
 # Resources
 - ### See Gantt Chart here: 
-![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Project-Proposal/Project%20Proposal/Team_1_Gantt_Chart.png)
-![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Project-Proposal/Project%20Proposal/Team_1_Gantt_Chart_2.png)
+![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/main/Project%20Proposal/Team_1_Gantt_Chart.png)
+![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/main/Project%20Proposal/Team_1_Gantt_Chart_2.png)
 - Table [1]: Tentative Expenses for Construction
 
 | Category                  | Item                       | Quantity | Unit Cost ($) | Total Cost ($) |
