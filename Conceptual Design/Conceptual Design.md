@@ -301,7 +301,6 @@ Power management is another critical aspect. With a minimum operation time of 20
 ---
 
 # Statement of Contribution
-Everyone will fill their own section.
 - Evan: Overall revisions. Power system. Formatting and elaboration of formulating the problem. Organization.
 - Connor: Overall revisions, Introduction, Broader Impacts, and Hardwire Connection.
 - Kamden: Overall revisions, microcontroller, diagrams, formatting markdown.
