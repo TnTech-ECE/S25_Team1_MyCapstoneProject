@@ -43,7 +43,7 @@
 
 ## Member Updates
 
-Evan -
+Evan - This week I revised the conceptual design and lost to team 4 on peer review. We met with Devcom and the ME team separately where we were able to better designate who was working on what and give the ME’s a deadline to have some preliminary stuff done so we can have something more solid to go off of.
 
 Connor -
 
@@ -61,7 +61,7 @@ This week, we met twice to really dig in what progress we had on this project. W
 
 For the Team: 1. Pass the Conceptual Design Review. Enjoy Spring break.
 
-Evan -
+Evan - I intend to make whatever changes necessary to the conceptual to pass peer review even tho I have no clue how to appease to people just to get stars. 
 
 Connor -
 
