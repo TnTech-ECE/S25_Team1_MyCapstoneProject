@@ -26,7 +26,7 @@ The system must meet specific design requirements and constraints to ensure reli
     - ANSI/TIA-568.2-D: This standard emphasizes the importance of proper strain relief to prevent mechanical stress on cables, which can lead to performance degradation or failure. Implementing strain relief mechanisms, such as boots or bushings, helps maintain the integrity of the cable by preventing excessive bending and pulling forces.
     - ANSI/TIA-568.2-D: This standard provides guidelines on the maximum pulling tension for Ethernet cables during installation. While specific tension tolerances can vary based on the cable manufacturer and type, a general guideline is to avoid exceeding a pulling tension of 25 pounds (110 Newtons) during installation. Exceeding this tension can cause stretching or damage to the cable, leading to signal degradation.
  
-- It shall be equipped with an independent power source capable of at least 20 minutes of operation in Tennessee environments. It is required to be rechargeable, which means that a battery will be required. The battery selected should maximize power while minimizing weight. It is hard to select the battery at this stage of development, but an example would be a Talentcell 12V 24Ah rechargeable deep cycle lithium battery. This battery should pack plenty of power while maintaining weight that will not hinder the robots capabilities.
+- It shall be equipped with an independent power source capable of at least 20 minutes of operation in Tennessee environments. It is required to be rechargeable, which means that a battery will be required. The battery selected should maximize power while minimizing weight. It is hard to select the battery at this stage of development, but an example would be a Talentcell 12V 24Ah rechargeable deep cycle lithium battery or potentially a power tool battery. These batteries should pack plenty of power while maintaining weight that will not hinder the robots capabilities.
     - The customer, DEVCOM, has specified the runtime and environmental condition requirements.
  
 - CirceBot shall transmit real-time data, including current position, current velocity, meters of cable left, heading, battery life percentage, and error codes if any occur. The minimum speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.
@@ -50,42 +50,17 @@ The system must meet specific design requirements and constraints to ensure reli
 
 
 
-## Design Requirements and Constraints
+## Additional Design Requirements and Constraints
 
 ### Communication Specifications
-- CirceBot shall be designed to receive and execute commands in the format supplied in the CirceSoft2CirceBot.proto spec from CirceSoft and transmit telemetry data in the CirceBot2CirceSoft.proto spec to CirceSoft.
-- CirceBot shall accept planned paths in the specified format and follow those paths to its objective.
-- **Customer Requirement**: The customer, DEVCOM, has specified that CirceBot shall use their provided software (CIRCESOFT) and format for data telemetry processing and communication.
+- **Customer Requirement**: The customer, DEVCOM, has specified that CirceBot shall use their provided software (CIRCESOFT) and format for data telemetry processing and communication. This software is either provided by DEVCOM or the computer science team.
 
 ### Cable Deployment Standards
-- CirceBot shall dispense cable according to installation guidelines, including proper curve radiuses, strain relief, and tension tolerances.
-- **Relevant Standards:**
-  - **ANSI/TIA-568.2-D**: Minimum bend radius should be four times the cable's outer diameter.
-  - **ANSI/TIA-568.2-D**: Proper strain relief is required to prevent mechanical stress.
-  - **ANSI/TIA-568.2-D**: Maximum pulling tension should not exceed 25 pounds (110 Newtons).
+- **Customer Requirement** CirceBot shall dispense cable from a spool mounted on the robot itself. This will eliminate the risk of damaging the cable since the alternative is to drag it over potentially harsh terrain.
 
 ### Power Source Requirements
-- It shall be equipped with an independent power source capable of at least 20 minutes of operation.
 - The battery should maximize power while minimizing weight.
-- Example: Talentcell 12V 24Ah rechargeable deep-cycle lithium battery.
-
-### Telemetry and Navigation
-- CirceBot shall transmit real-time data including:
-  - Current position
-  - Current velocity
-  - Meters of cable left
-  - Heading
-  - Battery life percentage
-  - Error codes (if any)
-- Minimum data transmission speed: **10 Hz**
-- CirceBot shall receive Next Position waypoints and navigate accordingly.
-
-### Additional Design Constraints
-- CirceBot shall carry up to **100 yards (10 lbs) of Ethernet cable**.
-- Quick and tool-free replacement of Ethernet cable reels (within 2 minutes).
-- Shall operate both **with and without GPS assistance**.
-- Shall use minor obstacle avoidance mechanisms.
-- **Relevant Safety Standard:** ANSI/RIA R15.08 (Obstacle Detection and Avoidance for AMRs).
+- Example: Talentcell 12V 24Ah rechargeable deep-cycle lithium battery or Milwaukee M18 12ah.
 
 ---
 
@@ -129,6 +104,9 @@ Lead-acid batteries were considered for their low cost and availability. While t
 ### Nickel-Metal Hydride (NiMH) Battery:
 NiMH batteries offer a middle ground between lithium-ion and lead-acid batteries in terms of cost and performance. They are lighter than lead-acid batteries and provide a decent amount of power, but their energy density is lower than lithium-ion batteries. While NiMH could work for CIRCE's needs, it would not provide the same level of runtime or efficiency as lithium-ion batteries, especially when factoring in the required power to run computing systems and maneuver over obstacles. NiMH batteries also have a relatively short lifespan and longer charging times compared to lithium-ion alternatives.
 
+## Potential Solutions to Connection of Ethernet cable:
+
+### Swivel
 
 # Chosen Solution
 After careful evaluation, LiDAR was selected for the obstacle avoidance system due to its superior accuracy, long-range detection, and adaptability to varying environmental conditions. Its ability to provide reliable 360-degree mapping makes it the best fit for CIRCE’s complex navigation needs. Similarly, the ECEF coordinate system was chosen for its global consistency, accuracy, and suitability for long-range positioning. Finally, lithium-ion rechargeable batteries were selected as the power supply due to their high energy density, lightweight design, long-lasting power, and rechargeability. Together, these solutions provide the best combination of performance, scalability, and reliability, ensuring CIRCE can navigate effectively and efficiently in dynamic environments. As always the progression of research and design may cause deviation from the above designation; however, this is the best path forward given the level of understanding the team currently possesses. 
@@ -171,7 +149,7 @@ Given the complexity of this project and the need for strong teamwork, a divide-
 - Telemetry data will include CirceBot’s GPS coordinates (when available), velocity, cable length deployed, heading, battery status, and error codes.
 - CirceBot will receive waypoints and navigation instructions from CirceSoft, allowing for precise path execution.
 
-## **Operating System**
+## **Operating System/Brain of Robot**
 - The Arduino Mega 2560 is the ideal microcontroller for this Ethernet cable-laying robot due to its extensive 54 digital I/O pins, including 15 PWM outputs and 16 analog inputs, allowing seamless integration of multiple sensors, motor controllers, and other peripherals without the need for additional multiplexing. Unlike smaller Arduino boards, the Mega 2560 provides four hardware serial ports (UARTs), which enable efficient communication with external modules such as motor drivers, sensor arrays, or even a wireless control system, reducing the risk of timing issues associated with software serial implementations.
 - Another key advantage is its 8 KB of SRAM and 256 KB of flash memory, which ensures sufficient space for handling complex control algorithms, sensor data processing, and real-time decision-making. Compared to a Raspberry Pi, which runs a full operating system and requires higher power consumption, the Arduino Mega operates on a deterministic execution model—meaning that its code runs in real time without the risk of unexpected delays or crashes caused by background processes. This reliability is crucial for a robotics application where precise motor control and sensor feedback are required. Additionally, the Arduino Mega 2560 consumes significantly less power, making it well-suited for battery-powered operations in field environments, whereas a Raspberry Pi would require additional power management solutions and may introduce unnecessary complexity. Ultimately, the Mega 2560’s combination of high I/O capacity, real-time processing, multiple UARTs, and low power consumption makes it the superior choice for this project.
 - The Arduino Mega 2560 was preferred over the Raspberry Pi and Jetson Nano primarily due to its simplicity, reliability, and power efficiency. While the Raspberry Pi and Jetson Nano offer greater computational power, they also come with the overhead of running a full operating system, which can introduce delays and increase power consumption. The Arduino, on the other hand, operates with a deterministic execution model, ensuring real-time performance that is critical for controlling motors and processing sensor data without interruptions. Additionally, the Arduino Mega’s low power consumption is ideal for battery-operated systems like this robot, where extended runtime and minimal complexity are essential, while the Raspberry Pi and Jetson Nano would require more power management and potentially complicate the design.
@@ -248,6 +226,8 @@ Power management is another critical aspect. With a minimum operation time of 20
 ---
 
 # Resources
+- ### Potential "Off the Shelf" Solutions:
+  While there are several potential solutions out there, it is clear that there is not something that fits into the constraints of what the customer has given us. Many robots have no spool, which means they drag the ethernet cable behind them. While this works for indoor situations the outdoor aspect could cause issues do to the durability of the wire and it's abrasion resistence. Moreover, the majority of existing solutions utilize and rely on GPS navigation, which also does not fall within the given constraints. However, it is clear that things such as autonomous drones and lawn mowers could have ideas and hardware that can be utilized within this project. With time and research it may become apparent that the utilization of something like a lawn mower is the best option, but at this time it is unclear. 
 - ### See Gantt Chart here: 
 ![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/main/Project%20Proposal/Team_1_Gantt_Chart.png)
 ![Gantt Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/main/Project%20Proposal/Team_1_Gantt_Chart_2.png)
