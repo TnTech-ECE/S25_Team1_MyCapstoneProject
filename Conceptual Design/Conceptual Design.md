@@ -54,7 +54,7 @@ The system must meet specific design requirements and constraints to ensure reli
 
 ### Communication Specifications
 - **Customer Requirement**: The customer, DEVCOM, has specified that CirceBot shall use their provided software (CIRCESOFT) and format for data telemetry processing and communication. This software is either provided by DEVCOM or the computer science team.
-- Live video feed will not be provided. At this stage in development the robot is to be mainly autonomous with little user interaction; therefore, the relaying of it's exact position shall be proficient. This could potentially be added on later, but the main concern would be power consumption. 
+- Live video feed will not be provided. At this stage in development, the robot is to be mainly autonomous with little user interaction; therefore, the relaying of it's exact position shall be evident. This could potentially be added on later, but the main concern would be power consumption. 
 
 ### Cable Deployment Standards
 - **Customer Requirement** CirceBot shall dispense cable from a spool mounted on the robot itself. This will eliminate the risk of damaging the cable since the alternative is to drag it over potentially harsh terrain.
@@ -119,10 +119,10 @@ After careful evaluation, LiDAR was selected for the obstacle avoidance system d
 # High-Level Solution Overview
 Given the complexity of this project and the need for strong teamwork, a divide-and-conquer approach is most effective. The robot is structured into distinct subsystems, allowing the team to analyze how each component integrates into the whole. While some subsystems are more simple, others demand more intricate solutions. Each subsystem is assigned to a team member with either an interest or expertise in that area, ensuring efficiency and technical depth. However, the entire team remains available to collaborate and assist as needed, fostering a collective effort toward a cohesive and well-functioning system.
 ## **Power System**
-- Runs on a **lithium-ion battery** (Exact Model TBD). This battery will power the entire robot, which includes the tracks and motors, the microcontroller, all sensors required, operating systems and the cable laying device. 
-- Requires **step-up/step-down transformers** for different power needs. To accomplish running everything off of one battery it is safe to assume that step-up/step-down transformers will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple transformers will be needed. This could be solved with a PDM (power distribution module). This will allow the engineers to regulate voltage to each subsystem, by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses[3].
+- CirceBot shall run on a **lithium-ion battery** (Exact Model TBD). This battery will power the entire robot, which includes the tracks and motors, the microcontroller, all sensors required, operating systems and the cable laying device. 
+- CirceBot shall require **step-up/step-down transformers** for different power needs. To accomplish running everything off of one battery it is safe to assume that step-up/step-down transformers will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple transformers will be needed. This could be solved with a PDM (power distribution module). This will allow the engineers to regulate voltage to each subsystem, by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses[3].
 
-- **Battery Management System (BMS)** will monitor battery activity. This system should only be outputting power and receive no inputs unless being recharged. The battery will have a BMS (battery management system), where it will relay its status such as battery life (%), runtime, and other necessary information to ensure it’s health like temperature. 
+- CirceBot shall have a **Battery Management System (BMS)** that will monitor battery activity. This system should only be outputting power and receive no inputs unless being recharged. The battery will have a BMS (battery management system), where it will relay its status such as battery life (%), runtime, and other necessary information to ensure it’s health like temperature. 
 
 
 ### **Estimated Power Consumption**
@@ -136,20 +136,20 @@ Given the complexity of this project and the need for strong teamwork, a divide-
 | Unexpected | 50W |
 | **Total** | **290W** |
 
-- Based off the above numbers the battery should be **no less than 12V with a 9Ah rating**. 
+- Based off the above numbers the battery shall be **no less than 12V with a 9Ah rating**. 
 
 ## **Navigation**
-- Instead of relying on GPS, CIRCE operates within the ECEF coordinate system, which represents positions relative to the Earth's center, allowing for precise localization without satellite signals.
-- CIRCE tracks its movement by integrating accelerometer and gyroscope data within the ECEF frame, continuously updating its position without requiring external positioning signals.
-- Hall effect sensors detect wheel or motor rotations, providing real-time speed and distance traveled, which can be used to refine position estimates within the ECEF system.
-- By combining Hall sensor data with inertial measurement unit (IMU) readings, CIRCE can estimate its position relative to a known starting point, maintaining accurate navigation in GPS-denied environments.
-- CIRCE continuously transmits speed and positional data to the user through a hardline connection, ensuring real-time monitoring without radio frequency dependence.
+- Instead of relying on GPS, CIRCE shall operate within the ECEF coordinate system, which represents positions relative to the Earth's center, allowing for precise localization without satellite signals.
+- CIRCE shall track its movement by integrating accelerometer and gyroscope data within the ECEF frame, continuously updating its position without requiring external positioning signals.
+- Hall effect sensors shall detect wheel or motor rotations, providing real-time speed and distance traveled, which can be used to refine position estimates within the ECEF system.
+- By combining Hall sensor data with inertial measurement unit (IMU) readings, CIRCE shall estimate its position relative to a known starting point, maintaining accurate navigation in GPS-denied environments.
+- CIRCE shall continuously transmit speed and positional data to the user through a hardline connection, ensuring real-time monitoring without radio frequency dependence.
 
 ## **Hardwired Communication**
-- CirceBot will use Ethernet for bidirectional communication with CirceSoft, transmitting telemetry data while receiving navigational commands.
-- The WebSocket protocol will be employed over the Ethernet link, ensuring low-latency, real-time data exchange.
-- Telemetry data will include CirceBot’s GPS coordinates (when available), velocity, cable length deployed, heading, battery status, and error codes.
-- CirceBot will receive waypoints and navigation instructions from CirceSoft, allowing for precise path execution.
+- CirceBot shall use Ethernet for bidirectional communication with CirceSoft, transmitting telemetry data while receiving navigational commands.
+- The WebSocket protocol shall be employed over the Ethernet link, ensuring low-latency, real-time data exchange.
+- Telemetry data shall include CirceBot’s GPS coordinates (when available), velocity, cable length deployed, heading, battery status, and error codes.
+- CirceBot shall receive waypoints and navigation instructions from CirceSoft, allowing for precise path execution.
 
 ## **Operating System/Brain of Robot**
 - The Arduino Mega 2560 is the ideal microcontroller for this Ethernet cable-laying robot due to its extensive 54 digital I/O pins, including 15 PWM outputs and 16 analog inputs, allowing seamless integration of multiple sensors, motor controllers, and other peripherals without the need for additional multiplexing. Unlike smaller Arduino boards, the Mega 2560 provides four hardware serial ports (UARTs), which enable efficient communication with external modules such as motor drivers, sensor arrays, or even a wireless control system, reducing the risk of timing issues associated with software serial implementations.
@@ -166,12 +166,11 @@ Given the complexity of this project and the need for strong teamwork, a divide-
 - The microcontroller will communicate to the motors the speeds and torque needed to follow the designated path.
 - Size of the drivetrain will be dependent on the eventual size of CirceBot as well as the final positioning of the motors.
 
-## **Robot Chassis**
-- The robot chassis will ultimately be up to the design of the Mechanical Engineering team. They will use the specifications given to construct a durable and capable platform to host the power system, operating system, motors, and cable laying device. 
-
+## **Lidar Camera/Depth Sensor**
+-
 
 ## **Cable Laying Device**
-- Again this will likely be left up to the Mechanical Engineering team, so that they can better develop the correct materials and hardware to ensure a durable and capable system.
+-Note: I don't think we ever came to a consensus of whether or not to have a motor to help with the cable dispensing out of the box, so I will leave this section until the ME team send us that link to give us a better idea of yes or no. 
 
 ## **Hardware Block Diagram**
 ![Hardware Block Diagram](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Conceptual-Design/Conceptual%20Design/Hardware%20Block%20Diagram.png)
