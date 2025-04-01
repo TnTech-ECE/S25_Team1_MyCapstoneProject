@@ -26,7 +26,7 @@ The system must meet specific design requirements and constraints to ensure reli
     - ANSI/TIA-568.2-D: This standard emphasizes the importance of proper strain relief to prevent mechanical stress on cables, which can lead to performance degradation or failure. Implementing strain relief mechanisms, such as boots or bushings, helps maintain the integrity of the cable by preventing excessive bending and pulling forces.
     - ANSI/TIA-568.2-D: This standard provides guidelines on the maximum pulling tension for Ethernet cables during installation. While specific tension tolerances can vary based on the cable manufacturer and type, a general guideline is to avoid exceeding a pulling tension of 25 pounds (110 Newtons) during installation. Exceeding this tension can cause stretching or damage to the cable, leading to signal degradation.
  
-- It shall be equipped with an independent power source capable of at least 20 minutes of operation in Tennessee environments. It is required to be rechargeable, which means that a battery will be required. The battery selected should maximize power while minimizing weight. It is hard to select the battery at this stage of development, but an example would be a Talentcell 12V 24Ah rechargeable deep cycle lithium battery or potentially a power tool battery. These batteries should pack plenty of power while maintaining weight that will not hinder the robots capabilities.
+- It shall be equipped with an independent power source capable of at least 20 minutes of operation in Tennessee environments. It is required to be rechargeable, which means that a battery will be required. The battery selected should maximize power while minimizing weight. It is hard to select the battery at this stage of development, but an example would be a Talentcell 12V 50Ah rechargeable deep cycle lithium battery or potentially a power tool battery. These batteries should pack plenty of power while maintaining weight that will not hinder the robots capabilities.
     - The customer, DEVCOM, has specified the runtime and environmental condition requirements.
  
 - CirceBot shall transmit real-time data, including current position, current velocity, meters of cable left, heading, battery life percentage, and error codes if any occur. The minimum speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.
@@ -61,7 +61,7 @@ The system must meet specific design requirements and constraints to ensure reli
 
 ### Power Source Requirements
 - The battery should maximize power while minimizing weight.
-- Example: Talentcell 12V 24Ah rechargeable deep-cycle lithium battery or Milwaukee M18 12ah.
+- Example: Talentcell 12V 50Ah rechargeable deep-cycle lithium battery or Milwaukee M18 12ah.
 
 ---
 
@@ -119,24 +119,24 @@ After careful evaluation, LiDAR was selected for the obstacle avoidance system d
 # High-Level Solution Overview
 Given the complexity of this project and the need for strong teamwork, a divide-and-conquer approach is most effective. The robot is structured into distinct subsystems, allowing the team to analyze how each component integrates into the whole. While some subsystems are more simple, others demand more intricate solutions. Each subsystem is assigned to a team member with either an interest or expertise in that area, ensuring efficiency and technical depth. However, the entire team remains available to collaborate and assist as needed, fostering a collective effort toward a cohesive and well-functioning system.
 ## **Power System**
-- CirceBot shall run on a **lithium-ion battery** (Exact Model TBD). This battery will power the entire robot, which includes the tracks and motors, the microcontroller, all sensors required, operating systems and the cable laying device. 
-- CirceBot shall require **step-up/step-down transformers** for different power needs. To accomplish running everything off of one battery it is safe to assume that step-up/step-down transformers will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple transformers will be needed. This could be solved with a PDM (power distribution module). This will allow the engineers to regulate voltage to each subsystem, by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses[3].
+- CirceBot shall run on a **lithium-ion battery** (Exact Model TBD, but an example will be a talentcell 12v 50Ah). This battery will power the entire robot, which includes the tracks and motors, the microcontroller, all sensors required, operating systems and the cable laying device. A lithium ion deep cycle battery
+- CirceBot shall require **step-up/step-down transformers** for different power needs. To accomplish running everything off of one battery it is safe to assume that step-up/step-down transformers will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple transformers will be needed. For example there will likely be 4 motors, one for each wheel and every one will be 80w. Each individual motor will require 12/24 volts and draw roughly 3A of current. An ardruino will need 7-12v and draw up to 40 mA per I/O pin. The sensors will likely need a much smaller power input of 5v and 20 mA per sensor. Since there are many different components that require a different range of power it poses a problem that can be solved with a PDM (power distribution module). This will allow the engineers to regulate voltage to each subsystem, by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses[3].
 
-- CirceBot shall have a **Battery Management System (BMS)** that will monitor battery activity. This system should only be outputting power and receive no inputs unless being recharged. The battery will have a BMS (battery management system), where it will relay its status such as battery life (%), runtime, and other necessary information to ensure it’s health like temperature. 
+- CirceBot shall have a **Battery Management System (BMS)** that will monitor battery activity. This system will transmit the state of charge (%), state of health, and battery temperature back to the operator of the system. The BMS will also be equipped with a emergency shutoff system that shall be automatic and manual, so if needed the integrity of the robot will not be damaged by over heating. 
 
 
 ### **Estimated Power Consumption**
 | Subsystem | Power Consumption (Watts) |
 |-----------|-------------------------|
-| Drive Train | 150W |
+| Drive Train | 320W |
 | Microcontroller | 15W |
 | Sensors | 15W |
 | Communications | 10W |
 | Cable Laying Device | 50W |
 | Unexpected | 50W |
-| **Total** | **290W** |
+| **Total** | **460W** |
 
-- Based off the above numbers the battery shall be **no less than 12V with a 9Ah rating**. 
+- Based off the above numbers the battery shall be **no less than 12V with a 50Ah rating**. If size and room are available on the robot it is safe to assume that a bigger battery may be used to improve run time. 
 
 ## **Navigation**
 - Instead of relying on GPS, CIRCE shall operate within the ECEF coordinate system, which represents positions relative to the Earth's center, allowing for precise localization without satellite signals.
@@ -158,19 +158,21 @@ Given the complexity of this project and the need for strong teamwork, a divide-
 - The ENC28J60 Ethernet module will be used with the Arduino Mega 2560 since the board does not have a native Ethernet port. This module allows the Arduino to establish a reliable wired Ethernet connection for communication, enabling the robot to receive position controls and send telemetry data over the network. The ENC28J60’s low power consumption and compatibility with the Arduino make it a suitable choice for this application.
 - A computer will communicate to the ardruino through the ethernet cable using the port described above. This will allow for easier user interface and ease of transferring coordinates to the robot.
 
-## **Drive train/motors**
-- Two 12V 75W Brushless DC Motors each capable of running at a rated speed of 3000 rpm and with a rated torque of 0.24 N-m will be used to move the drivetrain of CirceBot[4]. This motor was chosen due to meeting the power consumption listed in the drivetrain portion of the Power System section above. This is the best estimate possible given the current understanding. 
+## **ME team Collaboration systems- Drive train/motors, cable laying device, robot chassis**
+### **Drive train/motors**
+-Two 12V 75W Brushless DC Motors each capable of running at a rated speed of 3000 rpm and with a rated torque of 0.24 N-m will be used to move the drivetrain of CirceBot[4]. This motor was chosen due to meeting the power consumption listed in the drivetrain portion of the Power System section above. This is the best estimate possible given the current understanding. 
 - The motors have a length of 100 mm, a width of 60 mm, and a height of 60 mm.
 - Each motor weighs 2.5 kg resulting in a total weight of 5 kg.
 - Each motor, with no accessories, costs $170.89 resulting in a total cost of $341.78
 - The microcontroller will communicate to the motors the speeds and torque needed to follow the designated path.
 - Size of the drivetrain will be dependent on the eventual size of CirceBot as well as the final positioning of the motors.
-
+### **Cable Laying Device**
+- This will solely be up to the ME's. The EE's will supply and be responsible for the power to the motor selected (not yet selected) and the controls of the system from the microcontroller. 
+### **Robot Chassis**
+  - All controls to motors, drivers, and wheels will be handled by the EE team. 
 ## **Lidar Camera/Depth Sensor**
 -
 
-## **Cable Laying Device**
--Note: I don't think we ever came to a consensus of whether or not to have a motor to help with the cable dispensing out of the box, so I will leave this section until the ME team send us that link to give us a better idea of yes or no. 
 
 ## **Hardware Block Diagram**
 ![Hardware Block Diagram](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Conceptual-Design/Conceptual%20Design/Hardware%20Block%20Diagram.png)
