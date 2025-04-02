@@ -172,8 +172,7 @@ Given the complexity of this project and the need for strong teamwork, a **divid
 ### **Robot Chassis**
   - All controls to motors, drivers, and wheels will be handled by the EE team. 
 ## **Lidar Camera/Depth Sensor**
--
-
+-LiDAR and depth cameras can work together to enable autonomous navigation without relying on GPS by providing complementary spatial data. LiDAR creates detailed 3D point clouds that map the environment, helping with obstacle detection and localization, while depth cameras offer precise close-range object recognition and depth maps for finer detail. The integration of both sensors allows for effective simultaneous localization and mapping (SLAM), real-time obstacle avoidance, and accurate path planning. By fusing data from both, the system can navigate safely in complex environments, even in GPS-denied areas, ensuring robust performance and reliable decision-making.
 
 ## **Hardware Block Diagram**
 ![Hardware Block Diagram](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/Conceptual-Design/Conceptual%20Design/Hardware%20Block%20Diagram.png)
