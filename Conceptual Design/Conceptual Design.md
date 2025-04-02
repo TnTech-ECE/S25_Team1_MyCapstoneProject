@@ -161,12 +161,14 @@ Given the complexity of this project and the need for strong teamwork, a **divid
 
 ## **ME team Collaboration systems- Drive train/motors, cable laying device, robot chassis**
 ### **Drive train/motors**
--Two 12V 75W Brushless DC Motors each capable of running at a rated speed of 3000 rpm and with a rated torque of 0.24 N-m will be used to move the drivetrain of CirceBot[4]. This motor was chosen due to meeting the power consumption listed in the drivetrain portion of the Power System section above. This is the best estimate possible given the current understanding. 
-- The motors have a length of 100 mm, a width of 60 mm, and a height of 60 mm.
-- Each motor weighs 2.5 kg resulting in a total weight of 5 kg.
-- Each motor, with no accessories, costs $170.89 resulting in a total cost of $341.78
+-The Dr. Robot Jaguar 4x4 Mobile Platform will be used as the drive train for the CirceBot. The Dr. Robot Jaguar 4x4 Mobile Platform is light weight, compact, and is weather, water, and shock resistant[4]. 
+- The platform has a height of 255mm (10"), a width of 530mm (21"), a length of 570mm (22.5"), and a ground clearance of 88mm (3.5").
+- The platform weighs 14.5 kg.
+- The platform is driven by four 24V DC motors with a max power output of 80W/motor.
+- The platform is capable carring a max weight of 34kg and dragging a max wight of 54kg.
+- The platform is capable of climbing up 45° slopes or over stairs(obstacles) with a max height of 110mm (4.5").
+- The platform costs $3,550 before tax.
 - The microcontroller will communicate to the motors the speeds and torque needed to follow the designated path.
-- Size of the drivetrain will be dependent on the eventual size of CirceBot as well as the final positioning of the motors.
 ### **Cable Laying Device**
 - This will solely be up to the ME's. The EE's will supply and be responsible for the power to the motor selected (not yet selected) and the controls of the system from the microcontroller. 
 ### **Robot Chassis**
@@ -276,7 +278,7 @@ Power management is another critical aspect. With a minimum operation time of 20
 - [1] **IEEE 802.** IEEE Standards Association, 3 June 2024. [Link](https://standards.ieee.org/featured/ieee-802/)
 - [2] **MIL-STD-882**. Assist-Quicksearch Document Details. [Link](https://quicksearch.dla.mil/qsDocDetails.aspx?ident_number=36027)
 - [3] **What Is a PDM, and Why Do You Need One?** High Performance Academy. [Link](https://www.hpacademy.com/technical-articles/what-is-a-pdm-and-why-do-you-need-one/)
-- [4] “75W Brushless DC Motor, 12V/24V/48V/310V, 0.24 Nm.” peacosupport.com, peacosupport.com/75w-brushless-dc-motor
+- [4] RobotShop USA. “Dr. Robot Jaguar 4x4 Mobile Platform (Chassis and Motors).” RobotShop USA, www.robotshop.com/products/dr-robot-jaguar-4x4-mobile-platform-chassis-motors?qd=481163c4fff996c270a114f9f1e1ac39.
 - [5] Telecommunications Industry Association. ANSI/TIA-568.2-D: Balanced Twisted-Pair Telecommunications Cabling and Components Standard. 2018. https://tiaonline.org/.
 - [6] National Fire Protection Association. NFPA 70: National Electrical Code. 2023. https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70.
 - [7] Leick, Alfred, et al. GPS Satellite Surveying. 4th ed., Wiley, 2015. (This book is available for purchase or via institutional access at Wiley: https://www.wiley.com/en-us/GPS+Satellite+Surveying%2C+4th+Edition-p-9781118675571)
