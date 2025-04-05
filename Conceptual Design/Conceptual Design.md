@@ -118,6 +118,9 @@ After careful evaluation, a LiDAR system paired with a depth module was selected
 
 # High-Level Solution Overview  
 Given the complexity of this project and the need for strong teamwork, a **divide-and-conquer** approach shall be the most effective strategy. The robot shall be structured into distinct subsystems, allowing the team to analyze how each component integrates into the whole. While some subsystems shall be relatively simple, others shall require more intricate solutions. Each subsystem shall be assigned to a team member with either an interest or expertise in that area, ensuring efficiency and technical depth. However, the entire team shall remain available to collaborate and assist as needed, fostering a collective effort toward a cohesive and well-functioning system.  
+
+# Atomic Subsystems: 
+
 ## **Power System**
 - CirceBot shall run on a **lithium-ion battery** (Exact Model TBD, but an example will be a talentcell 12v 50Ah). This battery will power the entire robot, which includes the tracks and motors, the microcontroller, all sensors required, operating systems and the cable laying device. A lithium ion deep cycle battery
 - CirceBot shall require **step-up/step-down DC-DC converters** for different power needs. To accomplish running everything off of one battery, it is safe to assume that step-up/step-down converters will be required. Not every single atomic subsystem will require the same power as the next; therefore, multiple converters will be needed. For example, there will likely be 4 motors, one for each wheel, and each one will be 80W. Each individual motor will require 12/24 volts and draw roughly 3A of current. An Arduino will need 7–12V and draw up to 40 mA per I/O pin. The sensors will likely need a much smaller power input of 5V and 20 mA per sensor. Since there are many different components that require a different range of power, it poses a problem that can be solved with a PDM (Power Distribution Module). This will allow the engineers to regulate voltage to each subsystem by using the PDM to distribute different amounts of power to multiple circuits while minimizing a complex system of relays and fuses[3].
@@ -186,7 +189,7 @@ Given the complexity of this project and the need for strong teamwork, a **divid
 # Ethical, Professional, and Standards Considerations
 
 ## **Broader Impacts**
-- **Minimized Physical Footprint**: Encourages trust in robotics for military and civilian applications.
+- **Creating Confidence in Autonmous Robots for Military Applications**: Encourages trust in robotics for military and civilian applications.
   - The introduction of a semi-autonomous cable installation robot in forward operating environments can accelerate the acceptance of robotics in military and civilian sectors. This design contributes to a culture of innovation, where autonomous systems are trusted to operate in high-risk areas, thereby potentially influencing broader societal views on automation and robotics.
 
 - **Reduction in Human Exposure**: Reduces risk to personnel in contested environments.
@@ -211,7 +214,7 @@ Given the complexity of this project and the need for strong teamwork, a **divid
 
 The design of the CIRCE system is built on well-established standards and best practices that ensure safety, reliability, and environmental responsibility, all while meeting the tough challenges of contested operational areas. Our team reviewed military, industrial, and environmental guidelines to shape every design decision.
 
-Military standards such as MIL-STD-882 have set a high bar for reliability of system safety and risk management[2]. This standard has led us to include thorough testing, validation, and fail-safe mechanisms so that even under unpredictable battlefield conditions, the system performs reliably, a must when human lives are on the line.
+Military standards such as MIL-STD-882 have set a high bar for reliability of system safety and risk management[2]. This standard has led us to include thorough testing, validation, and fail-safe mechanisms so that even under unpredictable battlefield conditions, the system performs reliably, a must when human lives are on the line. Examples of this in are things such as the BMS that intend to keep the battery health in check, so that the robot doesn't explode or get stranded. Further more, the use and more importantly the trouble shooting of all sensors both lidar and distance sensors will help to ensure the robot does not choose a path that creates issues such as flipping or bottoming out. 
 
 The team also looked to IEEE standards for guidance in telecommunications and robotics. The IEEE 802 series provided valuable insight in selecting the appropriate hardware and communication protocols to ensure steady data flow, even in frequency-contested environments [1]. Additionally, recommendations from the IEEE Robotics and Automation Society informed the design of navigation and control systems, enabling the robot to follow its path accurately, even in the absence of traditional GPS signals.
 
@@ -264,12 +267,12 @@ Power management is another critical aspect. With a minimum operation time of 20
 | **Subtotal**              |                            |          |               | 157            |
 | **Total Budget**          |                            |          |               | 1500           |
 - Personnel and Division of Labor
-  -   The following are the members of Team 1 and their skills. After comparing the skills available to the skills required for specific subsystems, the team members have been assigned to work on the subsystems they’re most suited for.
-    - Kamden: Operating System/Cpu, Lidar Camera/Depth Sensor, Hardware Block Diagram, Operation Flow Diagram, Gantt Chart, and Budget.
-    - Wayne: Expertise in hardwiring and troubleshooting, with knowledge in power systems and programming. He will be in charge of Navigation due to his knowledge in programming.
-    - Evan: Experienced with batteries, wiring, organization, and customer interaction. He will be in charge of the power system due to prior knowledge of batteries.
-    - Cooper: Proficient in AutoCAD and C++, with basic knowledge of SmartPlant/Smart3D. He will be in charge of the drive train/motor, which will involve communication with the ME team.
-    - Connor: Skilled in hardwiring, design, and 3D modeling in Revit. He will be in charge of the hardwired communications.
+  -  After comparing the skills available to the skills required for specific subsystems, the team members have been assigned to work on the subsystems they’re most suited for, which are as follows:
+    - Kamden: Operating System/Cpu, Lidar Camera/Depth Sensor
+    - Wayne: Navigation using sensors and lidar
+    - Evan: Power systems/Battery. Overall management of customer and communication among other teams. 
+    - Cooper: Drive train/Motor integration with the ME team.
+    - Connor: Hardwired communication using ethernet.
     - Both the Chassis subsystem and cable laying device will primarily be handled by the mechanical engineering team since that side pertains to materials more. It is intended for both teams to work closely together when needed. 
 ---
 
