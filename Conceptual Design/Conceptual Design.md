@@ -265,7 +265,7 @@ Power management is another critical aspect. With a minimum operation time of 20
 | **Total Budget**          |                            |          |               | 1500           |
 - Personnel and Division of Labor
   -   The following are the members of Team 1 and their skills. After comparing the skills available to the skills required for specific subsystems, the team members have been assigned to work on the subsystems they’re most suited for.
-    - Kamden: Proficient in AutoCAD and Revit. Also skilled in Fusion 360, soldering, troubleshooting, and programming. He will be in charge of Microcontroller Subsystem due to his prior knowledge and enthusiasm in that area.
+    - Kamden: Operating System/Cpu, Lidar Camera/Depth Sensor, Hardware Block Diagram, Operation Flow Diagram, Gantt Chart, and Budget.
     - Wayne: Expertise in hardwiring and troubleshooting, with knowledge in power systems and programming. He will be in charge of Navigation due to his knowledge in programming.
     - Evan: Experienced with batteries, wiring, organization, and customer interaction. He will be in charge of the power system due to prior knowledge of batteries.
     - Cooper: Proficient in AutoCAD and C++, with basic knowledge of SmartPlant/Smart3D. He will be in charge of the drive train/motor, which will involve communication with the ME team.
