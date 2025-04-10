@@ -61,7 +61,7 @@ to go around obstacles and avoid any collisions that could possibly damage the s
 The system uses the following integrated components:  
 
 ● Raspberry Pi 4: Executes SLAM, global positioning, path planning, and environmental  
-mapping using ROS. It collects sensor data from the LiDAR and RealSense camera to  
+mapping using ROS (Robot Operating System). It collects sensor data from the LiDAR and RealSense camera to  
 build a real-time occupancy map and fuses this with inertial and odometric feedback.  
 
 ● ATMega 2560: Processes velocity commands from the Pi, translates them to motor  
