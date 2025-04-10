@@ -116,11 +116,11 @@ velocity commands to the motor controller for precise movement.
 
 ### Buildable Schematic
 
-● ATMega Code:  
+● ATMega Code:![ATMega Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/ATMega_Code.png)  
 
-● Raspberry Pi 4 Code:  
+● Raspberry Pi 4 Code:![Raspberry Pi Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Raspberry%20Pi%204%20Code.png)  
 
-● Slam Launch File:  
+● Slam Launch File:![Slam Launch File](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Slam%20Launch%20File.png)  
 
 ---
 
