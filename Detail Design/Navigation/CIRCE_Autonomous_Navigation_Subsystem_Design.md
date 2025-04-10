@@ -1,5 +1,3 @@
-# CIRCE Autonomous Navigation Subsystem Design
-
 ## CIRCE Autonomous Navigation Subsystem Design
 
 ### Function of the Subsystem
