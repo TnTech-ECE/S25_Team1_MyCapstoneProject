@@ -17,44 +17,44 @@ a maximum distance of up to 100 yards from its start location.
 
 ● CirceBot shall carry up to 100 yards (approximately 10 lbs.) of Ethernet cable and report  
 error codes via self diagnosis.  
-○ ANSI/TIA-568.2-D: This standard specifies the maximum allowable length for  
-twisted-pair Ethernet cables in standard networking applications. The maximum  
-length is defined as 109 yards (328 feet or approximately 100 meters), beyond  
-which signal attenuation, latency, and packet loss can degrade network  
-performance. To extend connectivity beyond this limit, additional hardware such  
-as repeaters, switches, or fiber optic solutions are required. For this project it is  
-intended to stick with the initial 100 yards.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ANSI/TIA-568.2-D: This standard specifies the maximum allowable length for  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;twisted-pair Ethernet cables in standard networking applications. The maximum  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length is defined as 109 yards (328 feet or approximately 100 meters), beyond  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which signal attenuation, latency, and packet loss can degrade network  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performance. To extend connectivity beyond this limit, additional hardware such  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as repeaters, switches, or fiber optic solutions are required. For this project it is  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intended to stick with the initial 100 yards.  
 
 ● It shall receive Next Position waypoints and navigate to the next waypoint.  
-○ The customer, DEVCOM, has specified that navigation shall be conducted using a  
-waypoint-to-waypoint system.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified that navigation shall be conducted using a  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoint-to-waypoint system.  
 
 ● CirceBot shall transmit real-time data, including current position, current velocity, meters  
 of cable left, heading, battery life percentage, and error codes if any occur. The minimum  
 speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.  
-○ The customer, DEVCOM, has specified the required data to be transmitted and  
-displayed for the current operation.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified the required data to be transmitted and  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed for the current operation.  
 
 ● CirceBot shall use minor obstacle avoidance to avoid collisions. This will allow the robot  
 to go around obstacles and avoid any collisions that could possibly damage the system.  
-○ ANSI/RIA R15.08: This standard establishes safety requirements for autonomous  
-mobile robots (AMRs), including obstacle detection and avoidance. It defines  
-acceptable sensor technologies, response times, and stopping distances to ensure  
-safe operation in dynamic environments.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ANSI/RIA R15.08: This standard establishes safety requirements for autonomous  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile robots (AMRs), including obstacle detection and avoidance. It defines  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acceptable sensor technologies, response times, and stopping distances to ensure  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;safe operation in dynamic environments.  
 
 **Constraints include:**  
 
 ● Limited computational and RAM resources (balanced via ROS optimization)  
-○ This is a byproduct of the hardware being used, but balanced via the software.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ This is a byproduct of the hardware being used, but balanced via the software.  
 
 ● Sensor update timing and synchronization  
-○ As with any system utilizing sensor integration we must take into account refresh  
-rates and synchronicity of data.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ As with any system utilizing sensor integration we must take into account refresh  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rates and synchronicity of data.  
 
 ● Maintaining odometry accuracy over time and distance  
-○ This is caused due to the lack of reliability of most coordinate planes as a single  
-source, but is balanced by using three different coordinate planes in conjunction to  
-reduce drift and increase accuracy.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ This is caused due to the lack of reliability of most coordinate planes as a single  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source, but is balanced by using three different coordinate planes in conjunction to  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reduce drift and increase accuracy.  
 
 ---
 
@@ -75,17 +75,17 @@ provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's
 algorithm on a dynamic occupancy grid.  
 
 ● Coordinate System Integration:  
-○ ECI (Earth-Centered Inertial): Though typically used in space applications,  
-CIRCE utilizes ECI frames to provide a time-consistent reference for long-term  
-drift correction and synchronization with external positioning systems.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ECI (Earth-Centered Inertial): Though typically used in space applications,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIRCE utilizes ECI frames to provide a time-consistent reference for long-term  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drift correction and synchronization with external positioning systems.  
 
-○ ECEF (Earth-Centered Earth-Fixed): Maps real-world 3D positions relative to  
-the Earth’s surface. Useful when interfacing CIRCE with global positioning  
-systems.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ECEF (Earth-Centered Earth-Fixed): Maps real-world 3D positions relative to  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the Earth’s surface. Useful when interfacing CIRCE with global positioning  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;systems.  
 
-○ Local Cartesian Frame: CIRCE builds a local 2D/3D occupancy map in  
-Cartesian space where all obstacle detection and path planning take place. This is  
-the robot's immediate operational frame.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Local Cartesian Frame: CIRCE builds a local 2D/3D occupancy map in  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cartesian space where all obstacle detection and path planning take place. This is  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the robot's immediate operational frame.  
 
 These three coordinate systems are converted via transformation matrices inside the Pi’s software  
 stack (e.g., using ROS tf package). ECI provides time-invariant inertial anchoring, ECEF  
@@ -118,17 +118,23 @@ velocity commands to the motor controller for precise movement.
 
 ### Buildable Schematic
 
-● ATMega Code:  
+● ATMega Code:
 
-● Raspberry Pi 4 Code:  
+![ATMega Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/ATMega_Code.png)  
 
-● Slam Launch File:  
+● Raspberry Pi 4 Code:
+
+![Raspberry Pi Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Raspberry%20Pi%204%20Code.png)  
+
+● Slam Launch File:
+
+![Slam Launch File](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Slam%20Launch%20File.png)
 
 ---
 
 ### Flowchart
 
-*(Placeholder for actual diagram)*
+![Navigation Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/CIRCE%20Navigation%20Flowchart%20(1).jpg)
 
 ---
 
