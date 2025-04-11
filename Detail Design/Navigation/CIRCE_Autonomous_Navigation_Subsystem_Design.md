@@ -116,6 +116,10 @@ velocity commands to the motor controller for precise movement.
 
 ### Buildable Schematic
 
+● Navigation Wiring Schematic:
+
+![Navigation Wiring Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Navigation%20Wiring%20Schematic.png)
+
 ● ATMega Code:
 
 ![ATMega Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/ATMega_Code.png)  
