@@ -151,20 +151,11 @@ velocity commands to the motor controller for precise movement.
 
 ### Analysis
 
-This navigation system combines reactive real-time obstacle avoidance with strategic global  
-planning through ROS SLAM integration. The use of Hall sensors in the encoders ensures robust  
-motor feedback, allowing PID tuning and precise low-level control even during unexpected drift  
-or slippage.  
+The CIRCE autonomous navigation subsystem has been thoughtfully designed to meet the constraints and fulfill the intended function of guiding a mobile robot up to 100 yards with full autonomy. It integrates a suite of complementary technologies, including RTAB-Map-based SLAM, real-time path planning, and obstacle avoidance using RPLIDAR A1 and the Intel RealSense D456. These enable CIRCE to operate within dynamic environments while avoiding collisions, adhering to standards. Real-time sensor fusion—combining LiDAR, depth imaging, Hall-effect wheel encoders, and IMU data—ensures robust localization and reliable obstacle detection even in GPS-denied or cluttered environments.
 
-The fusion of multiple coordinate systems (ECI, ECEF, and local Cartesian) makes CIRCE a  
-future-ready platform. While ECI may seem excessive for a ground vehicle, its inclusion offers a  
-highly consistent inertial reference frame, essential when odometry and IMU data alone may  
-drift over time. This also opens the door for planetary or extreme-environment applications  
-where GPS is unreliable.  
+Furthermore, CIRCE satisfies critical constraints such as limited power and processing capacity through modular hardware selection and software optimization within ROS. The navigation system transmits 10 Hz telemetry, including all specified metrics—position, velocity, cable length remaining, heading, and fault states—as required by the customer (DEVCOM). By delegating high-level planning to the Raspberry Pi 4 and real-time control to the ATMega 2560, CIRCE achieves efficient task partitioning that maintains system responsiveness under computational limits.
 
-By encapsulating all navigation tasks into a well-layered system—with the Pi handling  
-computation and planning, and the ATMega managing precision control—CIRCE is engineered  
-for modular upgrades, accurate movement, and consistent long-range exploration.  
+Designed for modular upgrades and future scalability, the CIRCE subsystem is capable of accommodating expanded capabilities such as GPS integration or advanced motion planning modules. The design reflects a balance of cutting-edge navigation techniques with practical embedded systems engineering. Its ability to maintain accuracy over time, respond to real-world uncertainties, and deliver transparent diagnostics confirms that CIRCE is a reliable and field-ready autonomous solution.  
 
 ---
 
