@@ -2,19 +2,13 @@
 
 ### Function of the Subsystem
 
-The navigation subsystem for CIRCE serves as the brain of its autonomous movement. Its 
-primary function is to determine the robot’s position and orientation in space, plan safe and 
-efficient paths toward specified goals, and execute motion commands to reach those destinations 
-while avoiding obstacles. This system integrates real-time localization, environment mapping, 
-sensor fusion, and precise motor control, enabling CIRCE to autonomously explore and navigate 
-a maximum distance of up to 100 yards from its start location. 
+The navigation subsystem for CIRCE serves as the brain of its autonomous movement. Its primary function is to determine the robot’s position and orientation in space, plan safe and efficient paths toward specified goals, and execute motion commands to reach those destinations while avoiding obstacles. This system integrates real-time localization, environment mapping, sensor fusion, and precise motor control, enabling CIRCE to autonomously explore and navigate a maximum distance of up to 100 yards from its start location. 
 
 ---
 
 ### Specifications and Constraints
 
-● CirceBot shall carry up to 100 yards (approximately 10 lbs.) of Ethernet cable and report  
-error codes via self diagnosis.  
+● CirceBot shall carry up to 100 yards (approximately 10 lbs.) of Ethernet cable and report error codes via self diagnosis.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ANSI/TIA-568.2-D: This standard specifies the maximum allowable length for  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;twisted-pair Ethernet cables in standard networking applications. The maximum  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length is defined as 109 yards (328 feet or approximately 100 meters), beyond  
@@ -27,14 +21,11 @@ error codes via self diagnosis.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified that navigation shall be conducted using a  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoint-to-waypoint system.  
 
-● CirceBot shall transmit real-time data, including current position, current velocity, meters  
-of cable left, heading, battery life percentage, and error codes if any occur. The minimum  
-speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.  
+● CirceBot shall transmit real-time data, including current position, current velocity, meters of cable left, heading, battery life percentage, and error codes if any occur. The minimum speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified the required data to be transmitted and  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed for the current operation.  
 
-● CirceBot shall use minor obstacle avoidance to avoid collisions. This will allow the robot  
-to go around obstacles and avoid any collisions that could possibly damage the system.  
+● CirceBot shall use minor obstacle avoidance to avoid collisions. This will allow the robot to go around obstacles and avoid any collisions that could possibly damage the system.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ANSI/RIA R15.08: This standard establishes safety requirements for autonomous  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile robots (AMRs), including obstacle detection and avoidance. It defines  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acceptable sensor technologies, response times, and stopping distances to ensure  
@@ -60,17 +51,11 @@ to go around obstacles and avoid any collisions that could possibly damage the s
 
 The system uses the following integrated components:  
 
-● Raspberry Pi 4: Executes Simultaneous Localization and Mapping (SLAM), global positioning, path planning, and environmental  
-mapping using Robot Operating System (ROS). It collects sensor data from the LiDAR and RealSense camera to  
-build a real-time occupancy map and fuses this with inertial and odometric feedback.  
+● Raspberry Pi 4: Executes Simultaneous Localization and Mapping (SLAM), global positioning, path planning, and environmental mapping using Robot Operating System (ROS). It collects sensor data from the LiDAR and RealSense camera to build a real-time occupancy map and fuses this with inertial and odometric feedback.  
 
-● ATMega 2560: Processes velocity commands from the Pi, translates them to motor  
-driver signals, and uses encoder feedback with Hall effect sensors to maintain precise  
-wheel speed and direction.  
+● ATMega 2560: Processes velocity commands from the Pi, translates them to motor driver signals, and uses encoder feedback with Hall effect sensors to maintain precise wheel speed and direction.  
 
-● SLAM and Path Planning: Real-Time Appearance-Based Mapping (RTAB-Map)  
-provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's  
-algorithm on a dynamic occupancy grid.  
+● SLAM and Path Planning: Real-Time Appearance-Based Mapping (RTAB-Map) provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's algorithm on a dynamic occupancy grid.  
 
 ● Coordinate System Integration:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Earth-Centered Inertial (ECI): Though typically used in space applications,  
@@ -85,33 +70,21 @@ algorithm on a dynamic occupancy grid.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cartesian space where all obstacle detection and path planning take place. This is  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the robot's immediate operational frame.  
 
-These three coordinate systems are converted via transformation matrices inside the Pi’s software  
-stack (e.g., using ROS tf package). ECI provides time-invariant inertial anchoring, ECEF  
-supports geographic referencing, and the Cartesian map offers immediate spatial  
-decision-making.  
+These three coordinate systems are converted via transformation matrices inside the Pi’s software stack (e.g., using ROS tf package). ECI provides time-invariant inertial anchoring, ECEF supports geographic referencing, and the Cartesian map offers immediate spatial decision-making.  
 
-● Wheel Encoders with Hall Sensors: Each DC motor is equipped with a  
-Hall-effect-based quadrature encoder. These generate two out-of-phase digital signals,  
-interpreted by the ATMega to determine both speed and direction of each wheel.  
-Combined with the IMU, they provide dead-reckoning odometry, crucial for short-term  
-localization and motor control feedback.  
+● Wheel Encoders with Hall Sensors: Each DC motor is equipped with a Hall-effect-based quadrature encoder. These generate two out-of-phase digital signals, interpreted by the ATMega to determine both speed and direction of each wheel. Combined with the IMU, they provide dead-reckoning odometry, crucial for short-term localization and motor control feedback.  
 
 ---
 
 ### Interface with Other Subsystems
 
-● Power System: Supplies 5V and 12V to Raspberry Pi, ATMega, sensors, and motors. A  
-regulated buck converter ensures voltage consistency.  
+● Power System: Supplies 5V and 12V to Raspberry Pi, ATMega, sensors, and motors. A regulated buck converter ensures voltage consistency.  
 
-● Communication Bus: A UART link allows the Raspberry Pi to send high-level velocity  
-commands to the ATMega. The communication subsystem will link to the ethernet port
-of the Raspberry Pi for the required information as per the Computer Science Team.
+● Communication Bus: A UART link allows the Raspberry Pi to send high-level velocity commands to the ATMega. The communication subsystem will link to the ethernet port of the Raspberry Pi for the required information as per the Computer Science Team.
 
-● Motor Controls: UART over serial allows for the ATMega to send linear and angular  
-velocity commands to the motor controller for precise movement. 
+● Motor Controls: UART over serial allows for the ATMega to send linear and angular velocity commands to the motor controller for precise movement. 
 
-● Operating System: This subsystem is almost directly linked to the operating subsytem, 
-since the operating system will control the linking between the Raspberry Pi and the ATMega 2560.
+● Operating System: This subsystem is almost directly linked to the operating subsytem, since the operating system will control the linking between the Raspberry Pi and the ATMega 2560.
 
 ---
 
