@@ -60,24 +60,24 @@ to go around obstacles and avoid any collisions that could possibly damage the s
 
 The system uses the following integrated components:  
 
-● Raspberry Pi 4: Executes SLAM, global positioning, path planning, and environmental  
-mapping using ROS (Robot Operating System). It collects sensor data from the LiDAR and RealSense camera to  
+● Raspberry Pi 4: Executes Simultaneous Localization and Mapping (SLAM), global positioning, path planning, and environmental  
+mapping using Robot Operating System (ROS). It collects sensor data from the LiDAR and RealSense camera to  
 build a real-time occupancy map and fuses this with inertial and odometric feedback.  
 
 ● ATMega 2560: Processes velocity commands from the Pi, translates them to motor  
 driver signals, and uses encoder feedback with Hall effect sensors to maintain precise  
 wheel speed and direction.  
 
-● SLAM and Path Planning: RTAB-Map (Real-Time Appearance-Based Mapping)  
+● SLAM and Path Planning: Real-Time Appearance-Based Mapping (RTAB-Map)  
 provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's  
 algorithm on a dynamic occupancy grid.  
 
 ● Coordinate System Integration:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ECI (Earth-Centered Inertial): Though typically used in space applications,  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Earth-Centered Inertial (ECI): Though typically used in space applications,  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIRCE utilizes ECI frames to provide a time-consistent reference for long-term  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;drift correction and synchronization with external positioning systems.  
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ECEF (Earth-Centered Earth-Fixed): Maps real-world 3D positions relative to  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Earth-Centered Earth-Fixed (ECEF): Maps real-world 3D positions relative to  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the Earth’s surface. Useful when interfacing CIRCE with global positioning  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;systems.  
 
@@ -104,13 +104,14 @@ localization and motor control feedback.
 regulated buck converter ensures voltage consistency.  
 
 ● Communication Bus: A UART link allows the Raspberry Pi to send high-level velocity  
-commands to the ATMega.  
-
-● Sensor Bus: I2C/UART interfaces connect the sensors to the Raspberry Pi, while GPIO  
-handles interrupts from Hall sensors to the ATMega.  
+commands to the ATMega. The communication subsystem will link to the ethernet port
+of the Raspberry Pi for the required information as per the Computer Science Team.
 
 ● Motor Controls: UART over serial allows for the ATMega to send linear and angular  
-velocity commands to the motor controller for precise movement.  
+velocity commands to the motor controller for precise movement. 
+
+● Operating System: This subsystem is almost directly linked to the operating subsytem, 
+since the operating system will control the linking between the Raspberry Pi and the ATMega 2560.
 
 ---
 
