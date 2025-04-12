@@ -79,6 +79,9 @@ Due to this subsystem’s sole purpose of being a hardwired connection, a builda
 ### Printed Circuit Board Layout:
 Due to this subsystem’s sole purpose of being a hardwired connection, a PCB is not applicable. 
 
+### Operational Flowchart:
+![Operation Flow Chart](link)
+
 ### Bill of Materials (BOM):
 
 | Product            | Manufacturer              | Part Number     | Distributor | Distributor Part Number   | Quantity | Price (USD) | Purchasing URL |
