@@ -80,7 +80,7 @@ Due to this subsystem’s sole purpose of being a hardwired connection, a builda
 Due to this subsystem’s sole purpose of being a hardwired connection, a PCB is not applicable. 
 
 ### Operational Flowchart:
-![Operation Flow Chart](link)
+![Operation Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Hardwired-Communication/Detail%20Design/Hardwired%20Communication/Operational_Flowchart.png)
 
 ### Bill of Materials (BOM):
 
