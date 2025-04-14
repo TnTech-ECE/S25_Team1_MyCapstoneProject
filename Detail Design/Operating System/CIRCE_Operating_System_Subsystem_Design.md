@@ -29,7 +29,7 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 - It shall support modular task scheduling, enabling future upgrades (e.g., GPS integration, Wi-Fi communication) without a complete system rewrite.  
   - This ensures long-term flexibility and maintainability of the system architecture.
  
-  ### Constraints
+  ### Extended Constraints
 
 - Limited processing bandwidth on the Raspberry Pi when running multiple ROS nodes  
   - The Raspberry Pi must balance tasks like SLAM, serial communication, logging, and visualization within its limited CPU and memory constraints. Optimization of ROS parameters and lightweight node design is critical.
