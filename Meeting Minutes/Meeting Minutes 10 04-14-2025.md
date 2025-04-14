@@ -27,7 +27,7 @@
 
 ## Member Updates
 
-Evan -
+Evan - This past week I worked on getting Devcoms approval on our conceptual design. Once that was taken care of I changed my focus to the detailed design and began on it where I got the bones put together and just need to put the time into finalizing things.
 
 Connor - This past week I worked on the hardwired connection subsystem detailed design.
 
@@ -45,7 +45,7 @@ Cooper -
 
 For the Team: 1. Pass peer review for DD and hold on.
 
-Evan -
+Evan - I intend to wrap up my detailed design this week and help out where needed. 
 
 Connor - This next week I hope to help get other subsystem detailed designs up and running for peer review.
 
