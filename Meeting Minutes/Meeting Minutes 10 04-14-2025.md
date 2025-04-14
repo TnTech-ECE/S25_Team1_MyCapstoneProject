@@ -35,7 +35,7 @@ Kamden - Work on the GitHub and DD have been going okay. We for sure need to pic
 
 Wayne -
 
-Cooper -
+Cooper - I've been busy with DSD programming, so I was only able to label the sections for my portion of detailed design.
 
 ## Meeting Minutes (Summary)
 
@@ -53,4 +53,4 @@ Kamden - I need to complete the OS DD and push that through review asap. I do th
 
 Wayne -
 
-Cooper -
+Cooper - Hopefully I'll be able to start putting information into my detailed design.
