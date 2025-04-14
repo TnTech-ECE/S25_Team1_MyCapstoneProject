@@ -29,7 +29,7 @@
 
 Evan -
 
-Connor -
+Connor - This past week I worked on the hardwired connection subsystem detailed design.
 
 Kamden - Work on the GitHub and DD have been going okay. We for sure need to pick the pace up I believe but we are pushing ours through quite well.
 
@@ -43,11 +43,11 @@ Cooper -
 
 ## Action Items for Next Week
 
-For the Team: 1.
+For the Team: 1. Pass peer review for DD and hold on.
 
 Evan -
 
-Connor -
+Connor - This next week I hope to help get other subsystem detailed designs up and running for peer review.
 
 Kamden - I need to complete the OS DD and push that through review asap. I do think we are on track to pass peer review with out pieces but it will be coming in close.
 
