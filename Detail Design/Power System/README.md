@@ -83,14 +83,17 @@ Everything must interface with the power system to function properly; however, n
 
 ## Design Analysis
 
-- Assess power draw from each subsystem to ensure battery capacity and converter ratings are sufficient.
-- Account for inrush currents from motor controllers.
-- Include voltage monitoring and fusing for safety and diagnostics.
+The proposed power system design effectively meets the needs of the robot by leveraging a centralized 22.2V LiPo battery (6S, 10Ah) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices.
+
+To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 22.2V to specific voltage levels. A dedicated 5.1V, 4–5A buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
+
+The motor drivers are powered directly from the 22.2V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
+
+Overall, the integration of high-capacity power delivery, voltage regulation, and protective measures demonstrates that the design not only meets the operational requirements of the robot but also ensures long-term stability and system reliability.
 
 ---
 
 ## KiCad Files (To be attached)
 
-- **Schematic**: Voltage regulation and distribution
-- **PCB Layout**: Power rails, grounding, heat management
+- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/KiCad%20Schematic%20DD.png)
 
