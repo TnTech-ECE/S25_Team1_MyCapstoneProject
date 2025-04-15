@@ -40,6 +40,14 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 - Fault tolerance and watchdog behavior  
   - The system must account for potential crashes or hangs in either the Raspberry Pi or ATMega, requiring failsafe logic, watchdog timers, or auto-restart mechanisms to ensure recovery.
 
-
 ---
 
+### Overview of Proposed Solution
+
+This system includes the following devices:
+
+- Raspberry Pi 4:
+
+- Arduino Mega 2560:
+
+- 
