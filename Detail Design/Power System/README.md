@@ -95,5 +95,5 @@ Overall, the integration of high-capacity power delivery, voltage regulation, an
 
 ## KiCad Files (To be attached)
 
-- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/KiCad%20Schematic%20DD.png)
+- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/KiCadDDPowersystem.png)
 
