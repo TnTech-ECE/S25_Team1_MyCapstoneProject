@@ -8,7 +8,7 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 ### Specifications and Constraints
 
-- The OS subsystem shall initiate all major robot subsystems during boot including navigation, motor control, diagnostics, and telemetry.  
+- The OS subsystem shall initiate all major robot subsystems during boot including navigation, motor control, and telemetry.  
   - This ensures a centralized control system where all critical modules are initialized in a predefined sequence, allowing safe and synchronized operation.
 
 - It shall manage the communication between the Raspberry Pi and ATMega 2560 using UART for real-time command exchange and feedback handling.  
@@ -16,12 +16,6 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 - The OS shall relay required operational data (position, velocity, heading, battery, cable length, errors) at a minimum rate of 10 Hz, consistent with the navigation requirements.  
   - This satisfies the DEVCOM specification for real-time telemetry and ensures continuous feedback for monitoring and analysis.
-
-- It shall provide diagnostic feedback and error codes, and log these events locally for post-mission review.  
-  - This enables onboard troubleshooting and supports reliability assessment through recorded operational history.
-
-- It shall remain lightweight and responsive, optimized for real-time operation on resource-limited hardware.  
-  - This is a design constraint imposed by the use of embedded systems like the Raspberry Pi and ATMega 2560.
 
 - It shall interface with all coordinate transformation modules, enabling data to remain consistent across ECI, ECEF, and Local Cartesian reference frames.  
   - This supports navigation accuracy and system alignment across different spatial reference frames.
@@ -46,8 +40,6 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 - Fault tolerance and watchdog behavior  
   - The system must account for potential crashes or hangs in either the Raspberry Pi or ATMega, requiring failsafe logic, watchdog timers, or auto-restart mechanisms to ensure recovery.
 
-- Task scheduling conflicts within ROS  
-  - ROS operates on a cooperative multitasking basis. Poorly managed callback functions or timers can introduce scheduling bottlenecks, especially during high-load operations like mapping or obstacle avoidance.
 
 ---
 
