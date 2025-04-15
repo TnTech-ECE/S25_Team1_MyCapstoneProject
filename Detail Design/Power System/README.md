@@ -67,20 +67,18 @@ Everything must interface with the power system to function properly; however, n
   - The motor and motor drivers shall be the only things run directly off the battery. It shall be fused to 10A to ensure the drivers do not pull too much current. 
 
 ## Bill of Materials (BOM)
+  
+| Product                                 |   Manufacturer                | Part Number     | Distributor | Distributor Part Number   | Quantity    | Price (USD) | Purchasing URL |
+|-----------------------------------------|-------------------------------|-----------------|-------------|---------------------------|-------------|-------------|----------------|
+|DC-DC 5A Buck Converter with LED Display | Valeford                      | VA-0189         | Amazon      | VA-0189                   | 2 (4 total) | $13.99      | [Link](https://www.amazon.com/Converter-1-25-36V-Voltage-Regulator-Display/dp/B085T73CSD/ref=sr_1_5?crid=2HCTSH5VGT9J4&dib=eyJ2IjoiMSJ9.ts4XtPSFXcv6QmYe9vAOshSzbMEvAgLm08h_fiqdBGYmJC5BjAh3HiI_JnNYOJM7ewlNdGFfhbBPaPTBVlkmbhlNxfYNxtmqWm1aJhhbeUS1iTKkG7Ii0fzFdAth4CjwlVE2_D8cjfz-cDUgguXQSWJ4o9va4fJm8N9jDp_iK7vFRvb6WTogliNLKBtczurP50ceHUyKUBM0yvu8DsSjwpwXOaPwmb3ck0eVurntfDiyNG_sm0cTwQ4f1PcJ_8LbfGcnziqfchLabw7WMoQwIL8yd60_onNg8U-UApX8QzI.yF_bYTXwRnjbbEB53mgy3fWMXNStgb6wpzY9t4lPsg4&dib_tag=se&keywords=DC-DC+buck+converters&qid=1744730775&s=electronics&sprefix=dc-dc+buck+converters%2Celectronics%2C120&sr=1-5) |
+| Butt Splice          | Haisstronica | B07L29DLGN        | Amazon     | B07L29DLGN          | 1        | $19.99      | [Link](https://www.amazon.com/Haisstronica-Connectors-Gauge-Insulated-Waterproof-Electrical/dp/B07L29DLGN/ref=sr_1_2_sspa?crid=3PW6LLCKXS5O&dib=eyJ2IjoiMSJ9.Z4YyUbMciosyhKqNP5auDcibcRFrwPEBQ1Z2uhOuEQv3V3A884OAQ7lPsDnQKyoc9hV5ZGN0yD8nw9ditwNxAYbh92CkHbOwjc-taibmGVFgH-U8RHToYZFU3nSSkSwfTPDqXm4zV43qZRnYuzo8sRc3lw_ZVFp5LLRaRXzcjDUvt0GYPz5r0ZLPizXnluYT6-vsPWTbLCRRfcZpIZcW2jJjGN-22bSsQtqOJ20xbyca1fcGyWyulz6SAfeyyw8o-cDKsyQxgN-Pju8hpuv2MhoTJLCamOZMNnvo-YmwuH4.a0s1hFn3PqgIP3fEG_FPHaQb4FpdVGTRgVADcbtk-Dk&dib_tag=se&keywords=Butt%2Bsplice&qid=1744731493&s=electronics&sprefix=butt%2Bsplic%2Celectronics%2C133&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) |
 
-- **Buck converters** (Minimum of 2; one for Raspberry Pi, one for Arduino/logic)
-- **Soldering tools**
-- **Crimping pliers**
-- **Butt splices**:
-  - 18–22 AWG (logic power lines)
-  - 12–16 AWG (motor power lines)
 
 ---
 
 ## Flow Diagram
 
-*A flowchart of the power distribution system based on the robot's architecture should be inserted here.*
-
+![Operational Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/Power_System_FlowChart.png)
 ---
 
 ## Design Analysis
