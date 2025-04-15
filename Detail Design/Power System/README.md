@@ -34,6 +34,7 @@ Disclaimer that the design is based off of running everything off of a single ba
 
 
 - Primary battery: **6S LiPo, 22.2V, 10 Ah** pack.
+- The battery will connect to a battery management system which will allow the user to read the percentage of the battery left.
 - This battery must supply power to:
   - **Raspberry Pi** 
     - A raspberry pi 4 operates off of 5V; however, it has a low voltage detection system and runs the risk of crashing out if it drops below 5V for any reason, so for margin 5.1V will be supplied in case of a slight irregularity. It will also draw up to 4A of current, which will be one of the more power intensive modules for this design behind the actual drive train power needs. 
@@ -72,7 +73,7 @@ Everything must interface with the power system to function properly; however, n
 |-----------------------------------------|-------------------------------|-----------------|-------------|---------------------------|-------------|-------------|----------------|
 |DC-DC 5A Buck Converter with LED Display | Valeford                      | VA-0189         | Amazon      | VA-0189                   | 2 (4 total) | $13.99      | [Link](https://www.amazon.com/Converter-1-25-36V-Voltage-Regulator-Display/dp/B085T73CSD/ref=sr_1_5?crid=2HCTSH5VGT9J4&dib=eyJ2IjoiMSJ9.ts4XtPSFXcv6QmYe9vAOshSzbMEvAgLm08h_fiqdBGYmJC5BjAh3HiI_JnNYOJM7ewlNdGFfhbBPaPTBVlkmbhlNxfYNxtmqWm1aJhhbeUS1iTKkG7Ii0fzFdAth4CjwlVE2_D8cjfz-cDUgguXQSWJ4o9va4fJm8N9jDp_iK7vFRvb6WTogliNLKBtczurP50ceHUyKUBM0yvu8DsSjwpwXOaPwmb3ck0eVurntfDiyNG_sm0cTwQ4f1PcJ_8LbfGcnziqfchLabw7WMoQwIL8yd60_onNg8U-UApX8QzI.yF_bYTXwRnjbbEB53mgy3fWMXNStgb6wpzY9t4lPsg4&dib_tag=se&keywords=DC-DC+buck+converters&qid=1744730775&s=electronics&sprefix=dc-dc+buck+converters%2Celectronics%2C120&sr=1-5) |
 | Butt Splice          | Haisstronica | B07L29DLGN        | Amazon     | B07L29DLGN          | 1        | $19.99      | [Link](https://www.amazon.com/Haisstronica-Connectors-Gauge-Insulated-Waterproof-Electrical/dp/B07L29DLGN/ref=sr_1_2_sspa?crid=3PW6LLCKXS5O&dib=eyJ2IjoiMSJ9.Z4YyUbMciosyhKqNP5auDcibcRFrwPEBQ1Z2uhOuEQv3V3A884OAQ7lPsDnQKyoc9hV5ZGN0yD8nw9ditwNxAYbh92CkHbOwjc-taibmGVFgH-U8RHToYZFU3nSSkSwfTPDqXm4zV43qZRnYuzo8sRc3lw_ZVFp5LLRaRXzcjDUvt0GYPz5r0ZLPizXnluYT6-vsPWTbLCRRfcZpIZcW2jJjGN-22bSsQtqOJ20xbyca1fcGyWyulz6SAfeyyw8o-cDKsyQxgN-Pju8hpuv2MhoTJLCamOZMNnvo-YmwuH4.a0s1hFn3PqgIP3fEG_FPHaQb4FpdVGTRgVADcbtk-Dk&dib_tag=se&keywords=Butt%2Bsplice&qid=1744731493&s=electronics&sprefix=butt%2Bsplic%2Celectronics%2C133&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) |
-
+| RC Cellmeter          | RCPow | LT-US-CM7        | Amazon     | B0DHGV1PVK          | 1        | $8.99      | [Link](https://www.amazon.com/Cellmeter-Digital-Battery-Capacity-Controller/dp/B0DHGV1PVK/ref=sr_1_6?crid=3QMZQCDQ3RJU7&dib=eyJ2IjoiMSJ9.BSvBYWIY7ec59dVdVl7Bd9jYPQpYjvVKVJQRFscVzCOv7GeY3l2h-ashM7Qm5qF39lGq4gMWyR8xXYQRS7KJjplZH7DK3hJiy9PPk546srNhYpd2KGg4VaScArLV81slQ7xC8hQpa5eVTwsWHXbk5Ne0faaenbra6qr0N6gXQKH-LbgIEjZlfgUcz6bVZB19ZwDsD6NtrcKttLw4L2TFG-pukdTJZD18i1PUn_sYrrE.3h9p-LCmGyhNu319WkbBIi1_mIrG_di1BrrDOpJiB2c&dib_tag=se&keywords=battery%2Bmanager%2Bfor%2BLiPo&qid=1744743333&sprefix=battery%2Bmanager%2Bfor%2Blipo%2Caps%2C108&sr=8-6&th=1) |
 
 ---
 
