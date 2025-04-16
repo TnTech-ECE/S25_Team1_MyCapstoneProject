@@ -88,8 +88,6 @@ This system includes the following devices:
 
 ---
 
-### Bill of Materials
-
 ### Bill of Materials (BOM)
 
 | Item                      | Qty | Part Number / Model       | Description                         | Digi-Key Link |
