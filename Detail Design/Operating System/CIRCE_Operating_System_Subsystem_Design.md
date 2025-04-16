@@ -106,7 +106,33 @@ This system includes the following devices:
 
 ### Analysis of Design Decisions
 
-- place holder
+#### USB Communication to Raspberry Pi
+
+- **Plug-and-Play Simplicity**  
+  USB peripherals like the RealSense D456, RPLIDAR A1, and Arduino Mega 2560 are natively supported on the Raspberry Pi using existing Linux drivers and ROS 2 packages. USB eliminates the need for manual configuration of GPIO-based UART ports or low-level kernel module setup.
+
+- **Higher Bandwidth**  
+  Compared to traditional UART over GPIO (which is typically limited to 115200–1 Mbps), USB provides significantly higher throughput—especially important for devices like the RealSense D456, which streams high-bandwidth depth and IMU data.
+
+- **Fewer GPIO Conflicts**  
+  USB devices don’t consume GPIO pins, which are reserved for lower-level control like motor PWM, encoders, or sensor interrupts on the Arduino. This clean separation simplifies software design and debugging.
+
+- **Isolation of Timing-Critical Tasks**  
+  Offloading low-level control to the Arduino over USB allows the Raspberry Pi to focus on high-level decision making, vision processing, and navigation tasks. The USB serial connection provides a clear command/feedback interface between high-level and low-level controllers.
+
+#### Powered USB Hub Requirement
+
+- **Protecting the Raspberry Pi from Overload**  
+  The Raspberry Pi 4's USB ports are limited in how much current they can safely supply—typically ~1.2 A total across all ports. High-draw devices like the RealSense (up to 900 mA) and RPLIDAR (350–400 mA) could cause undervoltage conditions, brownouts, or intermittent disconnects if powered directly from the Pi.
+
+- **External Power Sourcing**  
+  The powered USB hub allows these devices to draw current from a dedicated 5V rail sourced from the robot’s main battery (via a buck converter), bypassing the Pi’s internal power path and preventing instability.
+
+- **Reliable Data Transmission**  
+  A powered USB hub helps maintain consistent voltage levels to USB devices, which is critical for stable, high-speed communication—especially for the RealSense D456 running full-resolution depth + IMU streams in real time.
+
+**Conclusion:**  
+The decision to use USB communication was made to ensure plug-and-play compatibility, adequate data bandwidth, and modularity across subsystems. The addition of a powered USB hub safeguards the Raspberry Pi from power overdraw, enhances system stability, and supports future expansion of USB peripherals without requiring major redesigns.
 
 ---
 
