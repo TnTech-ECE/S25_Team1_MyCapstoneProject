@@ -83,3 +83,23 @@ This system includes the following devices:
 ---
 
 ### Operational Flowchart
+
+- place holder
+
+---
+
+### Bill of Materials
+
+- place holder
+
+---
+
+### Analysis of Design Decisions
+
+- place holder
+
+---
+
+### References
+
+- place holder
