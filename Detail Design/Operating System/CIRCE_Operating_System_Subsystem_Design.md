@@ -53,7 +53,8 @@ This system includes the following devices:
 - **Intel RealSense D456** – Depth camera with IMU (USB)  
 - **RPLIDAR A1** – 2D LiDAR sensor (USB)  
 - **ROB-14450 Motor Controller** – Controlled by Arduino over GPIO  
-- **Encoders** – Connected to Arduino for speed/position feedback  
+- **Encoders** – Connected to Arduino for speed/position feedback
+- **USB HUB** - Connected to pi and powered externally to assist in load
 
 > Only three USB connections are used: RealSense, RPLIDAR, and Arduino. All other peripherals interface using GPIO or analog inputs.
 
