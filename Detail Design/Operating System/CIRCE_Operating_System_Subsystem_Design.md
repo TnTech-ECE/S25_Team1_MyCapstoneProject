@@ -46,8 +46,43 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 This system includes the following devices:
 
-- Raspberry Pi 4:
+- Raspberry Pi 4
 
-- Arduino Mega 2560:
+- Arduino Mega 2560
 
-- 
+- Intel RealSense D456 - Cam Depth and IMU
+
+- RPLIDAR A1 - LiDAR
+
+- ROB-14450 - Motor Controller
+
+- Encoders - On hold for ME team
+
+---
+
+### Interface With Other Subsystems
+
+
+---
+
+### 3D Model of Custom Mechanical Components
+
+
+---
+
+### Operational Flowchart
+
+
+---
+
+### Bill of Materials (BOM)
+
+
+---
+
+### Analysis of Design Decisions
+
+
+---
+
+### References
