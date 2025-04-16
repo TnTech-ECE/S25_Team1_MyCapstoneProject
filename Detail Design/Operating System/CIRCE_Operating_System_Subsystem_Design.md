@@ -90,7 +90,18 @@ This system includes the following devices:
 
 ### Bill of Materials
 
-- place holder
+### Bill of Materials (BOM)
+
+| Item                      | Qty | Part Number / Model       | Description                         | Digi-Key Link |
+|---------------------------|-----|---------------------------|-------------------------------------|---------------|
+| Raspberry Pi 4 Model B (4GB) | 1   | SC0194(9)                 | Single Board Computer, 4GB RAM      | [View on Digi-Key](https://www.digikey.com/en/products/detail/raspberry-pi/SC0194-9/10258781) |
+| Arduino Mega 2560 Rev3    | 1   | A000067                   | Microcontroller Board               | [View on Digi-Key](https://www.digikey.com/en/products/detail/arduino/A000067/2639006) |
+| Intel RealSense D456      | 1   | 82635DSD456               | Depth Camera with IMU, IP65 Rated   | [View on Digi-Key](https://www.digikey.com/en/products/detail/intel-realsense/82635DSD456/21555839) |
+| RPLIDAR A1                | 1   | DFR0315                   | 360° 2D LiDAR Sensor                | [View on Digi-Key](https://www.digikey.com/en/products/detail/dfrobot/DFR0315/7597150) |
+| Motor Controller          | 1   | ROB-14450                 | TB6612FNG Motor Driver Board        | [View on Digi-Key](https://www.digikey.com/en/products/detail/sparkfun-electronics/ROB-14450/7915576) |
+| Powered USB Hub           | 1   | U360-004-SLIM             | 4-Port USB 3.0 Hub                  | [View on Digi-Key](https://www.digikey.com/en/products/detail/eaton-tripp-lite/U360-004-SLIM/7105094) |
+| 5V DC-DC Converter        | 1   | DROK 5V 3A Buck Converter | Step-down Power Supply Module       | [View on Digi-Key](https://www.digikey.com/en/products/detail/drok/5V-3A-Buck-Converter/XXXXX) |
+| Encoders                  | 2   | TBD by ME Team            | Wheel Encoders                      | To be determined |
 
 ---
 
