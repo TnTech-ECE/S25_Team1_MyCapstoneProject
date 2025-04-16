@@ -95,7 +95,7 @@ This system includes the following devices:
 
 | Item                      | Qty | Part Number / Model       | Description                         | Digi-Key Link |
 |---------------------------|-----|---------------------------|-------------------------------------|---------------|
-| Raspberry Pi 4 Model B (4GB) | 1   | SC0194(9)                 | Single Board Computer, 4GB RAM      | [View on Digi-Key](https://www.digikey.com/en/products/detail/raspberry-pi/SC0194-9/10258781) |
+| Raspberry Pi 4 Model B (8GB) | 1 | SC15184 | Single Board Computer, 8GB RAM | [View on Digi-Key](https://www.digikey.com/en/products/detail/raspberry-pi/SC15184/13109857) |
 | Arduino Mega 2560 Rev3    | 1   | A000067                   | Microcontroller Board               | [View on Digi-Key](https://www.digikey.com/en/products/detail/arduino/A000067/2639006) |
 | Intel RealSense D456      | 1   | 82635DSD456               | Depth Camera with IMU, IP65 Rated   | [View on Digi-Key](https://www.digikey.com/en/products/detail/intel-realsense/82635DSD456/21555839) |
 | RPLIDAR A1                | 1   | DFR0315                   | 360° 2D LiDAR Sensor                | [View on Digi-Key](https://www.digikey.com/en/products/detail/dfrobot/DFR0315/7597150) |
