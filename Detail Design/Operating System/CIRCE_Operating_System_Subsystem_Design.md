@@ -78,10 +78,9 @@ This system includes the following devices:
 
 (To be added via CAD)
 
-- Mounting brackets for RealSense and LiDAR  
-- Compartment for Raspberry Pi, Arduino, and USB hub  
-- Battery and electronics tray  
-- Airflow and ventilation routing for electronics  
+- Mounting options for RealSense and LiDAR  
+- Compartment for Raspberry Pi, Arduino, and USB hub
+- Pin diagram for Pi and Arduino  
 
 ---
 
