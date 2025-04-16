@@ -120,6 +120,7 @@ These three coordinate systems are converted via transformation matrices inside 
 |--------------------|---------------------------|------------------|-------------|----------------------------|----------|-------------|----------------|
 | Intel RealSense D456 | Intel RealSense         | 82635DSD456      | DigiKey     | 2311-82635DSD456-ND        | 1        | $498.75     | [Link](https://www.digikey.com/en/products/detail/intel-realsense/82635DSD456/21555839) |
 | RPLIDAR A1          | Seeed Technology Co., Ltd | 114992561        | DigiKey     | 1597-114992561-ND          | 1        | $99.00      | [Link](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/114992561/13635863) |
+| Total |          |       |      |         |         | $597.75     |  |
 
 ---
 
