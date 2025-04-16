@@ -74,6 +74,73 @@ This system includes the following devices:
 
 ---
 
+### Software Stack and Operating System Integration
+
+#### Raspberry Pi 4
+
+The Raspberry Pi 4 will serve as the **main processing unit** and will run a **headless Linux-based OS** tailored for real-time robotic workloads.
+
+- **Operating System**:  
+  - `Ubuntu Server 22.04 LTS (64-bit)`  
+  - Chosen for its **long-term support**, **ROS 2 compatibility**, and **lightweight headless environment**.  
+
+- **ROS 2 Distribution**:  
+  - `ROS 2 Humble Hawksbill` (LTS)  
+  - Provides middleware for node-based communication, SLAM, sensor fusion, localization, and real-time command publishing.
+
+- **Packages and Nodes Running on the Pi**:  
+  - `realsense2_camera`: streams depth and IMU data  
+  - `rplidar_ros`: handles 2D scan data from RPLIDAR A1  
+  - `serial_bridge_node`: enables USB serial communication to Arduino  
+  - `nav2_bringup`: manages the Navigation2 stack (local planner, costmaps)  
+  - `robot_state_publisher`, `tf2`, `lifecycle_manager`, etc.
+
+- **Other Software**:  
+  - Custom Python or C++ nodes for telemetry, diagnostics, and system status  
+  - Logging handled by `ros2 bag` or dedicated logging nodes
+
+- **Startup**:  
+  - All nodes are launched via a unified ROS 2 launch file (e.g., `system_bringup.launch.py`) that enforces sequence dependencies
+
+---
+
+#### Arduino Mega 2560
+
+The Arduino is a low-level real-time controller that runs firmware written in **C++ using the Arduino IDE**. It does not have an OS in the traditional sense—it's **bare-metal embedded code** compiled for the AVR architecture.
+
+- **Runtime Environment**:  
+  - `Bare-metal Arduino firmware` using `avr-gcc`, `HardwareSerial`, and `Encoder` libraries  
+  - Runs a continuous loop (`loop()` function) for real-time motor control, encoder reading, and message parsing
+
+- **Functions Performed**:  
+  - Reads encoder values  
+  - Drives motors via PWM to the ROB-14450 controller  
+  - Monitors battery voltage via analog input  
+  - Receives velocity commands from the Pi over USB serial  
+  - Sends telemetry (encoder ticks, voltage, status flags) back to the Pi
+
+---
+
+### USB Interface: Raspberry Pi to Arduino
+
+- **Protocol**:  
+  - Communication over a **USB serial (CDC ACM)** interface using `/dev/ttyACM0` on the Pi
+  - Baudrate: typically 115200 or higher
+
+- **Message Format**:  
+  - Commands from Pi: formatted packets (e.g., `CMD:VEL:LEFT:100:RIGHT:100`)
+  - Feedback from Arduino: structured status updates (e.g., `ENC:L:12345:R:12300:VOLT:11.7`)
+
+- **Libraries Used**:  
+  - Pi side: `pyserial` (Python) or `rclcpp_serial_bridge` (C++)  
+  - Arduino side: `Serial` object with non-blocking read/write logic
+
+- **ROS 2 Integration**:  
+  - A dedicated ROS 2 node (`serial_bridge_node`) reads Arduino feedback and republishes it as ROS topics (e.g., `/wheel_ticks`, `/battery_voltage`)
+  - Velocity commands published on `/cmd_vel` are translated to serial packets sent to the Arduino
+
+---
+
 ### 3D Model of Custom Mechanical Components
 
 (To be added via CAD)
