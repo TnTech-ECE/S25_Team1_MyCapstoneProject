@@ -11,8 +11,8 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 - The OS subsystem shall initiate all major robot subsystems during boot including navigation, motor control, and telemetry.  
   - This ensures a centralized control system where all critical modules are initialized in a predefined sequence, allowing safe and synchronized operation.
 
-- It shall manage the communication between the Raspberry Pi and ATMega 2560 using UART for real-time command exchange and feedback handling.  
-  - This maintains consistent and low-latency messaging between the high-level processor and the low-level controller, which is essential for responsive behavior.
+- It shall manage the communication between the Raspberry Pi and ATMega 2560 using **USB-based serial** for real-time command exchange and feedback handling.  
+  - This provides stable, higher-bandwidth communication and simplifies configuration.
 
 - The OS shall relay required operational data (position, velocity, heading, battery, cable length, errors) at a minimum rate of 10 Hz, consistent with the navigation requirements.  
   - This satisfies the DEVCOM specification for real-time telemetry and ensures continuous feedback for monitoring and analysis.
@@ -22,17 +22,19 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 - It shall support modular task scheduling, enabling future upgrades (e.g., GPS integration, Wi-Fi communication) without a complete system rewrite.  
   - This ensures long-term flexibility and maintainability of the system architecture.
- 
-  ### Extended Constraints
+
+---
+
+### Extended Constraints
 
 - Limited processing bandwidth on the Raspberry Pi when running multiple ROS nodes  
   - The Raspberry Pi must balance tasks like SLAM, serial communication, logging, and visualization within its limited CPU and memory constraints. Optimization of ROS parameters and lightweight node design is critical.
 
-- UART communication bandwidth and latency between Raspberry Pi and ATMega  
-  - Serial communication introduces latency and limited throughput, which can affect command response time and real-time feedback. Efficient message structuring and baudrate tuning help mitigate this.
+- USB communication bandwidth and draw  
+  - While USB provides stable data channels, high-power devices like LiDAR and cameras must not overload the Pi's onboard regulators.
 
 - ROS node startup sequencing and interdependencies  
-  - Certain nodes must be launched in sequence to ensure proper system initialization (e.g., serial connection must be ready before velocity commands are published). This is handled through custom launch files and timing delays.
+  - Certain nodes must be launched in sequence to ensure proper system initialization (e.g., camera and LiDAR before SLAM or navigation nodes).
 
 - File system reliability and SD card write limits  
   - Logging and diagnostics write to the SD card, which has limited write cycles. Excessive logging or power loss during writes can lead to data corruption or storage failure.
@@ -46,43 +48,38 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 This system includes the following devices:
 
-- Raspberry Pi 4
+- **Raspberry Pi 4** – Main computer running ROS and coordinating the system  
+- **Arduino Mega 2560** – Low-level motor control and encoder processing  
+- **Intel RealSense D456** – Depth camera with IMU (USB)  
+- **RPLIDAR A1** – 2D LiDAR sensor (USB)  
+- **ROB-14450 Motor Controller** – Controlled by Arduino over GPIO  
+- **Encoders** – Connected to Arduino for speed/position feedback  
 
-- Arduino Mega 2560
-
-- Intel RealSense D456 - Cam Depth and IMU
-
-- RPLIDAR A1 - LiDAR
-
-- ROB-14450 - Motor Controller
-
-- Encoders - On hold for ME team
+> Only three USB connections are used: RealSense, RPLIDAR, and Arduino. All other peripherals interface using GPIO or analog inputs.
 
 ---
 
 ### Interface With Other Subsystems
 
+| Subsystem        | Interface Type       | Device(s)                 | Connection to Pi      | Notes                                                    |
+|------------------|-----------------------|----------------------------|------------------------|-----------------------------------------------------------|
+| Navigation        | ROS Topics            | LiDAR, RealSense           | USB                    | Navigation stack uses depth and scan data for SLAM        |
+| Motor Control     | PWM + GPIO            | Arduino + Motor Controller | GPIO to Motor Ctrl     | Arduino receives velocity commands and drives motors      |
+| Telemetry         | USB Serial + ROS Logs | Raspberry Pi               | USB Logs               | Data is collected and published at 10Hz                   |
+| Localization      | Coordinate Transforms | RealSense + LiDAR          | USB                    | ROS nodes handle SLAM and frame alignment                 |
+| Power Monitoring  | Analog Voltage Read   | Arduino                    | GPIO / Analog          | Reads battery voltage and transmits data via USB          |
 
 ---
 
 ### 3D Model of Custom Mechanical Components
 
+(To be added via CAD)
+
+- Mounting brackets for RealSense and LiDAR  
+- Compartment for Raspberry Pi, Arduino, and USB hub  
+- Battery and electronics tray  
+- Airflow and ventilation routing for electronics  
 
 ---
 
 ### Operational Flowchart
-
-
----
-
-### Bill of Materials (BOM)
-
-
----
-
-### Analysis of Design Decisions
-
-
----
-
-### References
