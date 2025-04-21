@@ -36,6 +36,7 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ## Buildable Schematic(Temp)
 
+![Coop Project_1]()
 
 
 ## Bill of Materials (BOM)
