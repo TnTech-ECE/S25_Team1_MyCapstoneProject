@@ -217,26 +217,22 @@ The decision to use USB communication was made to ensure plug-and-play compatibi
 
 ### References
 
-### References
+[1] Raspberry Pi Foundation, “Raspberry Pi 4 Model B,” [Online]. Available: [https://www.raspberrypi.com/products/raspberry-pi-4-model-b/](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 
-### References
+[2] Arduino, “Arduino Mega 2560 Rev3,” [Online]. Available: [https://store.arduino.cc/products/arduino-mega-2560-rev3](https://store.arduino.cc/products/arduino-mega-2560-rev3)
 
-[1] Raspberry Pi Foundation, “Raspberry Pi 4 Model B (8GB),” [Online]. Available: https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
+[3] Intel Corporation, “Intel® RealSense™ Depth Camera D456,” [Online]. Available: [https://www.intelrealsense.com/depth-camera-d456/](https://www.intelrealsense.com/depth-camera-d456/)
 
-[2] Arduino, “Arduino Mega 2560 Rev3,” [Online]. Available: https://store.arduino.cc/products/arduino-mega-2560-rev3
+[4] DFRobot, “RPLIDAR A1 – 360° Laser Scanner,” [Online]. Available: [https://www.dfrobot.com/product-1125.html](https://www.dfrobot.com/product-1125.html)
 
-[3] Intel Corporation, “Intel RealSense Depth Camera D456,” [Online]. Available: https://www.intelrealsense.com/depth-camera-d456/
+[5] SparkFun Electronics, “ROB-14450: TB6612FNG Dual Motor Driver Carrier,” [Online]. Available: [https://www.sparkfun.com/products/14450](https://www.sparkfun.com/products/14450)
 
-[4] DFRobot, “RPLIDAR A1 – 360° Laser Scanner,” [Online]. Available: https://www.dfrobot.com/product-1385.html
+[6] Coolgear, “USBG-4U2ML – 4-Port USB 2.0 Powered Hub,” [Online]. Available: [https://www.coolgear.com/product/industrial-4-port-usb-2-0-powered-hub-with-power-adapter-for-pc-mac](https://www.coolgear.com/product/industrial-4-port-usb-2-0-powered-hub-with-power-adapter-for-pc-mac)
 
-[5] SparkFun Electronics, “ROB-14450: TB6612FNG Dual Motor Driver Carrier,” [Online]. Available: https://www.sparkfun.com/products/14450
+[7] DROK, “DC-DC Buck Converter 5V 3A Power Supply Module,” [Online]. Available: [https://www.amazon.com/dp/B00C63TLCC](https://www.amazon.com/dp/B00C63TLCC)
 
-[6] Coolgear, “USBG-4U2ML – 4-Port USB 2.0 Powered Hub with 7–24V Input,” [Online]. Available: https://www.coolgear.com/product/4-port-usb-2-0-isolated-powered-hub-7-to-24v-dc-input
+[8] Open Robotics, “ROS 2 Documentation – Humble Hawksbill (LTS),” [Online]. Available: [https://docs.ros.org/en/humble/index.html](https://docs.ros.org/en/humble/index.html)
 
-[7] DROK, “DC-DC Buck Converter 5V 3A Power Supply Module,” [Online]. Available: https://www.amazon.com/dp/B0787WGCXT
+[9] Pololu, “5V, 5A Step-Down Voltage Regulator D24V50F5,” [Online]. Available: [https://www.pololu.com/product/2851](https://www.pololu.com/product/2851)
 
-[8] Open Robotics, “ROS 2 Documentation – Humble Hawksbill (LTS),” [Online]. Available: https://docs.ros.org/en/humble/index.html
-
-[9] Pololu, “5V, 5A Step-Down Voltage Regulator D24V50F5,” [Online]. Available: https://www.pololu.com/product/2851
-
-[10] Canonical Ltd., “Ubuntu Server 22.04 LTS,” [Online]. Available: https://ubuntu.com/download/server
+[10] Canonical Ltd., “Ubuntu Server 22.04 LTS,” [Online]. Available: [https://ubuntu.com/download/server](https://ubuntu.com/download/server)
