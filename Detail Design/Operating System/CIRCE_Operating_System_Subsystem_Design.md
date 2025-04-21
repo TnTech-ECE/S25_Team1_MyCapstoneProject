@@ -1,5 +1,3 @@
-# Work in Progress - Not ready for the FULL review :)
-
 ## CIRCE Operating System Subsystem Design
 
 ### Function of the Subsystem
