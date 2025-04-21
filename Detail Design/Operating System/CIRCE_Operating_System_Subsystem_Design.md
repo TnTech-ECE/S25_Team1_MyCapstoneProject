@@ -78,7 +78,7 @@ This system includes the following devices:
 
 #### Raspberry Pi 4
 
-The Raspberry Pi 4 will serve as the **main processing unit** and will run a **headless Linux-based OS** tailored for real-time robotic workloads.
+The Raspberry Pi 4 (8GB model) shall serve as the main computing platform, responsible for autonomous navigation, sensor fusion, SLAM, and coordination with the low-level motor controller (Arduino Mega 2560). The Pi is connected to all peripherals through a powered USB hub, allowing a single data and power uplink to the Pi while preventing current draw issues.
 
 - **Operating System**:  
   - `Ubuntu Server 22.04 LTS (64-bit)`  
@@ -88,57 +88,70 @@ The Raspberry Pi 4 will serve as the **main processing unit** and will run a **h
   - `ROS 2 Humble Hawksbill` (LTS)  
   - Provides middleware for node-based communication, SLAM, sensor fusion, localization, and real-time command publishing.
 
-- **Packages and Nodes Running on the Pi**:  
-  - `realsense2_camera`: streams depth and IMU data  
-  - `rplidar_ros`: handles 2D scan data from RPLIDAR A1  
-  - `serial_bridge_node`: enables USB serial communication to Arduino  
-  - `nav2_bringup`: manages the Navigation2 stack (local planner, costmaps)  
-  - `robot_state_publisher`, `tf2`, `lifecycle_manager`, etc.
+#### System Communication Architecture
 
-- **Other Software**:  
-  - Custom Python or C++ nodes for telemetry, diagnostics, and system status  
-  - Logging handled by `ros2 bag` or dedicated logging nodes
+The Raspberry Pi shall interface with external devices using a combination of USB-based communication and serial-over-USB protocols. All peripherals are routed through a powered USB hub to ensure stable power and data handling.
 
-- **Startup**:  
-  - All nodes are launched via a unified ROS 2 launch file (e.g., `system_bringup.launch.py`) that enforces sequence dependencies
+- **Intel RealSense D456**
+  - **Connection**: USB 3.0 via powered USB hub  
+  - **ROS 2 Package**: `realsense2_camera`  
+  - **Published Topics**:  
+    - `/camera/depth/color/points` – Point cloud data  
+    - `/imu` – Inertial measurement unit data  
+    - `/camera/image_raw` – RGB image stream
 
+- **RPLIDAR A1**
+  - **Connection**: USB 2.0 via powered USB hub  
+  - **ROS 2 Package**: `rplidar_ros`  
+  - **Published Topics**:  
+    - `/scan` – 2D laser scan data for obstacle detection
+
+- **Arduino Mega 2560 (Motor Controller Interface)**
+  - **Connection**: Serial-over-USB to Raspberry Pi  
+  - **Communication Node**: `serial_bridge_node`  
+  - **Function**:  
+    - Receives high-level movement commands  
+    - Sends status and feedback from motor controller
 ---
 
 #### Arduino Mega 2560
 
-The Arduino is a low-level real-time controller that runs firmware written in **C++ using the Arduino IDE**. It does not have an OS in the traditional sense—it's **bare-metal embedded code** compiled for the AVR architecture.
+The Arduino Mega 2560 serves as a low-level real-time controller that runs firmware written in C++ using the Arduino IDE. It operates without a traditional operating system, relying instead on bare-metal embedded code compiled for the AVR architecture.
 
-- **Runtime Environment**:  
-  - `Bare-metal Arduino firmware` using `avr-gcc`, `HardwareSerial`, and `Encoder` libraries  
-  - Runs a continuous loop (`loop()` function) for real-time motor control, encoder reading, and message parsing
+- **Runtime Environment**
+  - Bare-metal Arduino firmware compiled with `avr-gcc`
+  - Utilizes `HardwareSerial` for serial communication
+  - Uses `Encoder` and standard Arduino libraries for hardware interaction
+  - Executes a continuous `loop()` function for:
+    - Real-time motor control  
+    - Encoder reading  
+    - USB serial message parsing
 
-- **Functions Performed**:  
-  - Reads encoder values  
-  - Drives motors via PWM to the ROB-14450 controller  
-  - Monitors battery voltage via analog input  
-  - Receives velocity commands from the Pi over USB serial  
-  - Sends telemetry (encoder ticks, voltage, status flags) back to the Pi
+- **Communication Interfaces**
+  - **To Raspberry Pi (High-Level Controller)**:
+    - Connected via USB (serial-over-USB)
+    - Communicates using `HardwareSerial` (e.g., `Serial`)
+    - Receives velocity commands from the Raspberry Pi  
+    - Sends telemetry including encoder ticks, battery voltage, and status flags  
+    - Compatible with a ROS 2 node like `serial_bridge_node` on the Pi side
 
----
+  - **To Sensors and Actuators (Direct Hardware Connections)**:
+    - **Motor Control**:  
+      - Drives motors using PWM signals connected to the ROB-14450 motor controller  
+      - Direction and enable lines managed through GPIO pins  
+    - **Encoders**:  
+      - Reads quadrature encoders via digital pins using `Encoder` library  
+    - **Battery Monitoring**:  
+      - Reads battery voltage through analog input pins (ADC)
+    - **Status LEDs (Optional)**:  
+      - Can toggle LEDs for debug or system state indication
 
-### USB Interface: Raspberry Pi to Arduino
-
-- **Protocol**:  
-  - Communication over a **USB serial (CDC ACM)** interface using `/dev/ttyACM0` on the Pi
-  - Baudrate: typically 115200 or higher
-
-- **Message Format**:  
-  - Commands from Pi: formatted packets (e.g., `CMD:VEL:LEFT:100:RIGHT:100`)
-  - Feedback from Arduino: structured status updates (e.g., `ENC:L:12345:R:12300:VOLT:11.7`)
-
-- **Libraries Used**:  
-  - Pi side: `pyserial` (Python) or `rclcpp_serial_bridge` (C++)  
-  - Arduino side: `Serial` object with non-blocking read/write logic
-
-- **ROS 2 Integration**:  
-  - A dedicated ROS 2 node (`serial_bridge_node`) reads Arduino feedback and republishes it as ROS topics (e.g., `/wheel_ticks`, `/battery_voltage`)
-  - Velocity commands published on `/cmd_vel` are translated to serial packets sent to the Arduino
-
+- **Functions Performed**
+  - Reads encoder values for real-time wheel position and speed feedback  
+  - Applies PWM output to control motor speed via ROB-14450  
+  - Monitors system power via analog voltage input  
+  - Parses incoming USB serial commands from the Pi (e.g., target velocities)  
+  - Formats and sends telemetry packets back to the Pi for logging or control decisions
 ---
 
 ### 3D Model of Custom Mechanical Components
