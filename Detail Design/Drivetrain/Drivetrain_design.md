@@ -45,6 +45,17 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ---
 
+| Item                      | Qty | Part Number / Model       | Description                         |
+|---------------------------|-----|---------------------------|-------------------------------------|
+| ? | 1 |  |  |
+| ?    | 1   |                    |                |
+| ?      | 1   |                |    |
+| ?                | 1   |                    |                 |
+| ?          | 1   |                 |         |
+| ?           | 1   |                 |  |
+| ?        | 1   |  |        |
+| ?                  | 1   |             |                      |
+
 ## Flow Diagram
 
 ---
