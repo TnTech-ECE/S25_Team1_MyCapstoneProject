@@ -36,9 +36,9 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ## Buildable Schematic(Temp)
 
-![Motor&DriverKit](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20122722.png)
-![Coop Project_1](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20122352.png)
-![Coop Project_2](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20122425.png)
+![Full_rover](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172200.png)
+![Coop Project_1]()
+![Coop Project_2]()
 
 
 ## Bill of Materials (BOM)
