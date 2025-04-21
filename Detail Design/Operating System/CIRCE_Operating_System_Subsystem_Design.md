@@ -219,4 +219,26 @@ The decision to use USB communication was made to ensure plug-and-play compatibi
 
 ### References
 
-- place holder
+### References
+
+### References
+
+[1] Raspberry Pi Foundation, “Raspberry Pi 4 Model B (8GB),” [Online]. Available: https://www.raspberrypi.com/products/raspberry-pi-4-model-b/
+
+[2] Arduino, “Arduino Mega 2560 Rev3,” [Online]. Available: https://store.arduino.cc/products/arduino-mega-2560-rev3
+
+[3] Intel Corporation, “Intel RealSense Depth Camera D456,” [Online]. Available: https://www.intelrealsense.com/depth-camera-d456/
+
+[4] DFRobot, “RPLIDAR A1 – 360° Laser Scanner,” [Online]. Available: https://www.dfrobot.com/product-1385.html
+
+[5] SparkFun Electronics, “ROB-14450: TB6612FNG Dual Motor Driver Carrier,” [Online]. Available: https://www.sparkfun.com/products/14450
+
+[6] Coolgear, “USBG-4U2ML – 4-Port USB 2.0 Powered Hub with 7–24V Input,” [Online]. Available: https://www.coolgear.com/product/4-port-usb-2-0-isolated-powered-hub-7-to-24v-dc-input
+
+[7] DROK, “DC-DC Buck Converter 5V 3A Power Supply Module,” [Online]. Available: https://www.amazon.com/dp/B0787WGCXT
+
+[8] Open Robotics, “ROS 2 Documentation – Humble Hawksbill (LTS),” [Online]. Available: https://docs.ros.org/en/humble/index.html
+
+[9] Pololu, “5V, 5A Step-Down Voltage Regulator D24V50F5,” [Online]. Available: https://www.pololu.com/product/2851
+
+[10] Canonical Ltd., “Ubuntu Server 22.04 LTS,” [Online]. Available: https://ubuntu.com/download/server
