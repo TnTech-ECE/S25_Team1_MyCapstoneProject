@@ -14,7 +14,7 @@
 
 1. Briefly met with Devcom and discussed current progress.
 
-2. Planned presentation with Devcom on the 28th
+2. Planned presentation with Devcom on the 28th.
 
 3. Received rover robot from ME team.
 
