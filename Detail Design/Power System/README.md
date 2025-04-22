@@ -53,6 +53,8 @@ Disclaimer that the design is based off of running everything off of a single ba
 ---
 
 ## Interfacing with Other Subsystems
+Battery Management System
+- This will be a preassembled device that the battery runs through in order to produce the data that will be sent back to the user interface. The BMS will meet up with the ethernet cable at the raspberry pi to relay the information.
 Everything must interface with the power system to function properly; however, not everything requires the same amount of power, so buck converters shall convert the 22.2V battery to the desired voltages of 3.3V, 5.5V and 12V. 
 - Buck Converter for 3.3V
   - Depth sensor will require 3.3V to operate correctly. It will be powered directly from the buck to ensure that it recieves the correct power, so that the Raspberry Pi is not overdrawn. This will also help on heat dissapation as well.
@@ -71,9 +73,9 @@ Everything must interface with the power system to function properly; however, n
   
 | Product                                 |   Manufacturer                | Part Number     | Distributor | Distributor Part Number   | Quantity    | Price (USD) | Purchasing URL |
 |-----------------------------------------|-------------------------------|-----------------|-------------|---------------------------|-------------|-------------|----------------|
-|DC-DC 5A Buck Converter with LED Display | Valeford                      | VA-0189         | Amazon      | VA-0189                   | 2 (4 total) | $13.99      | [Link](https://www.amazon.com/Converter-1-25-36V-Voltage-Regulator-Display/dp/B085T73CSD/ref=sr_1_5?crid=2HCTSH5VGT9J4&dib=eyJ2IjoiMSJ9.ts4XtPSFXcv6QmYe9vAOshSzbMEvAgLm08h_fiqdBGYmJC5BjAh3HiI_JnNYOJM7ewlNdGFfhbBPaPTBVlkmbhlNxfYNxtmqWm1aJhhbeUS1iTKkG7Ii0fzFdAth4CjwlVE2_D8cjfz-cDUgguXQSWJ4o9va4fJm8N9jDp_iK7vFRvb6WTogliNLKBtczurP50ceHUyKUBM0yvu8DsSjwpwXOaPwmb3ck0eVurntfDiyNG_sm0cTwQ4f1PcJ_8LbfGcnziqfchLabw7WMoQwIL8yd60_onNg8U-UApX8QzI.yF_bYTXwRnjbbEB53mgy3fWMXNStgb6wpzY9t4lPsg4&dib_tag=se&keywords=DC-DC+buck+converters&qid=1744730775&s=electronics&sprefix=dc-dc+buck+converters%2Celectronics%2C120&sr=1-5) |
+|Buck Converter with LED Display | Solarbotics                      | 40400         | RobotShop      | RB-Sbo-193                   | 1 | $7.44      | [Link](https://www.robotshop.com/products/buck-converter-with-led-display?qd=15ce2915da99d1ec72fd0ea88700259d) |
 | Butt Splice          | Haisstronica | B07L29DLGN        | Amazon     | B07L29DLGN          | 1        | $19.99      | [Link](https://www.amazon.com/Haisstronica-Connectors-Gauge-Insulated-Waterproof-Electrical/dp/B07L29DLGN/ref=sr_1_2_sspa?crid=3PW6LLCKXS5O&dib=eyJ2IjoiMSJ9.Z4YyUbMciosyhKqNP5auDcibcRFrwPEBQ1Z2uhOuEQv3V3A884OAQ7lPsDnQKyoc9hV5ZGN0yD8nw9ditwNxAYbh92CkHbOwjc-taibmGVFgH-U8RHToYZFU3nSSkSwfTPDqXm4zV43qZRnYuzo8sRc3lw_ZVFp5LLRaRXzcjDUvt0GYPz5r0ZLPizXnluYT6-vsPWTbLCRRfcZpIZcW2jJjGN-22bSsQtqOJ20xbyca1fcGyWyulz6SAfeyyw8o-cDKsyQxgN-Pju8hpuv2MhoTJLCamOZMNnvo-YmwuH4.a0s1hFn3PqgIP3fEG_FPHaQb4FpdVGTRgVADcbtk-Dk&dib_tag=se&keywords=Butt%2Bsplice&qid=1744731493&s=electronics&sprefix=butt%2Bsplic%2Celectronics%2C133&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) |
-| RC Cellmeter          | RCPow | LT-US-CM7        | Amazon     | B0DHGV1PVK          | 1        | $8.99      | [Link](https://www.amazon.com/Cellmeter-Digital-Battery-Capacity-Controller/dp/B0DHGV1PVK/ref=sr_1_6?crid=3QMZQCDQ3RJU7&dib=eyJ2IjoiMSJ9.BSvBYWIY7ec59dVdVl7Bd9jYPQpYjvVKVJQRFscVzCOv7GeY3l2h-ashM7Qm5qF39lGq4gMWyR8xXYQRS7KJjplZH7DK3hJiy9PPk546srNhYpd2KGg4VaScArLV81slQ7xC8hQpa5eVTwsWHXbk5Ne0faaenbra6qr0N6gXQKH-LbgIEjZlfgUcz6bVZB19ZwDsD6NtrcKttLw4L2TFG-pukdTJZD18i1PUn_sYrrE.3h9p-LCmGyhNu319WkbBIi1_mIrG_di1BrrDOpJiB2c&dib_tag=se&keywords=battery%2Bmanager%2Bfor%2BLiPo&qid=1744743333&sprefix=battery%2Bmanager%2Bfor%2Blipo%2Caps%2C108&sr=8-6&th=1) |
+| Blue Robotics Battery Cell Checker          | BlueRobotics | BR-100757        | RobotShop     | RB-Blu-541          | 1        | $18.00      | [Link](https://www.robotshop.com/products/blue-robotics-battery-cell-checker?qd=9c627b804e60ac374689e3f4bfb00820) |
 
 ---
 
@@ -84,9 +86,9 @@ Everything must interface with the power system to function properly; however, n
 
 ## Design Analysis
 
-The proposed power system design effectively meets the needs of the robot by leveraging a centralized 22.2V LiPo battery (6S, 10Ah) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices.
+The proposed power system design effectively meets the needs of the robot by leveraging a centralized 22.2V LiPo battery (6S, 10Ah) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices. The power from the battery will be run through a battery management system, which will be preassembled and tie into the communication system back to the user interface to deliver the necessary information. This will also protect the battery from over dissipating
 
-To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 22.2V to specific voltage levels. A dedicated 5.1V, 4–5A buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
+To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 22.2V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
 
 The motor drivers are powered directly from the 22.2V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
 
@@ -94,7 +96,7 @@ Overall, the integration of high-capacity power delivery, voltage regulation, an
 
 ---
 
-## KiCad Files (To be attached)
+## KiCad Files 
 
 - **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/KiCadDDPowersystem.png)
 
