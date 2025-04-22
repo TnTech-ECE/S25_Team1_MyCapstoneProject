@@ -33,8 +33,8 @@ Disclaimer that the design is based off of running everything off of a single ba
 | **Use additional batteries**       | Isolates power-hungry motors from logic systems| Increased size, weight, and wiring complexity           |
 
 
-- Primary battery: **6S LiPo, 22.2V, 10 Ah** pack.
-- The battery will connect to a battery management system which will allow the user to read the percentage of the battery left.
+- Primary battery: **6S LiPo, 22.2V, 10 Ah** pack. This battery comes with the sipplied chassis. 
+- The battery will connect to a battery management system which will allow the user to read the percentage of the battery left. If the test robot is kept then the BMS will be included in the kit.
 - This battery must supply power to:
   - **Raspberry Pi** 
     - A raspberry pi 4 operates off of 5V; however, it has a low voltage detection system and runs the risk of crashing out if it drops below 5V for any reason, so for margin 5.1V will be supplied in case of a slight irregularity. It will also draw up to 4A of current, which will be one of the more power intensive modules for this design behind the actual drive train power needs. 
