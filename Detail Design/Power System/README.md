@@ -73,15 +73,10 @@ Everything must interface with the power system to function properly; however, n
   
 | Product                                 |   Manufacturer                | Part Number     | Distributor | Distributor Part Number   | Quantity    | Price (USD) | Purchasing URL |
 |-----------------------------------------|-------------------------------|-----------------|-------------|---------------------------|-------------|-------------|----------------|
-|Buck Converter with LED Display | Solarbotics                      | 40400         | RobotShop      | RB-Sbo-193                   | 1 | $7.44      | [Link](https://www.robotshop.com/products/buck-converter-with-led-display?qd=15ce2915da99d1ec72fd0ea88700259d) |
-| Butt Splice          | Haisstronica | B07L29DLGN        | Amazon     | B07L29DLGN          | 1        | $19.99      | [Link](https://www.amazon.com/Haisstronica-Connectors-Gauge-Insulated-Waterproof-Electrical/dp/B07L29DLGN/ref=sr_1_2_sspa?crid=3PW6LLCKXS5O&dib=eyJ2IjoiMSJ9.Z4YyUbMciosyhKqNP5auDcibcRFrwPEBQ1Z2uhOuEQv3V3A884OAQ7lPsDnQKyoc9hV5ZGN0yD8nw9ditwNxAYbh92CkHbOwjc-taibmGVFgH-U8RHToYZFU3nSSkSwfTPDqXm4zV43qZRnYuzo8sRc3lw_ZVFp5LLRaRXzcjDUvt0GYPz5r0ZLPizXnluYT6-vsPWTbLCRRfcZpIZcW2jJjGN-22bSsQtqOJ20xbyca1fcGyWyulz6SAfeyyw8o-cDKsyQxgN-Pju8hpuv2MhoTJLCamOZMNnvo-YmwuH4.a0s1hFn3PqgIP3fEG_FPHaQb4FpdVGTRgVADcbtk-Dk&dib_tag=se&keywords=Butt%2Bsplice&qid=1744731493&s=electronics&sprefix=butt%2Bsplic%2Celectronics%2C133&sr=1-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) |
+|Buck Converter with LED Display | Solarbotics                      | 40400         | RobotShop      | RB-Sbo-193                   | 4 | $7.44      | [Link](https://www.robotshop.com/products/buck-converter-with-led-display?qd=15ce2915da99d1ec72fd0ea88700259d) |
+| Lever Wire Connectors          | XHF | B07SFCCPZ6        | Amazon     | B07SFCCPZ6          | 1        | $19.99      | [Link](https://www.amazon.com/Connectors-Conductor-Combination-Assortment-Connection/dp/B07SFCCPZ6/ref=asc_df_B07SFCCPZ6?mcid=fcc576a533863610b698aeb16f01c635&hvocijid=7958341847467851628-B07SFCCPZ6-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=738055595456&hvpos=&hvnetw=g&hvrand=7958341847467851628&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2426394699034&hvsb=hilltop&th=1) |
 | Blue Robotics Battery Cell Checker          | BlueRobotics | BR-100757        | RobotShop     | RB-Blu-541          | 1        | $18.00      | [Link](https://www.robotshop.com/products/blue-robotics-battery-cell-checker?qd=9c627b804e60ac374689e3f4bfb00820) |
 
----
-
-## Flow Diagram
-
-![Operational Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/Power_System_FlowChart.png)
 ---
 
 ## Design Analysis
