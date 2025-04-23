@@ -33,7 +33,7 @@ Disclaimer that the design is based off of running everything off of a single ba
 | **Use additional batteries**       | Isolates power-hungry motors from logic systems| Increased size, weight, and wiring complexity           |
 
 
-- Primary battery: **6S LiPo, 22.2V, 10 Ah** pack. This battery comes with the sipplied chassis. 
+- Primary battery: **8S LiPo, 29.6V, 98 Wh** pack. This battery comes with the supplied chassis. The max current draw is estimated to be around 65A continuous and 105A max.
 - The battery will connect to a battery management system which will allow the user to read the percentage of the battery left. If the test robot is kept then the BMS will be included in the kit.
 - This battery must supply power to:
   - **Raspberry Pi** 
@@ -81,11 +81,11 @@ Everything must interface with the power system to function properly; however, n
 
 ## Design Analysis
 
-The proposed power system design effectively meets the needs of the robot by leveraging a centralized 22.2V LiPo battery (6S, 10Ah) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices. The power from the battery will be run through a battery management system, which will be preassembled and tie into the communication system back to the user interface to deliver the necessary information. This will also protect the battery from over dissipating
+The proposed power system design effectively meets the needs of the robot by leveraging a centralized 29.6V LiPo battery (8S, 98Wh) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices. The power from the battery will be run through a battery management system, which will be preassembled and tie into the communication system back to the user interface to deliver the necessary information. This will also protect the battery from over dissipating
 
-To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 22.2V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
+To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
 
-The motor drivers are powered directly from the 22.2V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
+The motor drivers are powered directly from the 29.6V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
 
 Overall, the integration of high-capacity power delivery, voltage regulation, and protective measures demonstrates that the design not only meets the operational requirements of the robot but also ensures long-term stability and system reliability.
 
@@ -93,5 +93,5 @@ Overall, the integration of high-capacity power delivery, voltage regulation, an
 
 ## KiCad Files 
 
-- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/KiCadDDPowersystem.png)
+- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/DD%20KiCad%20Updated%20BMS.png)
 
