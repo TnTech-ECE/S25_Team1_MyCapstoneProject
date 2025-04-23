@@ -53,7 +53,7 @@ Disclaimer that the design is based off of running everything off of a single ba
 ---
 
 ## Interfacing with Other Subsystems
-Battery Management System
+Battery Management System- Included with robot chassis, but if robot chassis changes and the BMS is not provided there is a BMS on standby ready to be installed. 
 - This will be a preassembled device that the battery runs through in order to produce the data that will be sent back to the user interface. The BMS will meet up with the ethernet cable at the raspberry pi to relay the information.
 Everything must interface with the power system to function properly; however, not everything requires the same amount of power, so buck converters shall convert the 22.2V battery to the desired voltages of 3.3V, 5.5V and 12V. 
 - Buck Converter for 3.3V
@@ -75,13 +75,13 @@ Everything must interface with the power system to function properly; however, n
 |-----------------------------------------|-------------------------------|-----------------|-------------|---------------------------|-------------|-------------|----------------|
 |Buck Converter with LED Display | Solarbotics                      | 40400         | RobotShop      | RB-Sbo-193                   | 4 | $7.44      | [Link](https://www.robotshop.com/products/buck-converter-with-led-display?qd=15ce2915da99d1ec72fd0ea88700259d) |
 | Lever Wire Connectors          | XHF | B07SFCCPZ6        | Amazon     | B07SFCCPZ6          | 1        | $19.99      | [Link](https://www.amazon.com/Connectors-Conductor-Combination-Assortment-Connection/dp/B07SFCCPZ6/ref=asc_df_B07SFCCPZ6?mcid=fcc576a533863610b698aeb16f01c635&hvocijid=7958341847467851628-B07SFCCPZ6-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=738055595456&hvpos=&hvnetw=g&hvrand=7958341847467851628&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2426394699034&hvsb=hilltop&th=1) |
-| Blue Robotics Battery Cell Checker          | BlueRobotics | BR-100757        | RobotShop     | RB-Blu-541          | 1        | $18.00      | [Link](https://www.robotshop.com/products/blue-robotics-battery-cell-checker?qd=9c627b804e60ac374689e3f4bfb00820) |
+| TinyBMSv2.1-150A 4s-16s 12V-60V          | ENEPAQ | TinyBMSv2.1-150A 4s-16s 12V-60V        | DigiKey     | 5124-TinyBMSv2.1-150A4s-16s12V-60V-ND          | 1        | $389.00      | [Link](https://www.digikey.com/en/products/detail/enepaq/TinyBMSv2-1-150A-4s-16s-12V-60V/21283300) |
 
 ---
 
 ## Design Analysis
 
-The proposed power system design effectively meets the needs of the robot by leveraging a centralized 29.6V LiPo battery (8S, 98Wh) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices. The power from the battery will be run through a battery management system, which will be preassembled and tie into the communication system back to the user interface to deliver the necessary information. This will also protect the battery from over dissipating
+The proposed power system design effectively meets the needs of the robot by leveraging a centralized 29.6V LiPo battery (8S, 98Wh) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices. The power from the battery will be run through a battery management system that is included in the robot chassis;however, a preassembled option will be on stand by which will tie into the communication system via UART. This will feed the data back to the user interface to deliver the necessary information. This will also protect the battery from over dissipating and over current as well. The BMS selected will only be ordered if the final product robot chassis does not have one preinstalled. 
 
 To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
 
