@@ -21,7 +21,7 @@ The navigation subsystem for CIRCE serves as the brain of its autonomous movemen
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified that navigation shall be conducted using a  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoint-to-waypoint system.  
 
-● CirceBot shall transmit real-time data, including current position, current velocity, meters of cable left, heading, battery life percentage, and error codes if any occur. The minimum speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.  
+● CirceBot shall transmit real-time data, including current position, current velocity, heading, and error codes if any occur. The minimum speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified the required data to be transmitted and  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed for the current operation.  
 
@@ -33,14 +33,14 @@ The navigation subsystem for CIRCE serves as the brain of its autonomous movemen
 
 **Constraints include:**  
 
-● Limited computational and RAM resources (balanced via ROS optimization)  
+● CirceBot shall operate with limited computational and RAM resources (balanced via ROS optimization).  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ This is a byproduct of the hardware being used, but balanced via the software.  
 
-● Sensor update timing and synchronization  
+● CirceBot shall have reasonable sensor update timing and synchronization as outlined by DEVCOM.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ As with any system utilizing sensor integration we must take into account refresh  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rates and synchronicity of data.  
 
-● Maintaining odometry accuracy over time and distance  
+● CirceBot shall maintain odometry accuracy over time and distance.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ This is caused due to the lack of reliability of most coordinate planes as a single  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source, but is balanced by using three different coordinate planes in conjunction to  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reduce drift and increase accuracy.  
@@ -55,7 +55,7 @@ The system uses the following integrated components:
 
 ● ATMega 2560: Processes velocity commands from the Pi, translates them to motor driver signals, and uses encoder feedback with Hall effect sensors to maintain precise wheel speed and direction.  
 
-● SLAM and Path Planning: Real-Time Appearance-Based Mapping (RTAB-Map) provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's algorithm on a dynamic occupancy grid.  
+● SLAM and Path Planning: Real-Time Appearance-Based Mapping (RTAB-Map) provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's algorithm on a dynamic occupancy grid. These methods will rely on the LiDAR and RealSeanse depth camera for accuracy and fuctionality. 
 
 ● Coordinate System Integration:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ Earth-Centered Inertial (ECI): Though typically used in space applications,  
@@ -128,7 +128,9 @@ These three coordinate systems are converted via transformation matrices inside 
 
 The CIRCE autonomous navigation subsystem has been thoughtfully designed to meet the constraints and fulfill the intended function of guiding a mobile robot up to 100 yards with full autonomy. It integrates a suite of complementary technologies, including RTAB-Map-based SLAM, real-time path planning, and obstacle avoidance using RPLIDAR A1 and the Intel RealSense D456. These enable CIRCE to operate within dynamic environments while avoiding collisions, adhering to standards. Real-time sensor fusion—combining LiDAR, depth imaging, Hall-effect wheel encoders, and IMU data—ensures robust localization and reliable obstacle detection even in GPS-denied or cluttered environments.
 
-Furthermore, CIRCE satisfies critical constraints such as limited power and processing capacity through modular hardware selection and software optimization within ROS. The navigation system transmits 10 Hz telemetry, including all specified metrics—position, velocity, cable length remaining, heading, and fault states—as required by the customer (DEVCOM). By delegating high-level planning to the Raspberry Pi 4 and real-time control to the ATMega 2560, CIRCE achieves efficient task partitioning that maintains system responsiveness under computational limits.
+To achieve CIRCE’s goal of autonomous outdoor navigation with reliable obstacle avoidance and path planning over distances of up to 100 meters, a combination of LiDAR, stereo depth camera, and inertial sensing is employed. The RPLIDAR A1 offers 360° scanning with an angular resolution of approximately 1° and a range of up to 12 meters, providing sufficient accuracy (±2–3 cm at 1.5 m) for 2D SLAM and obstacle detection. This unit will also refresh at a rate of 10 Hz (10 full scans per second) at a proper optimization of the D456 and sensor fusion. The Intel RealSense D456 depth camera complements this with high-resolution 3D depth perception, delivering depth accuracy within ±2% at 2 meters and a maximum effective range of 5–10 meters. Together, these sensors enable CIRCE to detect and navigate around objects with a positional accuracy requirement of ±10–15 cm. However, inertial measurement units (IMUs) inherently drift over time, particularly in yaw, and must be corrected through sensor fusion techniques. This drift is mitigated by fusing IMU data with wheel encoder feedback, LiDAR scans, and stereo vision via algorithms such as the SLAM frameworks, ensuring robust and consistent localization throughout autonomous operation.
+
+Furthermore, CIRCE satisfies critical constraints such as limited power and processing capacity through modular hardware selection and software optimization within ROS. The navigation system draws anywhere from 8-10.5 W and transmits 10 Hz telemetry, including all specified metrics—position, velocity, cable length remaining, heading, and fault states—as required by the customer (DEVCOM). By delegating high-level planning to the Raspberry Pi 4 and real-time control to the ATMega 2560, CIRCE achieves efficient task partitioning that maintains system responsiveness under computational limits.
 
 Designed for modular upgrades and future scalability, the CIRCE subsystem is capable of accommodating expanded capabilities such as GPS integration or advanced motion planning modules. The design reflects a balance of cutting-edge navigation techniques with practical embedded systems engineering. Its ability to maintain accuracy over time, respond to real-world uncertainties, and deliver transparent diagnostics confirms that CIRCE is a reliable and field-ready autonomous solution.  
 
