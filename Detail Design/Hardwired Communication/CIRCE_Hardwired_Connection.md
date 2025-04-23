@@ -1,4 +1,4 @@
-# CIRCE Hardwired Communicaation Subsystem Design
+# CIRCE Hardwired Communication Subsystem Design
 
 ## Function of the Subsystem:
 The Hardwired Communication subsystem serves as the primary data pipeline between the brain of CirceBot and the CirceSoft control software. Its main function is to support bidirectional, real-time communication using Ethernet and the WebSocket protocol. It facilitates mission-critical data transmission, including navigational commands from CirceSoft to CirceBot and telemetry feedback such as GPS coordinates, velocity, cable deployment length, battery level, and system error codes. This communication ensures precise execution of autonomous tasks in radio frequency denied environments while updating system diagnostics.   
