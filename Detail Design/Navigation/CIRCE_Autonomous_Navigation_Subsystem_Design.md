@@ -8,7 +8,7 @@ The navigation subsystem for CIRCE serves as the brain of its autonomous movemen
 
 ### Specifications and Constraints
 
-● CirceBot shall carry up to 100 yards (approximately 10 lbs.) of Ethernet cable and report error codes via self diagnosis.  
+● CirceBot shall carry up to 100 yards (approximately 10 lbs.) of Ethernet cable.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ANSI/TIA-568.2-D: This standard specifies the maximum allowable length for  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;twisted-pair Ethernet cables in standard networking applications. The maximum  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length is defined as 109 yards (328 feet or approximately 100 meters), beyond  
@@ -17,13 +17,21 @@ The navigation subsystem for CIRCE serves as the brain of its autonomous movemen
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as repeaters, switches, or fiber optic solutions are required. For this project it is  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;intended to stick with the initial 100 yards.  
 
-● It shall receive Next Position waypoints and navigate to the next waypoint.  
+● CirceBot shall report error codes via self diagnosis.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified that error codes shall be reported using a  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self diagnosis system. 
+
+● CirceBot shall receive Next Position waypoints and navigate to the next waypoint.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified that navigation shall be conducted using a  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoint-to-waypoint system.  
 
-● CirceBot shall transmit real-time data, including current position, current velocity, heading, and error codes if any occur. The minimum speeds that this data should be relayed is 10 Hz. This will utilize sensors and circuiting.  
+● CirceBot shall transmit real-time data, including current position, current velocity, heading, and error codes if any occur.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified the required data to be transmitted and  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayed for the current operation.  
+
+● CirceBot shall transmit data at a minimum speed of 10 Hz.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ The customer, DEVCOM, has specified the data should be transmitted at a speed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;no lower than 10 Hz.
 
 ● CirceBot shall use minor obstacle avoidance to avoid collisions. This will allow the robot to go around obstacles and avoid any collisions that could possibly damage the system.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ ANSI/RIA R15.08: This standard establishes safety requirements for autonomous  
@@ -33,17 +41,15 @@ The navigation subsystem for CIRCE serves as the brain of its autonomous movemen
 
 **Constraints include:**  
 
-● CirceBot shall operate with limited computational and RAM resources (balanced via ROS optimization).  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ This is a byproduct of the hardware being used, but balanced via the software.  
+● CirceBot shall use approximately 70–85% of the Raspberry Pi 4’s CPU and 1.2–1.8 GB of RAM during operation, with the depth camera posing the highest processing demand. (balanced via ROS optimization).  
 
-● CirceBot shall have reasonable sensor update timing and synchronization as outlined by DEVCOM.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ As with any system utilizing sensor integration we must take into account refresh  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rates and synchronicity of data.  
+● CirceBot shall synchronize all sensor data inputs (LiDAR, depth camera, wheel encoders, and inertial measurement unit (IMU)) with a maximum time skew of ±20 milliseconds. 
 
-● CirceBot shall maintain odometry accuracy over time and distance.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;○ This is caused due to the lack of reliability of most coordinate planes as a single  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source, but is balanced by using three different coordinate planes in conjunction to  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reduce drift and increase accuracy.  
+● CirceBot shall complete the full navigation processing loop within 100 milliseconds to maintain a consistent 10 Hz update rate.
+
+● CirceBot shall maintain a positional accuracy within ±2% of the total distance traveled over time.
+
+● CirceBot shall not accumulate drift exceeding 10 cm per meter traveled under nominal terrain and sensor conditions.
 
 ---
 
@@ -53,7 +59,7 @@ The system uses the following integrated components:
 
 ● Raspberry Pi 4: Executes Simultaneous Localization and Mapping (SLAM), global positioning, path planning, and environmental mapping using Robot Operating System (ROS). It collects sensor data from the LiDAR and RealSense camera to build a real-time occupancy map and fuses this with inertial and odometric feedback.  
 
-● ATMega 2560: Processes velocity commands from the Pi, translates them to motor driver signals, and uses encoder feedback with Hall effect sensors to maintain precise wheel speed and direction.  
+● Arduino Advanced Technology megaAVR (ATMega) 2560: Processes velocity commands from the Pi, translates them to motor driver signals, and uses encoder feedback with Hall effect sensors to maintain precise wheel speed and direction.  
 
 ● SLAM and Path Planning: Real-Time Appearance-Based Mapping (RTAB-Map) provides a ROS-based SLAM solution. Navigation is guided using A* or Dijkstra's algorithm on a dynamic occupancy grid. These methods will rely on the LiDAR and RealSeanse depth camera for accuracy and fuctionality. 
 
@@ -80,11 +86,11 @@ These three coordinate systems are converted via transformation matrices inside 
 
 ● Power System: Supplies 5V and 12V to Raspberry Pi, ATMega, sensors, and motors. A regulated buck converter ensures voltage consistency.  
 
-● Communication Bus: A UART link allows the Raspberry Pi to send high-level velocity commands to the ATMega. The communication subsystem will link to the ethernet port of the Raspberry Pi for the required information as per the Computer Science Team.
+● Communication Bus: A Universal Asynchronous Receiver/Transmitter (UART) link allows the Raspberry Pi to send high-level velocity commands to the ATMega. The communication subsystem will link to the ethernet port of the Raspberry Pi for the required information as per the Computer Science Team.
 
 ● Motor Controls: UART over serial allows for the ATMega to send linear and angular velocity commands to the motor controller for precise movement. 
 
-● Operating System: This subsystem is almost directly linked to the operating subsytem, since the operating system will control the linking between the Raspberry Pi and the ATMega 2560.
+● Operating System: This subsystem is almost directly linked to the operating subsystem, since the operating system will control the linking between the Raspberry Pi and the ATMega 2560.
 
 ---
 
@@ -94,15 +100,27 @@ These three coordinate systems are converted via transformation matrices inside 
 
 ![Navigation Wiring Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Navigation%20Wiring%20Schematic.png)
 
-● ATMega Code:
+● ATMega Code:<br>
+
+○ Drives 4 motors with encoder feedback
+
+○ Receives linear and angular velocities
 
 ![ATMega Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/ATMega_Code.png)  
 
-● Raspberry Pi 4 Code:
+● Raspberry Pi 4 Code:<br>
+
+○ Navigation, planning, and obstacle avoidance using RTAB-Map and SLAM
+
+○ Publishes /cmd_vel and transmits it to ATMega
 
 ![Raspberry Pi Code](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Raspberry%20Pi%204%20Code.png)  
 
-● Slam Launch File:
+● Slam Launch File:<br>
+
+○ Initializes all the necessary nodes and parameters required for the robot to perform SLAM
+
+○ GMapping uses the LIDAR data to build a map of the environment while tracking the robot’s position
 
 ![Slam Launch File](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Navigation/Detail%20Design/Navigation/Slam%20Launch%20File.png)
 
@@ -128,11 +146,11 @@ These three coordinate systems are converted via transformation matrices inside 
 
 The CIRCE autonomous navigation subsystem has been thoughtfully designed to meet the constraints and fulfill the intended function of guiding a mobile robot up to 100 yards with full autonomy. It integrates a suite of complementary technologies, including RTAB-Map-based SLAM, real-time path planning, and obstacle avoidance using RPLIDAR A1 and the Intel RealSense D456. These enable CIRCE to operate within dynamic environments while avoiding collisions, adhering to standards. Real-time sensor fusion—combining LiDAR, depth imaging, Hall-effect wheel encoders, and IMU data—ensures robust localization and reliable obstacle detection even in GPS-denied or cluttered environments.
 
-To achieve CIRCE’s goal of autonomous outdoor navigation with reliable obstacle avoidance and path planning over distances of up to 100 meters, a combination of LiDAR, stereo depth camera, and inertial sensing is employed. The RPLIDAR A1 offers 360° scanning with an angular resolution of approximately 1° and a range of up to 12 meters, providing sufficient accuracy (±2–3 cm at 1.5 m) for 2D SLAM and obstacle detection. This unit will also refresh at a rate of 10 Hz (10 full scans per second) at a proper optimization of the D456 and sensor fusion. The Intel RealSense D456 depth camera complements this with high-resolution 3D depth perception, delivering depth accuracy within ±2% at 2 meters and a maximum effective range of 5–10 meters. Together, these sensors enable CIRCE to detect and navigate around objects with a positional accuracy requirement of ±10–15 cm. However, inertial measurement units (IMUs) inherently drift over time, particularly in yaw, and must be corrected through sensor fusion techniques. This drift is mitigated by fusing IMU data with wheel encoder feedback, LiDAR scans, and stereo vision via algorithms such as the SLAM frameworks, ensuring robust and consistent localization throughout autonomous operation.
+To achieve CIRCE’s goal of autonomous outdoor navigation with reliable obstacle avoidance and path planning over distances of up to 100 meters, a combination of LiDAR, stereo depth camera, and inertial sensing is employed. The RPLIDAR A1 offers 360° scanning with an angular resolution of approximately 1° and a range of up to 12 meters, providing sufficient accuracy (±2–3 cm at 1.5 m) for 2D SLAM and obstacle detection. This unit will also refresh at a rate of 10 Hz (10 full scans per second) at a proper optimization of the D456 and sensor fusion. The Intel RealSense D456 depth camera complements this with high-resolution 3D depth perception, delivering depth accuracy within ±2% at 2 meters and a maximum effective range of 5–10 meters. Together, these sensors enable CIRCE to detect and navigate around objects with a positional accuracy requirement of ±10 cm. However, IMUs inherently drift over time, particularly in yaw, and must be corrected through sensor fusion techniques. This drift is mitigated by fusing IMU data with wheel encoder feedback, LiDAR scans, and stereo vision via algorithms such as the SLAM frameworks, ensuring robust and consistent localization throughout autonomous operation. To mitigate vibration noise affecting CIRCE’s IMU, the IMU should be isolated from the robot's motors and other vibrating components using vibration-dampening materials such as rubber mounts or foam pads. Additionally, a Kalman filter should be implemented to fuse the IMU data with other sensor inputs, smoothing out high-frequency vibration noise and providing more accurate estimates of the robot’s orientation and position. Regular sensor calibration should also be performed to further reduce residual noise and improve accuracy.
 
 Furthermore, CIRCE satisfies critical constraints such as limited power and processing capacity through modular hardware selection and software optimization within ROS. The navigation system draws anywhere from 8-10.5 W and transmits 10 Hz telemetry, including all specified metrics—position, velocity, cable length remaining, heading, and fault states—as required by the customer (DEVCOM). By delegating high-level planning to the Raspberry Pi 4 and real-time control to the ATMega 2560, CIRCE achieves efficient task partitioning that maintains system responsiveness under computational limits.
 
-Designed for modular upgrades and future scalability, the CIRCE subsystem is capable of accommodating expanded capabilities such as GPS integration or advanced motion planning modules. The design reflects a balance of cutting-edge navigation techniques with practical embedded systems engineering. Its ability to maintain accuracy over time, respond to real-world uncertainties, and deliver transparent diagnostics confirms that CIRCE is a reliable and field-ready autonomous solution.  
+Designed for modular upgrades and future scalability, the CIRCE subsystem can accommodate expanded capabilities such as GPS integration or advanced motion planning modules. The design reflects a balance of cutting-edge navigation techniques with practical embedded systems engineering. Its ability to maintain accuracy over time, respond to real-world uncertainties, and deliver transparent diagnostics confirms that CIRCE is a reliable and field-ready autonomous solution.  
 
 ---
 
