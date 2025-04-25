@@ -62,7 +62,7 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ## Flow Diagram
 
-![Flow_Chart]()
+![Flow_Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/FlOW.png)
 
 ## Design Analysis
 
