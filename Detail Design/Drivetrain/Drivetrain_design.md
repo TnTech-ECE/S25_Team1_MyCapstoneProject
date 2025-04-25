@@ -48,7 +48,7 @@ The following device will be used as the drivetrain for the CirceBot:
 
 | Item                      | Qty | Part Number / Model       | Description                         |
 |---------------------------|-----|---------------------------|-------------------------------------|
-| ? | 1 |  |  |
+| JUSTOCK 3650SD G2.1 Brushless Motor | 2 | 30408012 | Motor built into the Rover |
 | ?    | 1   |                    |                |
 | ?      | 1   |                |    |
 | ?                | 1   |                    |                 |
