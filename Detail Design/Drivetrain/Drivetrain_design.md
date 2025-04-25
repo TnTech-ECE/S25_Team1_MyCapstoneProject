@@ -56,7 +56,7 @@ Motor:
 | Item                      | Qty | Part Number / Model       | Description                         |
 |---------------------------|-----|---------------------------|-------------------------------------|
 | JUSTOCK 3650SD G2.1 Brushless Motor | 2 | 30408012 | Motor built into the Rover |
-| ?    | 1   |                    |                |
+| 4wd Rover Zero Unmanned Ground Vehicle    | 1   | ? | The primary chassis including the motors, wheels, and internal battery |
 | ?      | 1   |                |    |
 | ?                | 1   |                    |                 |
 | ?          | 1   |                 |         |
@@ -72,6 +72,9 @@ Motor:
 
 ---
 
+The proposed drivetrain design meets all specified requirements and constraints for the drivetrain. The rover operates reliably within Tennessee’s environmental conditions and is structurally capable of carrying both the additional components and 100 yards of Ethernet cable. The motors are programmed to cease operation upon reaching the designated destination, and real-time data on motor speed and acceleration is successfully transmitted to the motor controller.
+
+The drivetrain achieves motion for the rover using two 21.5T style 2050KV JUSTOCK 3650SD G2.1 Brushless Motor supplied by Hobbywing North.
 
 ### References
 
