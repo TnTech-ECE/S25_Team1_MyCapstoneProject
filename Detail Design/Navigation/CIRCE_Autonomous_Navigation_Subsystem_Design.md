@@ -41,7 +41,7 @@ The navigation subsystem for CIRCE serves as the brain of its autonomous movemen
 
 **Constraints include:**  
 
-● CirceBot shall use approximately 70–85% of the Raspberry Pi 4’s CPU and 1.2–1.8 GB of RAM during operation, with the depth camera posing the highest processing demand. (balanced via ROS optimization).  
+● CirceBot shall use approximately 70–85% of the Raspberry Pi 4’s CPU and 1.2–1.8 GB of RAM during operation, with the depth camera posing the highest processing demand (balanced via ROS optimization).  
 
 ● CirceBot shall synchronize all sensor data inputs (LiDAR, depth camera, wheel encoders, and inertial measurement unit (IMU)) with a maximum time skew of ±20 milliseconds. 
 
