@@ -20,7 +20,7 @@
 
 ---
 The following device will be used as the drivetrain for the CirceBot:
-- Dr. Robot Jaguar 4x4 Mobile Platform
+- 4wd Rover Zero Unmanned Ground Vehicle
   - The platform has a height of 255mm (10"), a width of 530mm (21"), a length of 570mm (22.5"), and a ground clearance of 88mm (3.5").
   - The platform weighs 14.5 kg.
   - The platform is cabable of traverse sand, rock, concrete, gravel, grass, soil and other wet and dry terrain.
@@ -38,8 +38,8 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ![Full_rover](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172619.png)
 ![Rover_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172200.png)
-![Motor](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001221.png)
-![Motor_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001136.png)
+![Motor](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001221.png) [1]
+![Motor_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001136.png) [1]
 
 
 ## Bill of Materials (BOM)
@@ -65,4 +65,7 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ---
 
-## KiCad Files (To be attached)
+
+### References
+
+[1] America, Hobbywing North. “JUSTOCK 3650SD G2.1 Brushless Motor.” HOBBYWING North America, www.hobbywingdirect.com/products/justock-3650sd-g2-1-brushless-motor?srsltid=AfmBOoq0r92gtzdq2ndY9y4VhTjJVl2GHVZ_qYih_iiaVfPHbzuYj1f3&variant=14796323258483.
