@@ -21,11 +21,11 @@
 ---
 The following device will be used as the drivetrain for the CirceBot:
 - 4wd Rover Zero Unmanned Ground Vehicle
-  - The platform has a height of 255mm (10"), a width of 530mm (21"), a length of 570mm (22.5"), and a ground clearance of 88mm (3.5").
+  - The platform has a height of 258mm (10.2"), a width of 445mm (17.5"), a length of 541mm (21.3"), and a ground clearance of 69mm (2.7").
   - The platform weighs 14.5 kg.
   - The platform is cabable of traverse sand, rock, concrete, gravel, grass, soil and other wet and dry terrain.
   - The platform has a maximum speed of 15km/hr (9.32 mph).
-  - The platform is driven by four 24V DC motors with a max power output of 80W/motor.
+  - The platform is driven by two 2050KV brushless motors with a max power output of 115 W/motor.
   - The platform is capable carring a max weight of 34kg and dragging a max wight of 54kg.
   - The platform is capable of climbing up 45° slopes or over stairs(obstacles) with a max height of 110mm (4.5").
   - The platform costs $3,550 before tax.
