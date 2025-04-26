@@ -4,9 +4,13 @@
 
 ## Function of the Power Subsystem
 
-  The power subsystem plays a foundational role in the overall design of the robot, serving as the centralized source of energy distribution to all critical components. Aligned with the conceptual design, its primary function is to ensure that each subsystem—operating system, drive train/motors, navigation, hard wired communication, and spooling device—receives stable and sufficient power from high-capacity battery. This system is designed to be efficient on volume constraints, while reducing wiring complexity and improving overall system reliability.
+&nbsp;&nbsp;&nbsp;&nbsp; The power subsystem serves as the backbone of the robot’s overall design, functioning as the centralized source of energy distribution to all critical components. Aligned with the conceptual architecture, its primary role is to deliver stable and sufficient power to each subsystem—including the operating system, drivetrain and motors, navigation system, hard-wired communication interface, and the cable spooling mechanism.
 
-  This subsystem is not only responsible for supplying voltage, but also stepping down the high-voltage battery output to voltages appropriate for each module, including regulated 5.5V power for the Raspberry Pi and Arduino, and unregulated or regulated higher voltages for motors and motor drivers. It also acts as a protective layer, ensuring overcurrent and voltage regulation to prevent damage to sensitive electronics. As such, the power system is not just a passive supply, but an intelligent and integral part of the robot’s architecture, enabling robust and safe operation under a wide range of operating conditions.
+ &nbsp;&nbsp;&nbsp;&nbsp; This subsystem is designed with efficiency and compactness in mind, optimizing for limited volume while reducing wiring complexity and enhancing overall system reliability. By minimizing unnecessary interconnects and consolidating power distribution, the design ensures cleaner implementation and easier maintenance.
+
+ &nbsp;&nbsp;&nbsp;&nbsp; Beyond simple power delivery, the subsystem is also responsible for regulating voltage. It steps down the high-voltage output of the battery to levels suitable for each component—such as regulated 5.5V for the Raspberry Pi and Arduino, and higher, potentially unregulated voltages for the motor drivers and motors themselves.
+
+&nbsp;&nbsp;&nbsp;&nbsp;  Importantly, the power system functions not just as a passive source, but as a smart and protective layer. It incorporates overcurrent protection, voltage regulation, and filtering to prevent damage to sensitive electronics. As such, it is an active and integral part of the robot’s architecture, enabling safe, reliable, and robust operation across a variety of challenging operating conditions.
 
 
 
@@ -14,42 +18,48 @@
 
 ## Specifications and Constraints
 - Specifications
-  - CirceBot shall run for a minimum of 20 minutes allowing it enough time to deploy 100 yards of ethernet cable.
-  - CirceBot shall relay battery life and information back to the user interface to ensure battery health. Every single thing depends on the battery, so it must be solid.
-  - The battery shall be rechargeable and have easy access to the charging port. 
-  - The battery chosen shall power everything needed including, but not limited to: motors, drivers, microcontrollers, operating systems, sensors and spooling device. It shall have enough power to do so
-  - The robot is to be powered by **a single battery** (minimizing complexity and weight). 
+  - CirceBot shall include an independent power source and be capable of a minimum 20 minutes of operation.
+  - CirceBot shall have the ability to be recharged.
+  - CirceBot shall have easy access to be recharged.
+  - CirceBot shall relay battery percentage and health back to the user interface. 
+  - CirceBot is to be powered by a single battery unless the robot chassis is to change. 
 - Constraints
-  - Size is an issue that must be taken into account. The battery must be big enough to power everything needed while not bogging down the machine due to weight.
-
+  - The battery size shall also minimize volumetric space consumption. 
 ---
 
 ## Overview of Proposed Solutions
-Disclaimer that the design is based off of running everything off of a single battery, but these are potential options if needed. Once the ME team has the chassis figured out these options can be cut. 
-| Option                             | Pros                                           | Cons                                                    |
+&nbsp;&nbsp;&nbsp;&nbsp; The current design is based on the assumption that all components will be powered from a single, centralized battery. The robot chassis provided includes a battery intended to power the entire system.
+
+&nbsp;&nbsp;&nbsp;&nbsp; The table below presents alternative power configurations, which are only meant to serve as contingency options. These can be revisited or removed once the Mechanical Engineering (ME) team finalizes the chassis. If the chassis changes—and with it, the power supply—these options may become relevant.
+| Battery Configuration                             | Pros                                           | Cons                                                    |
 |------------------------------------|------------------------------------------------|---------------------------------------------------------|
-| **Use one 22.2V battery**          | Simplifies system, centralized power management| Requires multiple buck converters; possible bottlenecks |
-| **Use a single different battery** | Can optimize voltage for computing load        | Adds complexity; may not power motors effectively       |
-| **Use additional batteries**       | Isolates power-hungry motors from logic systems| Increased size, weight, and wiring complexity           |
+| **Use one 29.6V battery**          | Simplifies system, centralized power management| Requires multiple buck converters; possible bottlenecks |
+| **Use a single different battery** | Optimizes voltage for computing load        | Adds complexity; may not power motors effectively       |
+| **Use additional batteries**       | Isolates low voltage logic systems from higher voltage motors| Increased size, weight, and wiring complexity           |
+
+**Primary battery:** **8S LiPo, 29.6V, 98 Wh** pack. This battery comes with the supplied chassis. The max current draw is estimated to be around 65A continuous and 105A peak.  
+- The battery will connect to a battery management system, which will allow the user to monitor the battery percentage. If the test robot is retained, the BMS will be included in the kit.
+- The battery must supply power to:
+  - **Raspberry Pi**  
+    - A Raspberry Pi 4 operates on 5V, but it includes a low-voltage detection system that can trigger instability or unexpected shutdowns if the voltage drops below that threshold.
+      - To account for this, the system will supply a regulated 5.5V to provide adequate margin for any voltage fluctuations.
+    - The Raspberry Pi can draw up to 4A of current, making it one of the most power-demanding components aside from the drive system.
+  - **Arduino**  
+    - An Arduino operates at 5V internally, but its input voltage range typically falls between 5V and 12V.
+In this design, the battery voltage is stepped down using a buck converter to provide a regulated 5.1V at 1A.
+This provides ample margin to ensure stable and reliable operation.
+  - **Motor Drivers**  
+    - The motor driver acts as a hub where microcontroller input signals are used to control higher voltage/current supplied to the motors. The battery will feed the drivers directly, and the motors will be powered through the drivers.
+  - **Motors**  
+    - The motors will receive power from the motor drivers, which are directly connected to the battery.
+  - **Spooling Mechanism**  
+    - While the specific motors for the spooling mechanism are still undetermined, it is assumed that they will require power through a buck converter and draw no more than 3A at 12V. Actual current demand will likely be lower.
+  - **Sensors**  
+    - The sensors will use I/O pins for data communication but will be powered separately from the Raspberry Pi to prevent excessive current draw. Power will be provided through the power module and routed via the circuit board to all sensors.
+    - **Depth Sensor** – requires 3.3V and no more than 1A of current. It will be powered through a buck converter.
+    - **Lidar Sensor** – requires up to 5.5V and no more than 1A of current. It will also be powered through a buck converter.
 
 
-- Primary battery: **8S LiPo, 29.6V, 98 Wh** pack. This battery comes with the supplied chassis. The max current draw is estimated to be around 65A continuous and 105A max.
-- The battery will connect to a battery management system which will allow the user to read the percentage of the battery left. If the test robot is kept then the BMS will be included in the kit.
-- This battery must supply power to:
-  - **Raspberry Pi** 
-    - A raspberry pi 4 operates off of 5V; however, it has a low voltage detection system and runs the risk of crashing out if it drops below 5V for any reason, so for margin 5.1V will be supplied in case of a slight irregularity. It will also draw up to 4A of current, which will be one of the more power intensive modules for this design behind the actual drive train power needs. 
-  - **Arduino**
-    - An ardruino has an operating voltage of around 5V however the input voltage needs to be between 5-12. The intended design is to come out of a buck converter where the battery voltage is stepped down to 5.1V and 1A, which should allow for plenty of margin.
-  - **Motor drivers**
-    - The motor driver serves as a hub where the input from the microcontroller meets the higher voltage/current to meet the power needs of the motors themselves. The battery will feed the drivers directly and the motors will be powered through the driver. 
-  - **Motors**
-    - Will be fed from the drivers which are fed from the battery.
-  - **Spooling mechanism**
-    - While it is still unclear what motors will be used for the spooling machine it can be assumed that it will require power that comes through a buck converter and draws no more than 3A and 12V, but most likely will not requrie that much. 
-  - **Sensors**
-    - The sensors will use I/O pins to recieve and send information, but they will be powered seperately from the pi to keep from overdrawing current from the pi. This will come from the power module and come together within circuit board where all sensors will be powered from.
-    - Depth Sensor- will require 3.3V and no more than 1A of current. It will be run off a buck converter. 
-    - Lidar Sensor- will require up to 5.5V and no more than 1A of current. It will be run off a buck converter.
 ---
 
 ## Interfacing with Other Subsystems
