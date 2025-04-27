@@ -20,15 +20,16 @@
 
 ---
 The following device will be used as the drivetrain for the CirceBot:
-- 4wd Rover Zero Unmanned Ground Vehicle
-  - The platform has a height of 258mm (10.2"), a width of 445mm (17.5"), a length of 541mm (21.3"), and a ground clearance of 69mm (2.7").
-  - The platform weighs 14.5 kg.
+- 4WD Rover Zero 3 [1]:
+  - The platform has a height of 25.4 cm (10"), a width of 39 cm (15.4"), a length of 62 cm (24.4"), and a ground clearance of 7.87 cm (3.1").
+  - The platform weighs 11 kg.
   - The platform is cabable of traverse sand, rock, concrete, gravel, grass, soil and other wet and dry terrain.
-  - The platform has a maximum speed of 15km/hr (9.32 mph).
-  - The platform is driven by two 2050KV brushless motors with a max power output of 115 W/motor.
-  - The platform is capable carring a max weight of 34kg and dragging a max wight of 54kg.
-  - The platform is capable of climbing up 45° slopes or over stairs(obstacles) with a max height of 110mm (4.5").
-  - The platform costs $3,550 before tax.
+  - The platform has a maximum speed of 9.01 km/hr (5.6 mph).
+  - The platform is driven by two 2050 KV inrunner Brush-less Motors with a max power output of 115 W/motor.
+  - The platform is capable carring a max weight of 50 kg.
+  - The platform is capable of climbing hills, managing sidewalks, and traversing gravel if the ground is dry.
+  - The platform has a drive time of 1 to 2 hours and an idle time of 5 hours.
+  - The platform costs $4,000 before tax.
   - The microcontroller will communicate to the motors the speed and torque needed to follow the designated path.
 ## Interface with Other Subsystems
 
@@ -37,16 +38,16 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ● Motor Controls: Impements the navigation data recieved from CirceSoft as well as obstacle avoidance to drive the motors at the correct accelerations and speeds.
 
-## Buildable Schematic(Temp)
+## Buildable Schematic
 
 Full Rover:
 
-![Full_rover](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172619.png)
-![Rover_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172200.png)
+![Full_rover](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172619.png) [1]
+![Rover_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-21%20172200.png) [1]
 Motor:
 
-![Motor](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001221.png) [1]
-![Motor_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001136.png) [1]
+![Motor](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001221.png) [2]
+![Motor_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001136.png) [2]
 
 
 ## Bill of Materials (BOM)
@@ -55,14 +56,10 @@ Motor:
 
 | Item                      | Qty | Part Number / Model       | Description                         |
 |---------------------------|-----|---------------------------|-------------------------------------|
+| 4WD Rover Zero 3    | 1   | 55300200 | The primary chassis including the motors, wheels, and internal battery |
 | JUSTOCK 3650SD G2.1 Brushless Motor | 2 | 30408012 | Motor built into the Rover |
-| 4wd Rover Zero Unmanned Ground Vehicle    | 1   | ? | The primary chassis including the motors, wheels, and internal battery |
-| ?      | 1   |                |    |
-| ?                | 1   |                    |                 |
-| ?          | 1   |                 |         |
-| ?           | 1   |                 |  |
-| ?        | 1   |  |        |
-| ?                  | 1   |             |                      |
+| 98 Wh Battery      | 1   | N/A |  The removable internal battery included with the 4WD Rover Zero 3  |
+| 10" Rubber Wheels | 4 | N/A | The tires included with the 4WD Rover Zero 3 |
 
 ## Flow Diagram
 
@@ -78,4 +75,6 @@ The drivetrain achieves motion for the rover using two 21.5T style 2050KV JUSTOC
 
 ### References
 
-[1] America, Hobbywing North. “JUSTOCK 3650SD G2.1 Brushless Motor.” HOBBYWING North America, www.hobbywingdirect.com/products/justock-3650sd-g2-1-brushless-motor?srsltid=AfmBOoq0r92gtzdq2ndY9y4VhTjJVl2GHVZ_qYih_iiaVfPHbzuYj1f3&variant=14796323258483.
+[1] Rover Robotics, Inc. “Rover Zero UGV - Mobile Research Robot From Rover Robotics.” Rover Robotics, Inc., roverrobotics.com/products/4wd-rover-zero-unmanned-ground-vehicle.
+
+[2] America, Hobbywing North. “JUSTOCK 3650SD G2.1 Brushless Motor.” HOBBYWING North America, www.hobbywingdirect.com/products/justock-3650sd-g2-1-brushless-motor?srsltid=AfmBOoq0r92gtzdq2ndY9y4VhTjJVl2GHVZ_qYih_iiaVfPHbzuYj1f3&variant=14796323258483.
