@@ -36,7 +36,7 @@ The following device will be used as the drivetrain for the CirceBot:
 ---
 ● Power System: Supplies the necessary voltage and current to drive the motors at the speeds and time designated by the Motor Controls Subsystem.
 
-● Motor Controls: Impements the navigation data recieved from CirceSoft as well as obstacle avoidance to drive the motors at the correct accelerations and speeds.
+● Motor Controls: Implements the navigation data receieved from CirceSoft as well as obstacle avoidance to drive the motors at the correct accelerations and speeds.
 
 ## Buildable Schematic
 
