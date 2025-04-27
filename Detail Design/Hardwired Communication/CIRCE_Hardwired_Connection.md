@@ -7,7 +7,7 @@ The Hardwired Communication subsystem serves as the primary data pipeline betwee
 ### Specifications:
 - The Hardwired Communication subsystem shall utilize a physical Ethernet cable for all communication between CirceBot and CirceSoft. 
 - The subsystem shall transmit and receive data using the Websocket protocol implemented over a Transmission Control Protocol/Internet Protocol stack.
-- The subsystem shall transmit the following telemetry data from CirceBot to CirceSoft and vice versa via [CirceSoft2CirceBot.proto](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/pull/14/files#diff-678569a4bcc94c90155f3762924fea7630efa6eeb11e24435464094a76fe574d) and [CirceBot2CirceSoft.proto](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/pull/14/files#diff-fe8a6452f42b8eea1ee617c2c94dc5adde935cc7387334887b092201406a65e4):
+- The subsystem shall transmit the following telemetry data from CirceBot to CirceSoft and vice versa via [CirceSoft2CirceBot.proto](./CirceSoft2CirceBot.proto) and [CirceBot2CirceSoft.proto](./CirceBot2CirceSoft.proto):
   - Current Position
   - Current Velocity
   - Cable Length Remaining
