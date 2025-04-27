@@ -4,7 +4,7 @@
 
 ## Function of the Drivetrain Subsystem
 
-  The Drivetrain subsystem serves as the sole mover of the CirceBot. The primary function of the Drivetrain is to receive navigation data from the navigation subsystem. This would be accomplished by outputing the data as voltage signals to the corresponding motors to drive the CirceBot to its predetermined destination. The secondary function of the Drivetrain is to act as a base for the other subsystems to be built upon.
+  The Drivetrain subsystem serves as the sole mover of the CirceBot. The primary function of the Drivetrain is to receive navigation data from the navigation subsystem. This would be accomplished by outputting the data as voltage signals to the corresponding motors to drive the CirceBot to its predetermined destination. The secondary function of the Drivetrain is to act as a base for the other subsystems to be built upon.
 
 ## Specifications and Constraints
 
