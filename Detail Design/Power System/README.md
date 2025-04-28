@@ -95,6 +95,12 @@ Everything within the system must interface with the power subsystem to function
 - The TinyBMS is included solely as a contingency plan. As long as the robot chassis remains unchanged and continues to utilize the existing integrated battery management system, this component will not be purchased. However, due to its higher cost, it has been accounted for in the budget to ensure that any potential changes to the chassis or battery system do not create unforeseen expenses later in the project. 
 ---
 
+## KiCad Files 
+
+- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/DD%20KiCad%20Updated%20BMS.png)
+
+---
+
 ## Design Analysis
 
 At the core of the power subsystem is the Battery Management System (BMS), which ensures both safe operation and effective monitoring of the 8S, 29.6V LiPo battery. The BMS manages essential protection features, including over-discharge prevention, overcurrent protection, and thermal monitoring, safeguarding the battery and maintaining system reliability. The robot chassis provided includes an integrated BMS; however, if the final chassis design lacks this feature, a preassembled backup BMS is available and ready for integration.
@@ -103,17 +109,13 @@ The BMS does more than just protect the battery. It also provides real-time feed
 
 Combined with the voltage regulation provided by high-efficiency buck converters and the direct battery supply to the motor drivers, the BMS completes a power architecture designed for robust, stable, and reliable performance. Together, these elements ensure that all subsystems—from sensitive electronics to high-current motors—receive the correct power levels with appropriate protection against faults, electrical noise, and operational stresses.
 
-To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to unexpected system failures and shutdowns. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring. The converters also handle noise filtering via capcitor and inductor circuits included in the preassembled converters. 
+To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 4A peak current draw and eliminating undervoltage issues that could lead to unexpected system failures and shutdowns. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring. The converters also handle noise filtering via capcitor and inductor circuits included in the preassembled converters. 
 
 The motor drivers are powered directly from the 29.6V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
 
 Overall, the integration of high-capacity power delivery, voltage regulation, and protective measures demonstrates that the design not only meets the operational requirements of the robot but also ensures long-term stability and system reliability.
 
----
 
-## KiCad Files 
-
-- **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/DD%20KiCad%20Updated%20BMS.png)
 
 ---
 
@@ -122,3 +124,4 @@ Overall, the integration of high-capacity power delivery, voltage regulation, an
 - RobotShop, "Buck Converter with LED Display," RobotShop. [Online]. Available: https://www.robotshop.com/products/buck-converter-with-led-display?qd=15ce2915da99d1ec72fd0ea88700259d. [Accessed: Apr. 25, 2025].
 - Rover Robotics, "4WD Rover Zero Unmanned Ground Vehicle," Rover Robotics. [Online]. Available: https://roverrobotics.com/products/4wd-rover-zero-unmanned-ground-vehicle. [Accessed: Apr. 25, 2025].
 - Rover Robotics, "Zero 3 Core Datasheet," Rover Robotics. [Online]. Available: https://cdn.shopify.com/s/files/1/0055/0433/5925/files/Rover_Robotics_-_Zero_3_Core_Datasheet_2.pdf?v=1725325735. [Accessed: Apr. 25, 2025].
+- Raspberry Pi Foundation, "Raspberry Pi 4 Datasheet," Raspberry Pi Foundation. [Online]. Available: https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf. [Accessed: Apr. 25, 2025].
