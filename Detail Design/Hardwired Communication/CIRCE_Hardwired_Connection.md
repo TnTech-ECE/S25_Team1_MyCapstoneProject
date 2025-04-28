@@ -31,7 +31,7 @@ The Hardwired Communication subsystem serves as the primary data pipeline betwee
 - The subsystem shall function in outdoor environments, including terrain and weather typical of Tennessee.
 
 ## Overview of Proposed Solution:
-The communication subsystem is built around a hybrid architecture using a Raspberry Pi and an Arduino Mega 2560. The Raspberry Pi serves as the primary processing and networking node, handling Ethernet-based communication with CirceSoft over WebSockets. It also executes navigation logic and sensor fusion algorithms using data from GPS, Lidar(Light Detection and Ranging, and depth camera. The Arduino Mega is responsible for real-time motor control and sensor integration. Commands from CirceSoft are transmitted to the Raspberry Pi, which processes them and forwards motor instructions to the Arduino via Universal Asynchronous Receiver/Transmitter(UART).
+The communication subsystem is built around a hybrid architecture using a Raspberry Pi and an Arduino Mega 2560. The Raspberry Pi serves as the primary processing and networking node, handling Ethernet-based communication with CirceSoft over WebSockets. It also executes navigation logic and sensor fusion algorithms using data from GPS, Lidar(Light Detection and Ranging, and depth camera. The Arduino Mega is responsible for real-time motor control and sensor integration. Commands from CirceSoft are transmitted to the Raspberry Pi, which processes them and forwards motor instructions to the Arduino via Universal Serial Bus (USB) connection.
 This separation allows the Raspberry Pi to manage higher-level functions like pathfinding and networking while the Arduino focuses on deterministic, low-latency motor actuation. This architecture increases overall system responsiveness, ensures reliable communication with CirceSoft, and allows precise movement execution.
 Swivels and proper cable management techniques will reduce signal degradation and mechanical strain. The ethernet cable will attach to the CirceBot with a swivel connection, specifically an RJ45 Jack, to aid in relief of tension on the port itself as well as in the changing of ethernet spools.
 
@@ -69,12 +69,12 @@ Outputs from the Hardwired Communication Subsystem:
 - Frequency: ≥10Hz
 
 Movement Commands (to Arduino Mega):
-- Transport Protocol: UART (Serial)
+- Transport Protocol: USB
 - Direction: From Raspberry Pi to Arduino Mega
 - Content: Encoded movement instructions including speed, turning radius, and stop/start flags based on processed navigation logic
 
 Internal Communication:
-- The Raspberry Pi and Arduino Mega communicate over a dedicated serial UART link. The Pi acts as the master controller sending commands, while the Arduino handles real-time motor control and feedback loop closure for low-level actuation.
+- The Raspberry Pi and Arduino Mega communicate over a dedicated serial USB link. The Pi acts as the master controller sending commands, while the Arduino handles real-time motor control and feedback loop closure for low-level actuation.
 
 ### 3D Model of Custom Mechanical Components:
 The Ethernet cable routing and connector housing are managed by the mechanical deployment system, which is being developed by the Mechanical Engineering (ME) team. While no custom mechanical elements are required specifically from the hardwired communication subsystem, the design will still adhere to all relevant requirements. This includes maintaining signal integrity, minimizing cable strain, and ensuring connector stability during motion. These requirements are being communicated to and coordinated with the ME team to ensure mechanical integration supports reliable Ethernet-based communication throughout the mission.
