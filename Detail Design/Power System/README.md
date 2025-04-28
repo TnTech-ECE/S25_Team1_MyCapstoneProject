@@ -63,21 +63,24 @@ This provides ample margin to ensure stable and reliable operation.
 ---
 
 ## Interfacing with Other Subsystems
-Battery Management System- Included with robot chassis, but if robot chassis changes and the BMS is not provided there is a BMS on standby ready to be installed. 
-- This will be a preassembled device that the battery runs through in order to produce the data that will be sent back to the user interface. The BMS will meet up with the ethernet cable at the raspberry pi to relay the information.
-Everything must interface with the power system to function properly; however, not everything requires the same amount of power, so buck converters shall convert the 22.2V battery to the desired voltages of 3.3V, 5.5V and 12V. 
+- Battery Management System - is included with the supplied robot chassis. However, if the chassis is later replaced or modified and does not come with a built-in BMS, a preassembled backup unit is available and ready for installation.
+  -  The BMS is an essential safety and monitoring component that interfaces between the battery and the power system. It tracks key metrics such as voltage, current, temperature, and state of charge. The   battery will route through the BMS, which will collect and transmit this data to the Raspberry Pi via a USB connection. From there, the information is relayed to the user interface through the Ethernet connection. The BMS also helps protect the battery from over-discharge, overcurrent, and other hazardous conditions.
+
+
+Everything within the system must interface with the power subsystem to function properly; however, not all components require the same voltage or current levels. To accommodate these varying power needs, buck converters will step down the 29.6V from the battery to the required voltages of 3.3V, 5.5V, and 12V.
 - Buck Converter for 3.3V
-  - Depth sensor will require 3.3V to operate correctly. It will be powered directly from the buck to ensure that it recieves the correct power, so that the Raspberry Pi is not overdrawn. This will also help on heat dissapation as well.
- 
+  - The depth sensor requires 3.3V for proper operation. It will be powered directly from a dedicated buck converter to ensure it consistently receives the correct voltage without placing additional load on the Raspberry Pi’s power rail. This approach also helps minimize heat buildup and ensures reliable sensor operation.
 - Buck Converter for 5.5V 
-  - The raspberry pi will require 5.5V and will need it's own buck converter to ensure correct and constant power. It will recieve it's power through a USB, so the USB cable will come from the buck converter as well as connect to the ethernet cable to communicate back to the user interface.
-  - Ardruino will require 5.5V from a buck converter. It will also be power seperately and recieve the small signal instructions from the raspberry pi.
-  - Lidar sensor will require 5.5V and also be power seperatly from the raspberry pi where it's inputs and outputs will go.
+  - The Raspberry Pi 4 requires 5.5V for stable operation and will be powered by its own dedicated buck converter. Power will be supplied via a USB cable connected directly from the buck converter, which will also interface with the Ethernet cable for communication back to the user interface.
+  - The Arduino Mega 2560 will also require 5.5V from a separate buck converter. This ensures the Arduino operates independently from the Raspberry Pi’s power supply, receiving only control signals from the Pi without sharing power lines.
+  - The Lidar sensor operates at 5.5V as well and will be powered separately from the Raspberry Pi. This isolation ensures that the sensor receives a stable supply and that any fluctuations in the Pi’s power do not interfere with Lidar performance.
  
 - Buck Converter for 12v
-  - Worst case scenario for the cable spooling device 12V will be required. Most likely the device will only require 5.5V and run off one of the previosly mentioned buck converters
-- Directly power from the battery 22.2V
-  - The motor and motor drivers shall be the only things run directly off the battery. It shall be fused to 10A to ensure the drivers do not pull too much current. 
+  - In the worst-case scenario, the cable spooling mechanism may require 12V. A dedicated buck converter will be available to supply this voltage if necessary. However, under typical conditions, the spooling device is expected to operate at 5.5V and may share one of the existing 5.5V converters.
+- Directly power from the battery 29.6V
+  - The motors and motor drivers will be powered directly from the 29.6V battery without regulation. This high-current path will be protected by a 75A fuse to prevent excessive current draw from damaging the drivers or motors.
+
+
 
 ## Bill of Materials (BOM)
   
@@ -87,13 +90,20 @@ Everything must interface with the power system to function properly; however, n
 | Lever Wire Connectors          | XHF | B07SFCCPZ6        | Amazon     | B07SFCCPZ6          | 1        | $19.99      | [Link](https://www.amazon.com/Connectors-Conductor-Combination-Assortment-Connection/dp/B07SFCCPZ6/ref=asc_df_B07SFCCPZ6?mcid=fcc576a533863610b698aeb16f01c635&hvocijid=7958341847467851628-B07SFCCPZ6-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=738055595456&hvpos=&hvnetw=g&hvrand=7958341847467851628&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2426394699034&hvsb=hilltop&th=1) |
 | TinyBMSv2.1-150A 4s-16s 12V-60V          | ENEPAQ | TinyBMSv2.1-150A 4s-16s 12V-60V        | DigiKey     | 5124-TinyBMSv2.1-150A4s-16s12V-60V-ND          | 1        | $389.00      | [Link](https://www.digikey.com/en/products/detail/enepaq/TinyBMSv2-1-150A-4s-16s-12V-60V/21283300) |
 
+- The buck converters are highly adjustable and allow us to set the voltage values while ensuring up to 3A can be supplied.
+- The wire connectors are simple, but will be needed at each of the drivers to connect Vin's and Vout's.
+- The TinyBMS is included solely as a contingency plan. As long as the robot chassis remains unchanged and continues to utilize the existing integrated battery management system, this component will not be purchased. However, due to its higher cost, it has been accounted for in the budget to ensure that any potential changes to the chassis or battery system do not create unforeseen expenses later in the project. 
 ---
 
 ## Design Analysis
 
-The proposed power system design effectively meets the needs of the robot by leveraging a centralized 29.6V LiPo battery (8S, 98Wh) to power all subsystems through tailored voltage regulation and power distribution. This single-battery configuration simplifies the architecture, reduces weight, and minimizes system complexity while still providing sufficient energy and current capacity for high-demand components such as motors, controllers, and computing devices. The power from the battery will be run through a battery management system that is included in the robot chassis;however, a preassembled option will be on stand by which will tie into the communication system via UART. This will feed the data back to the user interface to deliver the necessary information. This will also protect the battery from over dissipating and over current as well. The BMS selected will only be ordered if the final product robot chassis does not have one preinstalled. 
+At the core of the power subsystem is the Battery Management System (BMS), which ensures both safe operation and effective monitoring of the 8S, 29.6V LiPo battery. The BMS manages essential protection features, including over-discharge prevention, overcurrent protection, and thermal monitoring, safeguarding the battery and maintaining system reliability. The robot chassis provided includes an integrated BMS; however, if the final chassis design lacks this feature, a preassembled backup BMS is available and ready for integration.
 
-To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to brownouts or system crashes. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring.
+The BMS does more than just protect the battery. It also provides real-time feedback on key battery parameters, including state of charge, voltage levels, and temperature readings. This data is communicated through a USB interface to the Raspberry Pi, which then relays it to the user interface via Ethernet. This ensures operators have continuous visibility into the health and performance of the power subsystem during operation.
+
+Combined with the voltage regulation provided by high-efficiency buck converters and the direct battery supply to the motor drivers, the BMS completes a power architecture designed for robust, stable, and reliable performance. Together, these elements ensure that all subsystems—from sensitive electronics to high-current motors—receive the correct power levels with appropriate protection against faults, electrical noise, and operational stresses.
+
+To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to unexpected system failures and shutdowns. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring. The converters also handle noise filtering via capcitor and inductor circuits included in the preassembled converters. 
 
 The motor drivers are powered directly from the 29.6V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
 
