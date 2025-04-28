@@ -37,7 +37,7 @@
 | **Use a single different battery** | Optimizes voltage for computing load        | Adds complexity; may not power motors effectively       |
 | **Use additional batteries**       | Isolates low voltage logic systems from higher voltage motors| Increased size, weight, and wiring complexity           |
 
-**Primary battery:** **8S LiPo, 29.6V, 98 Wh** pack. This battery comes with the supplied chassis. The max current draw is estimated to be around 65A continuous and 105A peak.  
+**Primary battery:** **8S LiPo, 29.6V, 98 Wh** pack. This battery comes with the supplied chassis. The max current draw is estimated to be 65A continuous and 105A peak.  
 - The battery will connect to a battery management system, which will allow the user to monitor the battery percentage. If the test robot is retained, the BMS will be included in the kit.
 - The battery must supply power to:
   - **Raspberry Pi**  
@@ -90,7 +90,7 @@ Everything within the system must interface with the power subsystem to function
 | Lever Wire Connectors          | XHF | B07SFCCPZ6        | Amazon     | B07SFCCPZ6          | 1        | $19.99      | [Link](https://www.amazon.com/Connectors-Conductor-Combination-Assortment-Connection/dp/B07SFCCPZ6/ref=asc_df_B07SFCCPZ6?mcid=fcc576a533863610b698aeb16f01c635&hvocijid=7958341847467851628-B07SFCCPZ6-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=738055595456&hvpos=&hvnetw=g&hvrand=7958341847467851628&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-2426394699034&hvsb=hilltop&th=1) |
 | TinyBMSv2.1-150A 4s-16s 12V-60V          | ENEPAQ | TinyBMSv2.1-150A 4s-16s 12V-60V        | DigiKey     | 5124-TinyBMSv2.1-150A4s-16s12V-60V-ND          | 1        | $389.00      | [Link](https://www.digikey.com/en/products/detail/enepaq/TinyBMSv2-1-150A-4s-16s-12V-60V/21283300) |
 
-- The buck converters are highly adjustable and allow us to set the voltage values while ensuring up to 3A can be supplied.
+- The buck converters are highly adjustable and allow us to set the voltage values while ensuring the correct current can be supplied.
 - The wire connectors are simple, but will be needed at each of the drivers to connect Vin's and Vout's.
 - The TinyBMS is included solely as a contingency plan. As long as the robot chassis remains unchanged and continues to utilize the existing integrated battery management system, this component will not be purchased. However, due to its higher cost, it has been accounted for in the budget to ensure that any potential changes to the chassis or battery system do not create unforeseen expenses later in the project. 
 ---
@@ -115,3 +115,10 @@ Overall, the integration of high-capacity power delivery, voltage regulation, an
 
 - **Schematic**: ![Building Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Power-System/Detail%20Design/Power%20System/DD%20KiCad%20Updated%20BMS.png)
 
+---
+
+## References
+- Enepaq, "TinyBMSv2-1-150A-4s-16s-12V-60V," Digi-Key Electronics. [Online]. Available: https://www.digikey.com/en/products/detail/enepaq/TinyBMSv2-1-150A-4s-16s-12V-60V/21283300. [Accessed: Apr. 25, 2025].
+- RobotShop, "Buck Converter with LED Display," RobotShop. [Online]. Available: https://www.robotshop.com/products/buck-converter-with-led-display?qd=15ce2915da99d1ec72fd0ea88700259d. [Accessed: Apr. 25, 2025].
+- Rover Robotics, "4WD Rover Zero Unmanned Ground Vehicle," Rover Robotics. [Online]. Available: https://roverrobotics.com/products/4wd-rover-zero-unmanned-ground-vehicle. [Accessed: Apr. 25, 2025].
+- Rover Robotics, "Zero 3 Core Datasheet," Rover Robotics. [Online]. Available: https://cdn.shopify.com/s/files/1/0055/0433/5925/files/Rover_Robotics_-_Zero_3_Core_Datasheet_2.pdf?v=1725325735. [Accessed: Apr. 25, 2025].
