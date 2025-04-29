@@ -19,7 +19,7 @@
 ## Overview of Proposed Solutions
 
 ---
-The following device will be used as the drivetrain for the CirceBot:
+The following device will be used as the basis for the drivetrain of the CirceBot:
 - 4WD Rover Zero 3 [1]:
   - The platform has a height of 25.4 cm (10"), a width of 39 cm (15.4"), a length of 62 cm (24.4"), and a ground clearance of 7.87 cm (3.1").
   - The platform weighs 11 kg.
