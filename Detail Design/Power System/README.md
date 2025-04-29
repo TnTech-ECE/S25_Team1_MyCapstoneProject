@@ -28,7 +28,7 @@
 ---
 
 ## Overview of Proposed Solutions
-&nbsp;&nbsp;&nbsp;&nbsp; The current design is based on the assumption that all components will be powered from a single, centralized battery. The robot chassis provided includes a battery intended to power the entire system.
+&nbsp;&nbsp;&nbsp;&nbsp; The current design assumes that the components will be powered from a single, centralized battery. The robot chassis provided includes a battery intended to power the entire system.
 
 &nbsp;&nbsp;&nbsp;&nbsp; The table below presents alternative power configurations, which are only meant to serve as contingency options. These can be revisited or removed once the Mechanical Engineering (ME) team finalizes the chassis. If the chassis changes—and with it, the power supply—these options may become relevant.
 | Battery Configuration                             | Pros                                           | Cons                                                    |
@@ -41,11 +41,9 @@
 - The battery will connect to a battery management system, which will allow the user to monitor the battery percentage. If the test robot is retained, the BMS will be included in the kit.
 - The battery must supply power to:
   - **Raspberry Pi**  
-    - A Raspberry Pi 4 operates on 5V, but it includes a low-voltage detection system that can trigger instability or unexpected shutdowns if the voltage drops below that threshold.
-      - To account for this, the system will supply a regulated 5.5V to provide adequate margin for any voltage fluctuations.
-    - The Raspberry Pi can draw up to 4A of current, making it one of the most power-demanding components aside from the drive system.
+    - A Raspberry Pi 4 operates on 5V, but it includes a low-voltage detection system that can trigger instability or unexpected shutdowns if the voltage drops below that threshold. To account for this, the system will supply a regulated 5.5V to provide adequate margin for any voltage fluctuations. The Raspberry Pi can draw up to 3A of current, making it one of the most power-demanding components aside from the drive system.
   - **Arduino**  
-    - An Arduino operates at 5V internally, but its input voltage range typically falls between 5V and 12V.
+    - An Arduino operates at 5V internally, but its input voltage range falls between 5V and 12V.
 In this design, the battery voltage is stepped down using a buck converter to provide a regulated 5.1V at 1A.
 This provides ample margin to ensure stable and reliable operation.
   - **Motor Drivers**  
@@ -63,7 +61,7 @@ This provides ample margin to ensure stable and reliable operation.
 ---
 
 ## Interfacing with Other Subsystems
-- Battery Management System - is included with the supplied robot chassis. However, if the chassis is later replaced or modified and does not come with a built-in BMS, a preassembled backup unit is available and ready for installation.
+- Battery Management System (BMS)- is included with the supplied robot chassis. However, if the chassis is later replaced or modified and does not come with a built-in BMS, a preassembled backup unit is available and ready for installation.
   -  The BMS is an essential safety and monitoring component that interfaces between the battery and the power system. It tracks key metrics such as voltage, current, temperature, and state of charge. The   battery will route through the BMS, which will collect and transmit this data to the Raspberry Pi via a USB connection. From there, the information is relayed to the user interface through the Ethernet connection. The BMS also helps protect the battery from over-discharge, overcurrent, and other hazardous conditions.
 
 
@@ -109,7 +107,7 @@ Everything within the system must interface with the power subsystem to function
 
 &nbsp;&nbsp;&nbsp;&nbsp; Combined with the voltage regulation provided by high-efficiency buck converters and the direct battery supply to the motor drivers, the BMS completes a power architecture designed for robust, stable, and reliable performance. Together, these elements ensure that all subsystems—from sensitive electronics to high-current motors—receive the correct power levels with appropriate protection against faults, electrical noise, and operational stresses.
 
-&nbsp;&nbsp;&nbsp;&nbsp; To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 4A peak current draw and eliminating undervoltage issues that could lead to unexpected system failures and shutdowns. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring. The converters also handle noise filtering via capcitor and inductor circuits included in the preassembled converters. 
+&nbsp;&nbsp;&nbsp;&nbsp; To deliver safe and stable voltage levels to sensitive electronics, high-efficiency buck converters are employed to step down the 29.6V to specific voltage levels. A dedicated 5.1V, buck converter powers the Raspberry Pi 4, ensuring sufficient headroom above its 3A peak current draw and eliminating undervoltage issues that could lead to unexpected system failures and shutdowns. Similarly, a 5V, 1A supply is allocated for the Arduino Mega 2560, which has a typical operating current of under 250mA even when driving peripheral sensors. Each converter includes filtering capacitors and protection features such as polyfuses and reverse polarity diodes to prevent damage from surges or miswiring. The converters also handle noise filtering via capcitor and inductor circuits included in the preassembled converters. 
 
 &nbsp;&nbsp;&nbsp;&nbsp; The motor drivers are powered directly from the 29.6V battery, as they are designed to handle the full battery voltage and deliver high current to the motors. Control signals (PWM, DIR) are safely sent from the Arduino to the motor drivers at logic levels, ensuring clear separation between high-voltage power and low-voltage control. Current capacity is managed through proper gauge wiring and protection fuses to avoid damage under high load or stall conditions. 
 
