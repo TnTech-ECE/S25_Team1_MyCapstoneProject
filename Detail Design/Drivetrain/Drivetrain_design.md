@@ -38,7 +38,7 @@ The following device will be used as the drivetrain for the CirceBot:
 
 ● Motor Controls: Implements the navigation data receieved from CirceSoft as well as obstacle avoidance to drive the motors at the correct accelerations and speeds.
 
-## Buildable Schematic
+## 3D Model of Custom Mechanical Components
 
 Full Rover:
 
