@@ -6,29 +6,24 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 ---
 
-### Specifications and Constraints
+### Specifications
 
 - The OS subsystem shall initiate all major robot subsystems during boot including navigation, motor control, and telemetry.  
-  - This ensures a centralized control system where all critical modules are initialized in a predefined sequence, allowing safe and synchronized operation.
 
-- It shall manage the communication between the Raspberry Pi and ATMega 2560 using **USB-based serial** for real-time command exchange and feedback handling.  
-  - This provides stable, higher-bandwidth communication and simplifies configuration.
+- It shall manage the communication between the Raspberry Pi and ATMega 2560 
 
-- The OS shall relay required operational data (position, velocity, heading, battery, cable length, errors) at a minimum rate of 10 Hz, consistent with the navigation requirements.  
-  - This satisfies the DEVCOM specification for real-time telemetry and ensures continuous feedback for monitoring and analysis.
+- The OS shall relay data at a minimum rate of 10 Hz, consistent with the navigation requirements.
 
 - It shall interface with all coordinate transformation modules, enabling data to remain consistent across ECI, ECEF, and Local Cartesian reference frames.  
-  - This supports navigation accuracy and system alignment across different spatial reference frames.
 
-- It shall support modular task scheduling, enabling future upgrades (e.g., GPS integration, Wi-Fi communication) without a complete system rewrite.  
-  - This ensures long-term flexibility and maintainability of the system architecture.
+- It shall support modular task scheduling, enabling future upgrades without a complete system rewrite.  
 
 ---
 
-### Extended Constraints
+### Constraints
 
-- Limited processing bandwidth on the Raspberry Pi when running multiple ROS nodes  
-  - The Raspberry Pi must balance tasks like SLAM, serial communication, logging, and visualization within its limited CPU and memory constraints. Optimization of ROS parameters and lightweight node design is critical.
+- Limited processing bandwidth on the Raspberry Pi when running multiple ROS nodes (4-6 nodes can run on the pi 4)
+  - The Raspberry Pi must balance tasks like SLAM, serial communication, logging, and visualization within its limited CPU and memory constraints.
 
 - USB communication bandwidth and draw  
   - While USB provides stable data channels, high-power devices like LiDAR and cameras must not overload the Pi's onboard regulators.
