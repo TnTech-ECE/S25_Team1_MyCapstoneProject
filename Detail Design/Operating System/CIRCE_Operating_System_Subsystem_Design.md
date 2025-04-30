@@ -179,33 +179,44 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
 
 ### Analysis of Design Decisions
 
+#### Raspberry Pi and Arduino Communication
+
+- **Division of Labor**
+    - The Raspberry Pi 4 handles computationally intensive tasks such as SLAM, image processing, and mission-level decision making, while the Arduino Mega 2560 is dedicated to real-time tasks like motor control, encoder reading, and sensor polling. This split reduces system bottlenecks and leverages the strengths of both platforms. A similar approach was used in the Autonomous Mars Rover project, where the Pi processed vision data and the Arduino controlled mobility and obstacle detection [11].
+
+- **Benefits of Task Separation**
+    - Offloading real-time I/O to the Arduino improves the Pi’s overall system stability and responsiveness. It also helps reduce SD card wear by buffering high-frequency sensor data on the Arduino before sending batches to the Pi, minimizing unnecessary filesystem writes.
+
+- **Simple and Reliable Serial Communication**
+    - The Arduino communicates with the Raspberry Pi via USB serial, allowing asynchronous command and telemetry exchange. The Pi can issue control instructions like “start laying cable” or “turn left,” while the Arduino responds with sensor values or operational status, maintaining robust two-way communication with minimal overhead.
+
 #### USB Communication to Raspberry Pi
 
-- **Plug-and-Play Simplicity**  
-  USB peripherals like the RealSense D456, RPLIDAR A1, and Arduino Mega 2560 are natively supported on the Raspberry Pi using existing Linux drivers and ROS 2 packages. USB eliminates the need for manual configuration of GPIO-based UART ports or low-level kernel module setup.
+- **Plug-and-Play Simplicity**
+    - USB peripherals like the RealSense D456, RPLIDAR A1, and Arduino Mega 2560 are natively supported on the Raspberry Pi using existing Linux drivers and ROS 2 packages. USB eliminates the need for manual configuration of GPIO-based UART ports or low-level kernel module setup.
 
 - **Higher Bandwidth**  
-  Compared to traditional UART over GPIO (which is typically limited to 115200–1 Mbps), USB provides significantly higher throughput—especially important for devices like the RealSense D456, which streams high-bandwidth depth and IMU data.
+    - Compared to traditional UART over GPIO (which is typically limited to 115200–1 Mbps), USB provides significantly higher throughput—especially important for devices like the RealSense D456, which streams high-bandwidth depth and IMU data.
 
 - **Fewer GPIO Conflicts**  
-  USB devices don’t consume GPIO pins, which are reserved for lower-level control like motor PWM, encoders, or sensor interrupts on the Arduino. This clean separation simplifies software design and debugging.
+    - USB devices don’t consume GPIO pins, which are reserved for lower-level control like motor PWM, encoders, or sensor interrupts on the Arduino. This clean separation simplifies software design and debugging.
 
 - **Isolation of Timing-Critical Tasks**  
-  Offloading low-level control to the Arduino over USB allows the Raspberry Pi to focus on high-level decision making, vision processing, and navigation tasks. The USB serial connection provides a clear command/feedback interface between high-level and low-level controllers.
+    - Offloading low-level control to the Arduino over USB allows the Raspberry Pi to focus on high-level decision making, vision processing, and navigation tasks. The USB serial connection provides a clear command/feedback interface between high-level and low-level controllers.
 
 #### Powered USB Hub Requirement
 
-- **Protecting the Raspberry Pi from Overload**  
-  The Raspberry Pi 4's USB ports are limited in how much current they can safely supply—typically ~1.2 A total across all ports. High-draw devices like the RealSense (up to 900 mA) and RPLIDAR (350–400 mA) could cause undervoltage conditions, brownouts, or intermittent disconnects if powered directly from the Pi.
+- **Protecting the Raspberry Pi from Overload**
+    - The Raspberry Pi 4's USB ports are limited in how much current they can safely supply—typically ~1.2 A total across all ports. High-draw devices like the RealSense (up to 900 mA) and RPLIDAR (350–400 mA) could cause undervoltage conditions, brownouts, or intermittent disconnects if powered directly from the Pi.
 
-- **External Power Sourcing**  
-  The powered USB hub allows these devices to draw current from a dedicated 5V rail sourced from the robot’s main battery (via a buck converter), bypassing the Pi’s internal power path and preventing instability.
+- **External Power Sourcing**
+    - The powered USB hub allows these devices to draw current from a dedicated 5V rail sourced from the robot’s main battery (via a buck converter), bypassing the Pi’s internal power path and preventing instability.
 
-- **Reliable Data Transmission**  
-  A powered USB hub helps maintain consistent voltage levels to USB devices, which is critical for stable, high-speed communication—especially for the RealSense D456 running full-resolution depth + IMU streams in real time.
+- **Reliable Data Transmission**
+    - A powered USB hub helps maintain consistent voltage levels to USB devices, which is critical for stable, high-speed communication—especially for the RealSense D456 running full-resolution depth + IMU streams in real time.
 
 **Conclusion:**  
-The decision to use USB communication was made to ensure plug-and-play compatibility, adequate data bandwidth, and modularity across subsystems. The addition of a powered USB hub safeguards the Raspberry Pi from power overdraw, enhances system stability, and supports future expansion of USB peripherals without requiring major redesigns.
+  - The decision to use dual microprocessors to execute our commands was made to ensure reliability and accuracy of control with the robot. The decision to us USB communication was made to ensure plug-and-play compatibility, adequate data bandwidth, and modularity across subsystems. The addition of a powered USB hub safeguards the Raspberry Pi from power overdraw, enhances system stability, and supports future expansion of USB peripherals without requiring major redesigns.
 
 ---
 
@@ -230,3 +241,5 @@ The decision to use USB communication was made to ensure plug-and-play compatibi
 [9] Pololu, “5V, 5A Step-Down Voltage Regulator D24V50F5,” [Online]. Available: [https://www.pololu.com/product/2851](https://www.pololu.com/product/2851)
 
 [10] Canonical Ltd., “Ubuntu Server 22.04 LTS,” [Online]. Available: [https://ubuntu.com/download/server](https://ubuntu.com/download/server)
+
+[11] R. Rajendra, “Autonomous Mars Rover using Raspberry Pi, Arduino and Pi Camera,” Medium, Jul. 22, 2020. [Online]. Available: (https://medium.com/@rishavrajendra/autonomous-mars-rover-using-raspberry-pi-arduino-and-pi-camera-5b285be452c1)
