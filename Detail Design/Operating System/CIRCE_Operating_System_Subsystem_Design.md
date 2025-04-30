@@ -162,9 +162,9 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
 
 ---
 
-### Operational Flowchart
+### Operational Block Diagram
 
-![Operation Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Operating-System/Detail%20Design/Operating%20System/DD%20OS.png)
+![Operation Flow Chart](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Operating-System/Detail%20Design/Operating%20System/DD%20OS%20V2.png)
 
 ---
 
