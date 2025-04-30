@@ -152,14 +152,12 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
   - Formats and sends telemetry packets back to the Pi for logging or control decisions
 ---
 
-### 3D Model of Custom Mechanical Components
+### 3D Model of Physical Components
 
-(To be added via CAD)
+![Raspberry Pi](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Operating-System/Detail%20Design/Operating%20System/Pi%20Image.png)
 
-- Mounting options for RealSense and LiDAR  
-- Compartment for Raspberry Pi, Arduino, and USB hub
-- Pin diagram for Pi and Arduino  
-
+![Arduino Mega 2560](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Operating-System/Detail%20Design/Operating%20System/Mega%202560.PNG)
+    
 ---
 
 ### Operational Block Diagram
