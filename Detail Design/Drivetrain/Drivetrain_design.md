@@ -4,7 +4,7 @@
 
 ## Function of the Drivetrain Subsystem
 
-  The Drivetrain subsystem serves as the sole mover of the CirceBot. The primary function of the Drivetrain is to receive navigation data from the navigation subsystem. This would be accomplished by outputting the data as voltage signals to the corresponding motors to drive the CirceBot to its predetermined destination. The secondary function of the Drivetrain is to act as a base for the other subsystems to be built upon.
+  The Drivetrain subsystem serves as the sole mover of CirceBot. The primary function of the Drivetrain is to receive navigation data from the navigation subsystem. This would be accomplished by outputting the data as voltage signals to the corresponding motors to drive the CirceBot to its predetermined destination. The secondary function of the Drivetrain is to act as a base for the other subsystems to be built upon.
 
 ## Specifications and Constraints
 
@@ -12,10 +12,10 @@
 - Specifications
   - CirceBot shall operate in Tennessee environments
   - CirceBot shall be able to carry 100 yards of Ethernet cable. (approximately 10 lbs.)
-    - It is the Drivetrain's responsibility to carry the weight of both the payload as well as the other subsystems.
+  - It is the Drivetrain's responsibility to carry the weight of both the payload as well as the other subsystems.
+  - CirceBot shall move once receiving a new specified location that is not its current location
   - CirceBot shall stop once specified destination has been reached.
-  - CirceBot shall transmit current position, current velocity, meters of cable left, heading, battery life as a percentage, and an error code if one occurs.
-    - It is the Drivetrain's responsibility to transmit its current velocity back to CirceSoft as the robot is moving.
+  - CirceBot shall transmit current position, current velocity, meters of cable left, heading, battery life as a percentage, and an error code if one occurs. It is the Drivetrain's responsibility to transmit its current velocity back to CirceSoft as the robot is moving.
 ## Overview of Proposed Solutions
 
 ---
@@ -23,11 +23,10 @@ The following device will be used as the basis for the drivetrain of the CirceBo
 - 4WD Rover Zero 3 [1]:
   - The platform has a height of 25.4 cm (10"), a width of 39 cm (15.4"), a length of 62 cm (24.4"), and a ground clearance of 7.87 cm (3.1").
   - The platform weighs 11 kg.
-  - The platform is cabable of traverse sand, rock, concrete, gravel, grass, soil and other wet and dry terrain.
   - The platform has a maximum speed of 9.01 km/hr (5.6 mph).
   - The platform is driven by two 2050 KV inrunner Brush-less Motors with a max power output of 115 W/motor.
   - The platform is capable carring a max weight of 50 kg.
-  - The platform is capable of climbing hills, managing sidewalks, and traversing gravel if the ground is dry.
+  - The platform is capable of climbing hills, traversing sidewalks, and traversing gravel if the ground is dry.
   - The platform has a drive time of 1 to 2 hours and an idle time of 5 hours.
   - The platform costs $4,000 before tax.
   - The microcontroller will communicate to the motors the speed and torque needed to follow the designated path.
@@ -36,7 +35,7 @@ The following device will be used as the basis for the drivetrain of the CirceBo
 ---
 ● Power System: Uses a 8S LiPo, 29.6V, 98 Wh battery pack to supply the necessary voltage and current to drive the motors at the speeds and time designated by the Motor Controls Subsystem.
 
-● Motor Controls: Uses a Arduino Mega 2560 and a ROB-14450 Motor Controller to implement the navigation data receieved from CirceSoft as well as obstacle avoidance to drive the motors at the correct accelerations and speeds.
+● Motor Controls: Uses a Arduino Mega 2560 and a ROB-14450 Motor Controller to implement the navigation data received from CirceSoft as well as obstacle avoidance to drive the motors at the correct accelerations and speeds.
 
 ## 3D Model of Custom Mechanical Components
 
@@ -49,6 +48,10 @@ Motor:
 ![Motor](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001221.png) [2]
 ![Motor_Schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-04-25%20001136.png) [2]
 
+## Electrical Schemattic
+
+---
+Due to the rover serving only as a basis for the ME team to build the drivetrain, a functional electrical schematic is not available at this time.
 
 ## Bill of Materials (BOM)
 
