@@ -52,7 +52,7 @@ Motor:
 ## Electrical Schemattic
 
 ---
-![Electrical_schematic]()
+![Electrical_schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Untitled.png)
 
 ## Bill of Materials (BOM)
 
