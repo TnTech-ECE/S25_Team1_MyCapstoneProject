@@ -15,6 +15,7 @@
   - It is the Drivetrain's responsibility to carry the weight of both the payload as well as the other subsystems.
   - CirceBot shall move once receiving a new specified location that is not its current location
   - CirceBot shall stop once specified destination has been reached.
+  - CirceBot shall navigate around detected obstacles.
   - CirceBot shall transmit current position, current velocity, meters of cable left, heading, battery life as a percentage, and an error code if one occurs. It is the Drivetrain's responsibility to transmit its current velocity back to CirceSoft as the robot is moving.
 ## Overview of Proposed Solutions
 
@@ -72,7 +73,7 @@ Due to the rover serving only as a basis for the ME team to build the drivetrain
 
 ---
 
-The proposed drivetrain design meets all specified requirements and constraints for the drivetrain. The rover operates reliably within Tennessee’s environmental conditions and is structurally capable of carrying both the additional components and 100 yards of Ethernet cable. The motors are programmed to cease operation upon reaching the designated destination, and real-time data on motor speed and acceleration is successfully transmitted to the motor controller.
+The proposed drivetrain design fully meets all specified requirements and constraints. The rover operates reliably under Tennessee’s environmental conditions and is structurally equipped to carry both additional components and 100 yards of Ethernet cable. The motors are programmed to initiate movement upon receiving a new destination, intelligently navigate around detected obstacles, and automatically stop upon arrival. Additionally, real-time data on motor speed and acceleration is accurately transmitted to the motor controller throughout operation.
 
 The drivetrain achieves motion for the rover using two 21.5T style 2050KV JUSTOCK 3650SD G2.1 Brushless Motor supplied by Hobbywing North.
 
