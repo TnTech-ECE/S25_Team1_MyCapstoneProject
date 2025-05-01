@@ -12,11 +12,11 @@
 - Specifications
   - CirceBot shall operate in Tennessee environments
   - CirceBot shall be able to carry 100 yards of Ethernet cable. (approximately 10 lbs.)
-  - It is the Drivetrain's responsibility to carry the weight of both the payload as well as the other subsystems.
+  - CirceBot shall carry the weight of both the payload as well as the other subsystems.
   - CirceBot shall move once receiving a new specified location that is not its current location
   - CirceBot shall stop once specified destination has been reached.
   - CirceBot shall navigate around detected obstacles.
-  - CirceBot shall transmit current position, current velocity, meters of cable left, heading, battery life as a percentage, and an error code if one occurs. It is the Drivetrain's responsibility to transmit its current velocity back to CirceSoft as the robot is moving.
+  - CirceBot shall transmit current position, current velocity, meters of cable left, heading, battery life as a percentage, and an error code if one occurs.
 ## Overview of Proposed Solutions
 
 ---
