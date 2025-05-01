@@ -52,7 +52,7 @@ Motor:
 ## Electrical Schemattic
 
 ---
-Due to the rover serving only as a basis for the ME team to build the drivetrain, a functional electrical schematic is not available at this time.
+![Electrical_schematic]()
 
 ## Bill of Materials (BOM)
 
