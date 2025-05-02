@@ -28,14 +28,14 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 - USB communication bandwidth and draw  
   - While USB provides stable data channels, high-power devices like LiDAR and cameras must not overload the Pi's onboard regulators.
 
-- ROS node startup sequencing and interdependencies  
+- Robot Operating System (ROS) node startup sequencing and interdependencies  
   - Certain nodes must be launched in sequence to ensure proper system initialization (e.g., camera and LiDAR before SLAM or navigation nodes).
 
-- File system reliability and SD card write limits  
-  - Logging and diagnostics write to the SD card, which has limited write cycles. Excessive logging or power loss during writes can lead to data corruption or storage failure.
-
-- Fault tolerance and watchdog behavior  
-  - The system must account for potential crashes or hangs in either the Raspberry Pi or ATMega, requiring failsafe logic, watchdog timers, or auto-restart mechanisms to ensure recovery.
+- SD card limits  
+  - Excessive logging or power loss during logging can lead to data corruption or storage failure when using the SD card.
+ 
+- GPIO Limits
+  - Limited amount of physical connections on the pi which can cause integration issues later.
 
 ---
 
@@ -46,12 +46,10 @@ This system includes the following devices:
 - **Raspberry Pi 4** – Main computer running ROS and coordinating the system  
 - **Arduino Mega 2560** – Low-level motor control and encoder processing  
 - **Intel RealSense D456** – Depth camera with IMU (USB)  
-- **RPLIDAR A1** – 2D LiDAR sensor (USB)  
-- **ROB-14450 Motor Controller** – Controlled by Arduino over GPIO  
-- **Encoders** – Connected to Arduino for speed/position feedback
-- **USB HUB** - Connected to pi and powered externally to assist in load
-
-> Only three USB connections are used: RealSense, RPLIDAR, and Arduino. All other peripherals interface using GPIO or analog inputs.
+- **RPLIDAR A1** – USB-connected 2D LiDAR sensor for obstacle detection and mapping  
+- **ROB-14450 Motor Controller** – Interfaces with the Arduino to control motor outputs via GPIO  
+- **Encoders** – Provide real-time speed and position feedback to the Arduino
+- **USB HUB** - Supplies power and data connectivity to multiple USB devices, linked to the Pi
 
 ---
 
@@ -71,40 +69,12 @@ This system includes the following devices:
 
 #### Raspberry Pi 4
 
-The Raspberry Pi 4 (8GB model) shall serve as the main computing platform, responsible for autonomous navigation, sensor fusion, SLAM, and coordination with the low-level motor controller (Arduino Mega 2560). The Pi is connected to all peripherals through a powered USB hub, allowing a single data and power uplink to the Pi while preventing current draw issues.
-
-- **Operating System**:  
-  - `Ubuntu Server 22.04 LTS (64-bit)`  
-  - Chosen for its **long-term support**, **ROS 2 compatibility**, and **lightweight headless environment**.  
-
-- **ROS 2 Distribution**:  
-  - `ROS 2 Humble Hawksbill` (LTS)  
-  - Provides middleware for node-based communication, SLAM, sensor fusion, localization, and real-time command publishing.
+The Raspberry Pi 4 (8GB model) serves as the main computing platform, responsible for autonomous navigation, sensor fusion, SLAM, and coordination with the low-level motor controller (Arduino Mega 2560). It operates using Ubuntu Server 22.04 LTS (64-bit), a lightweight headless Linux environment chosen for its long-term support and full compatibility with ROS 2 Humble Hawksbill (LTS). This ROS 2 distribution provides the middleware framework for node-based communication, real-time sensor fusion, localization, SLAM, and command publishing. All peripherals interface with the Pi through a powered USB hub, which consolidates data and power connections while preventing current draw issues.
 
 #### System Communication Architecture
 
-The Raspberry Pi shall interface with external devices using a combination of USB-based communication and serial-over-USB protocols. All peripherals are routed through a powered USB hub to ensure stable power and data handling.
+The Raspberry Pi interfaces with external devices using a combination of USB and serial-over-USB communication, with all peripherals routed through a powered USB hub to ensure stable power delivery and reliable data transfer. The Intel RealSense D456 connects via USB 3.0 and uses the realsense2_camera ROS 2 package to publish point cloud data on /camera/depth/color/points, IMU data on /imu, and RGB image streams on /camera/image_raw. These are libraries that are pre installed with ROS 2. The RPLIDAR A1, connected over USB 2.0, runs the rplidar_ros package and publishes 2D laser scan data on the /scan topic for obstacle detection. The Arduino Mega 2560, serving as the motor controller interface, communicates with the Pi using serial-over-USB. It runs a serial_bridge_node to receive high-level movement commands and transmit feedback and status data from the motor controller.
 
-- **Intel RealSense D456**
-  - **Connection**: USB 3.0 via powered USB hub  
-  - **ROS 2 Package**: `realsense2_camera`  
-  - **Published Topics**:  
-    - `/camera/depth/color/points` – Point cloud data  
-    - `/imu` – Inertial measurement unit data  
-    - `/camera/image_raw` – RGB image stream
-
-- **RPLIDAR A1**
-  - **Connection**: USB 2.0 via powered USB hub  
-  - **ROS 2 Package**: `rplidar_ros`  
-  - **Published Topics**:  
-    - `/scan` – 2D laser scan data for obstacle detection
-
-- **Arduino Mega 2560 (Motor Controller Interface)**
-  - **Connection**: Serial-over-USB to Raspberry Pi  
-  - **Communication Node**: `serial_bridge_node`  
-  - **Function**:  
-    - Receives high-level movement commands  
-    - Sends status and feedback from motor controller
 ---
 
 #### Arduino Mega 2560
@@ -112,39 +82,14 @@ The Raspberry Pi shall interface with external devices using a combination of US
 The Arduino Mega 2560 serves as a low-level real-time controller that runs firmware written in C++ using the Arduino IDE. It operates without a traditional operating system, relying instead on bare-metal embedded code compiled for the AVR architecture.
 
 - **Runtime Environment**
-  - Bare-metal Arduino firmware compiled with `avr-gcc`
-  - Utilizes `HardwareSerial` for serial communication
-  - Uses `Encoder` and standard Arduino libraries for hardware interaction
-  - Executes a continuous `loop()` function for:
-    - Real-time motor control  
-    - Encoder reading  
-    - USB serial message parsing
+  - The Arduino Mega 2560 operates with a bare-metal firmware environment compiled using avr-gcc. It leverages HardwareSerial for serial-over-USB communication with the Raspberry Pi, and standard Arduino libraries—including the Encoder library—for real-time hardware interaction. The control logic runs within the loop() function, continuously executing tasks such as motor control, encoder reading, and parsing incoming USB serial messages.
 
 - **Communication Interfaces**
-  - **To Raspberry Pi (High-Level Controller)**:
-    - Connected via USB (serial-over-USB)
-    - Communicates using `HardwareSerial` (e.g., `Serial`)
-    - Receives velocity commands from the Raspberry Pi  
-    - Sends telemetry including encoder ticks, battery voltage, and status flags  
-    - Compatible with a ROS 2 node like `serial_bridge_node` on the Pi side
-
-  - **To Sensors and Actuators (Direct Hardware Connections)**:
-    - **Motor Control**:  
-      - Drives motors using PWM signals connected to the ROB-14450 motor controller  
-      - Direction and enable lines managed through GPIO pins  
-    - **Encoders**:  
-      - Reads quadrature encoders via digital pins using `Encoder` library  
-    - **Battery Monitoring**:  
-      - Reads battery voltage through analog input pins (ADC)
-    - **Status LEDs (Optional)**:  
-      - Can toggle LEDs for debug or system state indication
+  - The Arduino communicates with the Raspberry Pi via a USB connection using HardwareSerial (e.g., Serial). It receives high-level velocity commands from the Pi and responds with telemetry data including encoder counts, battery voltage, and system status flags. This interface is compatible with a ROS 2 node like serial_bridge_node. Locally, the Arduino interfaces directly with sensors and actuators: it drives motors through PWM signals and GPIO lines to the ROB-14450 motor controller, reads quadrature encoders via digital inputs, measures battery voltage through ADC inputs, and optionally controls status LEDs for debugging or feedback.
 
 - **Functions Performed**
-  - Reads encoder values for real-time wheel position and speed feedback  
-  - Applies PWM output to control motor speed via ROB-14450  
-  - Monitors system power via analog voltage input  
-  - Parses incoming USB serial commands from the Pi (e.g., target velocities)  
-  - Formats and sends telemetry packets back to the Pi for logging or control decisions
+  - Core functions of the Arduino include reading encoder values to provide real-time speed and position feedback, applying PWM signals to control motor speed, and monitoring system voltage for power management. It also parses incoming serial commands—such as target velocities—from the Raspberry Pi, and formats outbound telemetry packets to support decision-making or data logging on the Pi side.
+
 ---
 
 ### 3D Model of Physical Components
@@ -192,7 +137,7 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
     - Compared to traditional UART over GPIO (which is typically limited to 115200–1 Mbps), USB provides significantly higher throughput—especially important for devices like the RealSense D456, which streams high-bandwidth depth and IMU data.
 
 - **Fewer GPIO Conflicts**  
-    - USB devices don’t consume GPIO pins, which are reserved for lower-level control like motor PWM, encoders, or sensor interrupts on the Arduino. This clean separation simplifies software design and debugging.
+    - USB devices do not occupy GPIO pins, which are reserved for low-level control tasks such as motor PWM, encoder inputs, and sensor interrupts on the Arduino. This clear separation of responsibilities simplifies both software design and system debugging.
 
 - **Isolation of Timing-Critical Tasks**  
     - Offloading low-level control to the Arduino over USB allows the Raspberry Pi to focus on high-level decision making, vision processing, and navigation tasks. The USB serial connection provides a clear command/feedback interface between high-level and low-level controllers.
