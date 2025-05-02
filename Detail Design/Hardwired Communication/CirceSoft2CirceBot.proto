@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package CirceSoft;
+
+
+message ReportedPosition
+{
+    double X_ECI = 1;
+    double Y_ECI = 2;
+    double Z_ECI = 3;
+}
+
+message ReportedVelocity
+{
+    double Vx_ECI = 1;
+    double Vy_ECI = 2;
+    double Vz_ECI = 3;
+}
+
+message CommandedPosition
+{
+    double X_ECI = 1;
+    double Y_ECI = 2;
+    double Z_ECI = 3;
+}
+
+message CommandedVelocity
+{
+    double Vx_ECI = 1;
+    double Vy_ECI = 2;
+    double Vz_ECI = 3;
+}
+
+message CurrentStatus
+{
+    reportedPosition reportedPosition = 1;
+    reportedVelocity reportedVelocity = 2;
+    double reportedHeading = 3;
+    float reportedCableRemaining_m = 4;
+    float reportedPercentBatteryRemaining = 5;
+    uint32 errorCode = 6;
+    bool cableDispenseStatus = 7;
+    bool cableDespenseCommand = 8;
+    CommandedPosition commandedPosition = 9;
+    CommandedVelocity commandedVelocity = 10;
+    uint32 SequenceNum = 11;
+}
