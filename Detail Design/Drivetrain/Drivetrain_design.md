@@ -54,6 +54,8 @@ Motor:
 ---
 ![Electrical_schematic](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Untitled.png)
 
+![Motor_Connections]()
+
 ## Bill of Materials (BOM)
 
 ---
