@@ -110,7 +110,7 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
 
 | Item                         | Qty | Part Number / Model       | Description                         | Digi-Key Link | Unit Price (USD) |
 |------------------------------|-----|---------------------------|-------------------------------------|---------------|------------------|
-| Raspberry Pi 5 Model B (8GB) | 1   | SC14993                   | Single Board Computer, 8GB RAM      | [View on Digi-Key](https://www.digikey.com/en/products/detail/raspberry-pi/SC14993/16839532) | ~$80.00 |
+| Raspberry Pi 5 Model B (8GB) | 1   | SC1111                    | Single Board Computer, 8GB RAM      | [View on Digi-Key](https://www.digikey.com/en/products/detail/raspberry-pi/SC1111/21658261) | ~$80.00 |
 | Arduino Mega 2560 Rev3       | 1   | A000067                   | Microcontroller Board               | [View on Digi-Key](https://www.digikey.com/en/products/detail/arduino/A000067/2639006) | $41.14 |
 | Powered USB Hub              | 1   | USBG-4U2ML                | 4-Port USB 2.0 Powered Hub with External 7–24V DC Input | [View on Digi-Key](https://www.digikey.com/en/products/detail/coolgear/USBG-4U2ML/12318669) | $81.78 |
 ---
