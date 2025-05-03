@@ -2,7 +2,7 @@
 
 ### Function of the Subsystem
 
-The Operating System (OS) subsystem acts as the central coordination and integration layer between all major functional blocks of the CIRCE robot. It is responsible for managing system-wide communication, synchronizing data exchange, initiating startup procedures, and overseeing subsystem interdependencies. The OS enables the distributed control logic—primarily spread between the Raspberry Pi 4 and the ATMega 2560—to function cohesively as one unit. It also manages configuration files, diagnostics, logging, and ensures that telemetry and commands are delivered to the appropriate hardware/software endpoints.
+The Operating System (OS) subsystem acts as the central coordination and integration layer between all major functional blocks of the CIRCE robot. It is responsible for managing system-wide communication, synchronizing data exchange, initiating startup procedures, and overseeing subsystem interdependencies. The OS enables the distributed control logic—primarily spread between the Raspberry Pi 5 and the ATMega 2560—to function cohesively as one unit. It also manages configuration files, diagnostics, logging, and ensures that telemetry and commands are delivered to the appropriate hardware/software endpoints.
 
 ---
 
@@ -22,7 +22,7 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 ### Constraints
 
-- Limited processing bandwidth on the Raspberry Pi when running multiple ROS nodes (4-6 nodes can run on the pi 4)
+- Limited processing bandwidth on the Raspberry Pi when running multiple ROS nodes (4–6 nodes could run on the Pi 4; the Pi 5 offers improved performance and headroom)
   - The Raspberry Pi must balance tasks like SLAM, serial communication, logging, and visualization within its limited CPU and memory constraints.
 
 - USB communication bandwidth and draw  
@@ -43,7 +43,7 @@ The Operating System (OS) subsystem acts as the central coordination and integra
 
 This system includes the following devices:
 
-- **Raspberry Pi 4** – Main computer running ROS and coordinating the system  
+- **Raspberry Pi 5** – Main computer running ROS and coordinating the system  
 - **Arduino Mega 2560** – Low-level motor control and encoder processing  
 - **Intel RealSense D456** – Depth camera with IMU (USB)  
 - **RPLIDAR A1** – USB-connected 2D LiDAR sensor for obstacle detection and mapping  
@@ -67,9 +67,9 @@ This system includes the following devices:
 
 ### Software Stack and Operating System Integration
 
-#### Raspberry Pi 4
+#### Raspberry Pi 5
 
-The Raspberry Pi 4 (8GB model) serves as the main computing platform, responsible for autonomous navigation, sensor fusion, SLAM, and coordination with the low-level motor controller (Arduino Mega 2560). It operates using Ubuntu Server 22.04 LTS (64-bit), a lightweight headless Linux environment chosen for its long-term support and full compatibility with ROS 2 Humble Hawksbill (LTS). This ROS 2 distribution provides the middleware framework for node-based communication, real-time sensor fusion, localization, SLAM, and command publishing. All peripherals interface with the Pi through a powered USB hub, which consolidates data and power connections while preventing current draw issues.
+The Raspberry Pi 5 (8GB model) serves as the main computing platform, responsible for autonomous navigation, sensor fusion, SLAM, and coordination with the low-level motor controller (Arduino Mega 2560). It operates using Ubuntu Server 22.04 LTS (64-bit), a lightweight headless Linux environment chosen for its long-term support and full compatibility with ROS 2 Humble Hawksbill (LTS). This ROS 2 distribution provides the middleware framework for node-based communication, real-time sensor fusion, localization, SLAM, and command publishing. All peripherals interface with the Pi through a powered USB hub, which consolidates data and power connections while preventing current draw issues.
 
 #### System Communication Architecture
 
@@ -120,7 +120,7 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
 #### Raspberry Pi and Arduino Communication
 
 - **Division of Labor**
-    - The Raspberry Pi 4 handles computationally intensive tasks such as SLAM, image processing, and mission-level decision making, while the Arduino Mega 2560 is dedicated to real-time tasks like motor control, encoder reading, and sensor polling. This split reduces system bottlenecks and leverages the strengths of both platforms. A similar approach was used in the Autonomous Mars Rover project, where the Pi processed vision data and the Arduino controlled mobility and obstacle detection [11].
+    - The Raspberry Pi 5 handles computationally intensive tasks such as SLAM, image processing, and mission-level decision making, while the Arduino Mega 2560 is dedicated to real-time tasks like motor control, encoder reading, and sensor polling. This split reduces system bottlenecks and leverages the strengths of both platforms. A similar approach was used in the Autonomous Mars Rover project, where the Pi processed vision data and the Arduino controlled mobility and obstacle detection [11].
 
 - **Benefits of Task Separation**
     - Offloading real-time I/O to the Arduino improves the Pi’s overall system stability and responsiveness. It also helps reduce SD card wear by buffering high-frequency sensor data on the Arduino before sending batches to the Pi, minimizing unnecessary filesystem writes.
@@ -145,7 +145,7 @@ The Arduino Mega 2560 serves as a low-level real-time controller that runs firmw
 #### Powered USB Hub Requirement
 
 - **Protecting the Raspberry Pi from Overload**
-    - The Raspberry Pi 4's USB ports are limited in how much current they can safely supply—typically ~1.2 A total across all ports. High-draw devices like the RealSense (up to 900 mA) and RPLIDAR (350–400 mA) could cause undervoltage conditions, brownouts, or intermittent disconnects if powered directly from the Pi.
+    - The Raspberry Pi’s USB ports are limited in how much current they can safely supply—typically ~1.2 A total across all ports. High-draw devices like the RealSense (up to 900 mA) and RPLIDAR (350–400 mA) could cause undervoltage conditions, brownouts, or intermittent disconnects if powered directly from the Pi.
 
 - **External Power Sourcing**
     - The powered USB hub allows these devices to draw current from a dedicated 5V rail sourced from the robot’s main battery (via a buck converter), bypassing the Pi’s internal power path and preventing instability.
