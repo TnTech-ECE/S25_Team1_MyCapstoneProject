@@ -56,6 +56,17 @@ Motor:
 
 ![Motor_Connections](https://github.com/TnTech-ECE/S25_Team1_MyCapstoneProject/blob/DD-Drivetrain/Detail%20Design/Drivetrain/Screenshot%202025-05-03%20131048.png)
 
+How to connect motor[2]:
+   1) Three power wires need to be connected to the motor, and they often differ in colors: Phase wire A is Blue, Phase wire B is
+Yellow and Phase wire C is Orange. Please note the ESC mark while connecting ESC output wires to motor power wires and
+ensure connections are: A-A, B-B and C-C.
+   2) If you are using a sensored ESC, please insure Hall-sensor wires are clean and undamaged; then connect them in the correct
+direction to the sensor ports of the motor & the ESC respectively. Warning: In such a case, the wire sequence of the ESC and
+the motor must strictly follow the rules of A-A, B-B and C-C. Do not change the wires sequence.
+   3) While if the ESC is a sensorless one, then connect the motor and the ESC according to the above way may cause the motor
+to rotate in the opposite direction, because definitions of phase (#A / #B / #C) are different among manufacturers, at this time
+you only need to swap any of two wire connections.
+
 ## Bill of Materials (BOM)
 
 ---
