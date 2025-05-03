@@ -62,6 +62,7 @@ Motor:
 |---------------------------|-----|---------------------------|-------------------------------------|
 | 4WD Rover Zero 3    | 1   | 55300200 | The primary chassis including the motors, wheels, and internal battery |
 | JUSTOCK 3650SD G2.1 Brushless Motor | 2 | 30408012 | Motor built into the Rover |
+| Dual FSESC 4.20A | 1 | N/A | Motor Controller |
 | 98 Wh Battery      | 1   | N/A |  The removable internal battery included with the 4WD Rover Zero 3  |
 | 10" Rubber Wheels | 4 | N/A | The tires included with the 4WD Rover Zero 3 |
 
