@@ -1,75 +1,53 @@
-This is a format to use for meeting minutes each week.
-
-# Day of Week, Month day, 2025
+# Monday, September 15th, 2025
 
 ## Attendance
 
-**In Person** on xx/xx/2025
+**In Person** on 09/15/2025
 
-1.
-2.
-3.
-4.
-5.
-
-## Key Points
-
-1.
-
-2.
-
-3.
-
-# Day of Week, Month day, 2025 (use this if there is more than one meeting in a week)
-
-## Attendance
-
-**In Person** on xx/xx/2025
-
-1.
-2.
-3.
-4.
-5.
+1. Evan
+2. Connor
+3. Kamden
+4. Wayne
+5. Cooper
 
 ## Key Points
 
-1.
+1. Met with Devcom to discuss project progress.
 
-2.
+2. Met with advisor and briefly discussed future operations concerning presentations.
 
-3.
+3. Coordinated with team for ordering progress.
 
 ## Action Items From Past Meetings
 
-1.
+1. Re-connect with team to evaluate progress.
 
 ## Member Updates
 
-Evan -
+Evan - I’ve worked on getting all teams on the same page as well as wrapping up a few power things such as battery size and budget.
 
-Connor -
+Connor - This week I mainly worked on getting ready for the presentation with Devcom.
 
-Kamden -
+Kamden - I have collected all the parts I believe are ready for the initial build phase.
 
 Wayne -
 
-Cooper -
+Cooper - Met with Devcom and Van Neste to give a short detailed design presentation.
 
 ## Meeting Minutes (Summary)
-
+Met with Devcom and ready to get the build phase started.
 
 
 ## Action Items for Next Week
 
-For the Team: 1.
+For the Team: 1. Order parts.
 
-Evan -
+Evan - This week I intend on getting parts ordered and verify parts with the ME team.
 
-Connor -
+Connor - The next couple of weeks I plan to nail down a swivel jack that will be the best fit for our project and then begin to hopefully help test some sensors.
 
-Kamden -
+Kamden - Recieve parts and begin scoping layout of pieces.
 
 Wayne -
 
-Cooper -
+Cooper - Waiting on M.E Team to order parts and make progress. Help team members were requested.
