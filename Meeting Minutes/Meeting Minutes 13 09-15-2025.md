@@ -30,7 +30,7 @@ Connor - This week I mainly worked on getting ready for the presentation with De
 
 Kamden - I have collected all the parts I believe are ready for the initial build phase.
 
-Wayne -
+Wayne - I have started to analyze the sensors that came in over the summer to begin the process of adding them to the bot.
 
 Cooper - Met with Devcom and Van Neste to give a short detailed design presentation.
 
@@ -48,6 +48,6 @@ Connor - The next couple of weeks I plan to nail down a swivel jack that will be
 
 Kamden - Recieve parts and begin scoping layout of pieces.
 
-Wayne -
+Wayne - Connect with power and OS to begin building the robot.
 
 Cooper - Waiting on M.E Team to order parts and make progress. Help team members were requested.
