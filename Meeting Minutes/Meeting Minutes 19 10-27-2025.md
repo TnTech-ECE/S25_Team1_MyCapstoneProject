@@ -39,7 +39,7 @@
 
 ## Member Updates
 
-Evan - This week I worked on the build of the robot and got the box mounted.
+Evan - Last week I met with everyone to get a game plan together on how to go about assembling everything. 
 
 Connor - This past week was spent mainly brainstorming ideas of how to lift the “box” to have clearance for the tracks on the bot. As well as gathering a gameplan for this next week
 
@@ -57,7 +57,7 @@ We are in full build prep to have the bot ready for the min design due date.
 
 For the Team: 1. Get more of the robot complete as well as have it moving by the pi alone.
 
-Evan - I plan to have the rest of the parts in the box as well as the external parts incorporated in the build.
+Evan - This week I intend to put that plan into motion which we made a solid start today.
 
 Connor - This next week I hope to help code the bot and help install the box clearance blocks with Evan and cooper.
 
