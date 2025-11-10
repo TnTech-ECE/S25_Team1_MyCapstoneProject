@@ -30,7 +30,7 @@ Connor - Early this past week was spent getting everything together for the mini
 
 Kamden - Working on the bot, I was met with a lot of hard obstacles that could not be fixed in the current setting. I hope with more testing and trial and error, a lot of the kinks are figured out.
 
-Wayne -
+Wayne - This week I got a prototype for the robots E-Stop function working. I also incorporated a launch file for ease of access to these processes.
 
 Cooper - Working to get robot moving.
 
@@ -48,6 +48,6 @@ Connor - This next week I hope to help with more mounting, cable management and 
 
 Kamden - Fix communication to the chassis and start on coordinate navigation.
 
-Wayne -  
+Wayne - In the next week I plan to get the autonomous function into a working prototype phase and begin running tests. 
 
 Cooper - Continuing to try and get the robot moving.
