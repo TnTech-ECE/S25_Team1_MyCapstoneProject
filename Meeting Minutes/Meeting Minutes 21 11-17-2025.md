@@ -30,9 +30,9 @@ Connor - This past week I worked primarily on the poster and in GitHub for the i
 
 Kamden - This week, I was able to test the ethernet port connection to see how file transfer would work. It seemed to be a trustable method for robot communication.
 
-Wayne -
+Wayne - This week I got a framework set in place for SLAM using force fed odometry.
 
-Cooper -
+Cooper - Met with Devcom.
 
 ## Meeting Minutes (Summary)
 Met to update Devcom and discuss poster.
@@ -47,6 +47,6 @@ Connor - This next week I hope to work more on the poster, begin writing the exp
 
 Kamden - Figure out doom plan for chassis. Check system integration.
 
-Wayne -
+Wayne - In the next week I plan to get SLAM functioning with the force fed odometry and gather sufficient data to prove functionality given wheel encoder data.
 
-Cooper -
+Cooper - Work with group on poster.
