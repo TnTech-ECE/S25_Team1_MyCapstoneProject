@@ -1,6 +1,3 @@
-Start
-
-
 ### Inventory Table
 
 
