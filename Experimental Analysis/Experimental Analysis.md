@@ -14,19 +14,19 @@ The following steps were used so a future team could effectively reproduce the e
   2. Powered on the Raspberry Pi 5.
   
 - Identify the IP Address of the Pi
-  1. Temporarily connect the Pi to mouse, keyboard, and monitor.
-  2. Open the terminal and run
-     -      Hostname-I
-  4. Write down the IP address provided, should be something like 169.254.XXX.XX
+  1. Temporarily connect the Pi to a mouse, keyboard, and monitor.
+  2. Open the terminal and run:
+     -     hostname -I
+  3. Write down the IP address provided (should be something like 169.254.XXX.XX).
     
-- Enabled SSH on the Pi
-  1. Start Menu -> Preferences -> Raspberry Pi Configuration -> Interfaces -> SSH ON
+- Enable SSH on the Pi
+  1. Go to Start Menu -> Preferences -> Raspberry Pi Configuration -> Interfaces -> SSH -> ON
      
 - Connect the laptop via SSH
-  1.	Open command terminal
-  2.	Enter:
-     -      ssh pi@[IP Address from earlier]
-  4.	Enter password: “Devcom2025” if prompted to do so.
+  1. Open a command terminal.
+  2. Enter:
+     -     ssh pi@[IP Address from earlier]
+  3. Enter password: `Devcom2025` if prompted.
   5.	Verified successful login – terminal control is now directly from the laptop and the display, mouse, and keyboard connected to the pi can be removed.
      
 - Attempted Telemetry Data Test
