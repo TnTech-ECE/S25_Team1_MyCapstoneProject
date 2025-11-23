@@ -15,17 +15,19 @@ The following steps were used so a future team could effectively reproduce the e
   
 - Identify the IP Address of the Pi
   1. Temporarily connect the Pi to mouse, keyboard, and monitor.
-  2. Open the terminal and run “hostname -I”
-  3. Write down the IP address provided, should be something like 169.254.XXX.XX
+  2. Open the terminal and run
+-      Hostname-I
+  4. Write down the IP address provided, should be something like 169.254.XXX.XX
     
 - Enabled SSH on the Pi
   1. Start Menu -> Preferences -> Raspberry Pi Configuration -> Interfaces -> SSH ON
      
 - Connect the laptop via SSH
   1.	Open command terminal
-  2.	Enter: “ssh pi@[IP Address from earlier]”
-  3.	Enter password: “Devcom2025” if prompted to do so.
-  4.	Verified successful login – terminal control is now directly from the laptop and the display, mouse, and keyboard connected to the pi can be removed.
+  2.	Enter:
+-     ssh pi@[IP Address from earlier]
+  4.	Enter password: “Devcom2025” if prompted to do so.
+  5.	Verified successful login – terminal control is now directly from the laptop and the display, mouse, and keyboard connected to the pi can be removed.
      
 - Attempted Telemetry Data Test
   1. Robot was unresponsive at the time of this experiment, which did not allow for the sensors to read odometry data, hence causing this test to fail.
