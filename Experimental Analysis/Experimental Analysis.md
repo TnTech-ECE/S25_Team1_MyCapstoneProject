@@ -16,7 +16,7 @@ The following steps were used so a future team could effectively reproduce the e
 - Identify the IP Address of the Pi
   1. Temporarily connect the Pi to mouse, keyboard, and monitor.
   2. Open the terminal and run
--      Hostname-I
+     -      Hostname-I
   4. Write down the IP address provided, should be something like 169.254.XXX.XX
     
 - Enabled SSH on the Pi
@@ -25,7 +25,7 @@ The following steps were used so a future team could effectively reproduce the e
 - Connect the laptop via SSH
   1.	Open command terminal
   2.	Enter:
--     ssh pi@[IP Address from earlier]
+     -      ssh pi@[IP Address from earlier]
   4.	Enter password: “Devcom2025” if prompted to do so.
   5.	Verified successful login – terminal control is now directly from the laptop and the display, mouse, and keyboard connected to the pi can be removed.
      
