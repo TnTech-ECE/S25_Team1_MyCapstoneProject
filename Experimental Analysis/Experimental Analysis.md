@@ -54,13 +54,16 @@ Hypothesis:
 
 
 
-## 2. Battery Function as it Applies to the Bot and Sensors
+## 2. Power Supply as it Applies to the Bot and Sensors (Battery Life)
 
 
 
 ### Purpose and Justification:
-The purpose of this experiment is to ensure that the supplied battery can supply sufficient power to both the bot and auxillary systems. The auxillary systems are the raspberry pi 5, the usb hub, the lidar sensor and the depth camera. The battery utilized was included with the robot provided by the Mechanical Engineering team. Utilizing the data sheet the calculations support that the bot and sensors will be sufficiently powered for the run time specification of 20 minutes. However, there is not hard data to confirm due to the robot not working. Voltages have been tested at both ends of the wiring harness, which are shown below and calculations of run time will have to be substituted in for the run time experiment that was planned. Had the bot been working the experiment would have been conducted 3 times to ensure quality data was obtained. This would have been conducted over the course of a week to allow the battery to fully charge between experiments. A detailed procedure of how the experiment was to be performed is provided below. 
+&nbsp;&nbsp;&nbsp;&nbsp; The purpose of this experiment is to verify that the supplied battery is capable of providing sufficient power to both the primary robotic platform and its auxiliary subsystems. The auxiliary components include the Raspberry Pi 5, the powered USB hub, the LiDAR sensor, and the Intel RealSense depth camera. The battery utilized in this analysis was provided by the Mechanical Engineering team as part of the standard robot chassis.
 
+&nbsp;&nbsp;&nbsp;&nbsp; Using manufacturer datasheet values and calculated power requirements, it was determined that the battery should adequately supply power to the motors and auxiliary electronics for the target operational runtime of approximately **20 minutes**. Although the calculations support this conclusion, experimental verification could not be completed due to ongoing issues preventing full robot functionality. Voltage measurements were taken at both ends of the wiring harness to confirm proper power distribution, and these results are presented below. In lieu of measured runtime data, calculated estimates have been substituted to represent the expected system performance.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Had the robot been operational, the planned experiment would have been conducted three times to ensure data accuracy and repeatability. Each trial would have been performed on separate days to allow the battery to fully recharge between tests, minimizing variability due to battery state-of-charge or temperature effects. A detailed procedure describing the intended experimental process is provided below.
 ### Detailed Procedure:
 For this experiment this would have been conducted in the capstone lab on three seperate days. Below are the steps to ensure proper testing.
 1. Ensure battery is fully charged. The green light on the charger must be on to indicate a full charge.  
@@ -72,9 +75,9 @@ For this experiment this would have been conducted in the capstone lab on three 
 7. Replace battery on charger for the next round.
 8. Repeat these steps a minimum of three times allowing the battery to charge between each iteration.
 
-The same steps can be used to determine maximum run time utilizing this battery by allowing the bot to run for as long as it can before a system fails. This would utilize a stop watch instead of a timer. Again, one must be present and attentive to all systems throughout the whole process. 
+&nbsp;&nbsp;&nbsp;&nbsp; The same steps can be used to determine maximum run time utilizing this battery by allowing the bot to run for as long as it can before a system fails. This would utilize a stop watch instead of a timer. Again, one must be present and attentive to all systems throughout the whole process. 
 
-However, since the bot is not working it does not allow the user to run this experiment because the robot motors will not draw any power. The motors are the biggest power consumers and ultimately will dictate run time. Due to this inconvenience one must rely on calculations and account for inefficiencies to obtain the best prediction of runtime. Expected results will give the best understanding of this. 
+&nbsp;&nbsp;&nbsp;&nbsp; However, since the bot is not working it does not allow the user to run this experiment because the robot motors will not draw any power. The motors are the biggest power consumers and ultimately will dictate run time. Due to this inconvenience one must rely on calculations and account for inefficiencies to obtain the best prediction of runtime. Expected results will give the best understanding of this. 
 
 
 
@@ -83,7 +86,7 @@ However, since the bot is not working it does not allow the user to run this exp
 
 ### Expected Results:
 
-The first thing to do is calculate the power that each device is using. The power will be measured in watts and then best measured against the batteries 98Wh rating. If the calculated wattage is less than the rating for the given time of 20 minutes then the systems should run fine. For this on paper experiment the equation P = IV will be utilized.
+&nbsp;&nbsp;&nbsp;&nbsp; The first thing to do is calculate the power that each device is using. The power will be measured in watts and then best measured against the batteries 98Wh rating. If the calculated wattage is less than the rating for the given time of 20 minutes then the systems should run fine. For this on paper experiment the equation P = IV will be utilized.
 
 - Raspberry Pi-5: P=VI≈5.1V×5.0A≈25.5W
 - Depth Camera: P=VI≈5V×2.4A≈12W
@@ -92,22 +95,28 @@ The first thing to do is calculate the power that each device is using. The powe
 
 - Total wattage of auxillary systems equals 44.5W. It is necessary to account for a 10% efficiency loss, which will result in the total going to 49.4W.
 
-It is safe to assume the motors will pull around 100W of power. This number should be sufficient for indoor/flat ground usage, which was the intended testing circumstance. Adding the 100W of the motor to the 49.4W the total power consumption will be 150W for calculation purposes. 
+&nbsp;&nbsp;&nbsp;&nbsp; It is safe to assume the motors will pull around 100W of power. This number should be sufficient for indoor/flat ground usage, which was the intended testing circumstance. Adding the 100W of the motor to the 49.4W the total power consumption will be 150W for calculation purposes. 
 - By dividing the 98Wh rating by the total power consumption it will provide the estimated runtime.
 **98Wh/150W = 0.653h or 39 minutes**, which more than meets the specifications. 
-By this math it is safe to assume the motors/auxillary systems can pull up to 296.9W to obtain a 20 minute runtime utilizing this battery. This number is obtained by the following calculations where 0.33h (20 minutes) is the specification to meet. This allows plenty of headroom. 
+&nbsp;&nbsp;&nbsp;&nbsp; By this math it is safe to assume the motors/auxillary systems can pull up to 296.9W to obtain a 20 minute runtime utilizing this battery. This number is obtained by the following calculations where 0.33h (20 minutes) is the specification to meet. This allows plenty of headroom. 
 - 98Wh/0.33h = 296.9W
 ### Actual Results:
-The only measurable data collected from this subsystem was the terminal voltage coming from the robots auxillary system power supply through the wiring harness. This ensured that when plugged in the pi, lidar sensor and depth camera had sufficient power. Measurements were taken utilizing a multimeter. 
+&nbsp;&nbsp;&nbsp;&nbsp; The only measurable data collected from this subsystem was the terminal voltage coming from the robots auxillary system power supply through the wiring harness. This ensured that when plugged in the pi, lidar sensor and depth camera had sufficient power. Measurements were taken utilizing a multimeter. 
 
 | Function Tested | Result               | Notes                                                                 |
 |-----------------|----------------------|-----------------------------------------------------------------------|
 | Voltage to USB hub through wiring harness | 16.36V | Voltage reads slightly higher than the expected 14V (this is good). The connection on the bot itself must be twisted to ensure quality contact with the female plug, which results in full power through harness. Sufficient power is supplied. |
-| Voltage to pi | 16.34 | Voltage reads slightly higher than the expected 14V (this is good). The connection on the bot itself must be twisted to ensure quality contact with the female plug, which results in full power through harness. Sufficient power is supplied. |
+| Voltage to Pi through wiring harness | 16.34 | Voltage reads slightly higher than the expected 14V (this is good). The connection on the bot itself must be twisted to ensure quality contact with the female plug, which results in full power through harness. Sufficient power is supplied. |
 ### Interpretation and Conclusion:
-- Interpretation:
-- Conclusion:
+&nbsp;&nbsp;&nbsp;&nbsp; Based on the calculated power requirements, the auxiliary subsystems—including the Raspberry Pi 5, USB hub, LiDAR sensor, and  depth camera—are expected to draw approximately 50 W of power. For the drivetrain, considering indoor operation on a flat surface with minor obstacles, an estimated 100 W of motor power consumption was assumed. While direct measurements could not be obtained due to the robot’s nonfunctional state, this estimate is considered slightly conservative to ensure an adequate safety margin.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Overall, the calculations indicate that the 14 V, 7 Ah (98 Wh) LiPo battery should comfortably supply sufficient power for both propulsion and auxiliary systems for at least the 20-minute runtime specified by the customer. These results align with expectations based on component datasheets. Any discrepancies between calculated and experimental values—had the system been operational—would likely result from variations in motor efficiency, terrain friction, or real-time current spikes during acceleration and sensor startup. At best the inefficiencies and headroom would ensure that these possibilities would not turn into issues.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Although the planned experimental verification could not be completed, analytical results support the conclusion that the supplied battery is fully capable of meeting the power and endurance requirements of the autonomous rover. The analysis demonstrates that the battery provides not only the energy needed for the 20-minute runtime but also sufficient overhead to handle unforeseen power surges or system inefficiencies.
+
+&nbsp;&nbsp;&nbsp;&nbsp; In summary, the power system design satisfies the project’s operational objectives and ensures stable performance for proof-of-concept testing and autonomous indoor navigation. Future validation through direct runtime testing is recommended once the robot becomes fully functional, to confirm these findings under real-world operating conditions. Also, for future reference the motors selected by the Mechanical Engineers must be taken into account if they prove to be bigger, which most likey they will be. If the motors are bigger it is recommended that a new battery be purchased to better handle the potential current spikes. 
 ## Statment of Contributions:
+- Evan Winnie- Battery Function as it Applies to the Bot and Sensors
 
 
 
