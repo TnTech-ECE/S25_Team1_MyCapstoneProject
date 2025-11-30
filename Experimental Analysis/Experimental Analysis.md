@@ -116,8 +116,8 @@ For this experiment this would have been conducted in the capstone lab on three 
 
 &nbsp;&nbsp;&nbsp;&nbsp; In summary, the power system design satisfies the project’s operational objectives and ensures stable performance for proof-of-concept testing and autonomous indoor navigation. Future validation through direct runtime testing is recommended once the robot becomes fully functional, to confirm these findings under real-world operating conditions. Also, for future reference the motors selected by the Mechanical Engineers must be taken into account if they prove to be bigger, which most likey they will be. If the motors are bigger it is recommended that a new battery be purchased to better handle the potential current spikes. 
 ## Statment of Contributions:
-- Evan Winnie- Battery Function as it Applies to the Bot and Sensors
-
+- Evan Winnie - Battery Function as it Applies to the Bot and Sensors
+- Connor Graves - Hardwired communication subsystem and experiment
 
 
 
