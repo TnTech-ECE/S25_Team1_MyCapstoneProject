@@ -448,7 +448,8 @@ All unmet criteria stem from the same issue:
 | 15    | Aluminum Case for Raspberry Pi 5                              |  1  | GeeekPi                | B0CLFYDT8Y     | Lab Station               | 11/3/2025     | New       |  In use.                                  |
 
 ## Statment of Contributions:
-- Evan Winnie - Battery Function as it Applies to the Bot and Sensors
-- Connor Graves - Inventory and Hardwired Communication Subsystem as it Applies to Telemetry Transmission and Bot-to-Laptop Data Link Performance
-- Wayne Marcrum - Navigation Subsystem as it Applies to the Autonomous Navigation Performance
-- Kamden Edens - System Integration Experiment as it Applies to Robot Drive Performance Under Full Sensor Load
+- Evan Winnie - Battery Function as it Applies to the Bot and Sensors.
+- Connor Graves - Inventory and Hardwired Communication Subsystem as it Applies to Telemetry Transmission and Bot-to-Laptop Data Link Performance.
+- Wayne Marcrum - Navigation Subsystem as it Applies to the Autonomous Navigation Performance.
+- Kamden Edens - System Integration Experiment as it Applies to Robot Drive Performance Under Full Sensor Load.
+- Cooper McFarlane- Supported mechanical design and later assisted cross-functionally with sensor mounting, hardware installation, and subsystem integration after mechanical subsystem dissolving.
