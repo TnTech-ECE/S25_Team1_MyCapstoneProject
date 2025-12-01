@@ -196,14 +196,122 @@ Although full-system testing could not be completed due to drivetrain issues, th
 
 In summary, the analytical and partial experimental results strongly suggest that the navigation subsystem meets project objectives for autonomy, mapping, and waypoint traversal. Once drivetrain functionality is restored, complete end-to-end testing is recommended to validate real-world navigation performance and refine SLAM parameters for optimal accuracy. Additionally, if future iterations of the robot use larger or more powerful motors, the navigation tuning (PID parameters, motion model, encoder scaling) must be updated accordingly to maintain localization accuracy.
 
+## 4. System Integration Experiment as it Applies to Robot Drive Performance Under Full Sensor Load
 
+### Purpose and Justification:
+The purpose of this experiment was to evaluate whether the Raspberry Pi 5 running Ubuntu 24.04 Desktop could simultaneously operate all onboard perception sensors and still maintain stable control of the Rover Zero 3 chassis. The experiment focused on real-time load handling rather than navigation accuracy. Specifically, the goal was to verify whether:
 
+1. The motor controller could reliably receive and execute drive commands from the Raspberry Pi.
+
+2. The sensing suite—including the LiDAR (RPLIDAR A1) and Intel RealSense D456 depth camera—could stream data at their required rates.
+
+3. The Raspberry Pi 5 could sustain real-time ROS 2 processing loads without communication dropouts or control latency.
+
+This experiment was justified because the overall CIRCE system relies heavily on the Pi’s ability to coordinate motors and sensors concurrently. Although manufacturer specifications indicate the Raspberry Pi 5 is capable of handling multi-sensor workloads, real-world stress testing was necessary to confirm that the system could maintain motor communication under full load.
+
+Preliminary expectations suggested that the Rover Zero 3 drivetrain should operate normally while perception nodes were active, with CPU utilization remaining below 70% and no interruption in motor controller connectivity. However, full validation was not possible due to system failures encountered during testing. The robot initially operated briefly, but subsequent attempts resulted in loss of communication between the Raspberry Pi and the drivetrain, preventing continuation of the experiment.
+
+### Detailed Procedure:
+
+The following steps were used to ensure the experiment could be reproduced by a future team:
+
+- System Initialization
+  1. Boot the Raspberry Pi 5 running Ubuntu 24.04 Desktop.
+  2. Verify that ROS 2 is installed and configured for motor control and sensor drivers.
+  3. Confirm that the motor controller (Rover Zero 3 onboard controller) is connected and visible to the OS.
+ 
+- Sensor Activation
+  - Launch ROS 2 Nodes for:
+    1. RPLIDAR A1
+    2. Intel RealSense D456
+
+  - Confirm that:
+    1. LiDAR generates valid scan data
+    2. Depth camera streams RGB-D frames at expected framerate
+  - Monitor sensor CPU usage and ROS topic bandwidth to ensure sufficient system margin.
+
+- Drive System Verification
+  - Send manual drive commands to verify that:
+    1. The Pi can communicate with the motor controller
+    2. Wheels respond correctly
+    3. Odometry topics (if available) publish data when wheels rotate
+
+- Full System Load Test
+  - With motors running, enable all active sensor streams simultaneously.
+  - Observe:
+    1. CPU/GPU load
+    2. ROS node stability
+    3. Motor command latency
+    4. Any warnings or connection dropouts
+
+- Sustained Operation Attempt
+  - Continue driving the robot around the environment while perception sensors run continuously.
+  - Monitor for:
+    1. Communication loss
+    2. Motor controller disconnections
+    3. Sudden halts or resets
+    4. Sensor failures
+
+- Record Results
+  - Document:
+    1. Whether drive commands remained responsive
+    2. Whether sensors maintained full data rate
+    3. Whether ROS 2 nodes crashed or degraded
+    4. Any connection failures between Pi and drivetrain
+
+### Expected Results:
+Based on subsystem specifications and analytical predictions:
+
+- RPLIDAR A1
+  1. Expected to produce full 360° scans at 5–10 Hz
+  2. Expected low CPU load (<10%)
+  3. Sufficient for real-time mapping and collision avoidance
+
+- RealSense D456
+  1. Expected to stream RGB-D data at 30 fps
+  2. Should maintain stable depth output indoors
+  3. Should consume moderate CPU resources (15–25%)
+ 
+- Motor Controller / Rover Zero 3 Chassis
+  1. Expected to respond instantly to ROS 2 drive commands
+  2. Should maintain reliable USB or serial communication
+  3. No expected dropouts under load
+ 
+- Raspberry Pi 5
+  1. Expected to sustain multi-sensor processing and motor control
+  2. CPU load should remain below ~65–70% during operation
+  3. No expected thermal throttling with proper airflow
+ 
+Overall, the system was expected to maintain full operation with all sensors running and motors controlled in real time.
+
+### Actual Results:
+With the condition of the chassis now and the only short test done, we were not able to exhaust this experiment.
+
+| Function Tested | Result               | Notes                                                                 |
+|-----------------|----------------------|-----------------------------------------------------------------------|
+| LiDAR Scan Data | Operational | Valid scans received when ROS node launched. |
+| Depth Camera Stream | Operational | RGB-D stream active; no frame drops observed. |
+| Motor Control (Initial Test) | Partially Operational | Robot moved normally during first session. |
+| Motor Control (Later Sessions) | Not Operational | Robot no longer responded to Pi; communication failure encountered. |
+| Pi → Motor Controller Connection | Failed | Robot no longer recognized on Pi or other machines. |
+| Full System Drive Test | Failed | Sensors functional but motor control failed before full test. |
+| CPU Load Observations | Partially Operational | CPU loads minus the chassis within margin of 60% |
+
+### Interpretation and Conclusion:
+Analytical evaluation indicates that the Raspberry Pi 5 should be capable of driving the Rover Zero 3 chassis while processing full sensor data streams. Sensor-level testing supports this conclusion, as both the LiDAR and RealSense camera were proven functional and able to stream data without errors.
+
+However, full experimental validation was not possible due to the drivetrain ceasing communication with the Raspberry Pi after the initial session. Since motor actuation is required to evaluate the Pi’s load-handling ability under real operating conditions, the loss of communication prevented completion of the test.
+
+The failure is consistent with issues such as:
+- USB/serial connection instability
+- Motor controller firmware failure
+
+Until drivetrain functionality is restored, complete evaluation of full-system control performance cannot be performed.
+
+The partial results confirm that the Raspberry Pi 5 can handle the sensing workload and the limiting factor is not computational performance but loss of communication with the drivetrain hardware. Once the motor control link is reliable, the full experiment should be repeated to measure real-world load, latency, and drive stability.
 
 ## Statment of Contributions:
 - Evan Winnie - Battery Function as it Applies to the Bot and Sensors
 - Connor Graves - Hardwired communication subsystem and experiment
 - Wayne Marcrum - Navigation Subsystem as it Applies to the Autonomous Navigation Performance
-
-
-
-
+- Kamden Edens - System Integration Experiment as it Applies to Robot Drive Performance Under Full Sensor Load
