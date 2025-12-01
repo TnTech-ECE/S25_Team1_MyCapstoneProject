@@ -202,6 +202,7 @@ In summary, the analytical and partial experimental results strongly suggest tha
 ## Statment of Contributions:
 - Evan Winnie - Battery Function as it Applies to the Bot and Sensors
 - Connor Graves - Hardwired communication subsystem and experiment
+- Wayne Marcrum - Navigation Subsystem as it Applies to the Autonomous Navigation Performance
 
 
 
