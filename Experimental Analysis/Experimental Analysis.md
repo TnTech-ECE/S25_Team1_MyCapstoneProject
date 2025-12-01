@@ -312,6 +312,6 @@ The partial results confirm that the Raspberry Pi 5 can handle the sensing workl
 
 ## Statment of Contributions:
 - Evan Winnie - Battery Function as it Applies to the Bot and Sensors
-- Connor Graves - Hardwired communication subsystem and experiment
+- Connor Graves - Hardwired Communication Subsystem as it Applies to Telemetry Transmission and Bot-to-Laptop Data Link Performance
 - Wayne Marcrum - Navigation Subsystem as it Applies to the Autonomous Navigation Performance
 - Kamden Edens - System Integration Experiment as it Applies to Robot Drive Performance Under Full Sensor Load
